@@ -1,0 +1,38 @@
+{
+  "name": "eslint-config-himynameisdave",
+  "version": "0.0.1",
+  "description": "🗒️ An opinionated eslint config by and for himynameisdave",
+  "main": "configurations/node.js",
+  "scripts": {
+    "lint": "eslint *.js"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.3",
+    "eslint": "^4.12.1",
+    "eslint-plugin-filenames": "^1.2.0",
+    "eslint-plugin-react": "^7.5.1"
+  },
+  "engines": {
+    "node": ">= 6.10.0"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "lint",
+    "code checker",
+    "code linter",
+    "code standards",
+    "code style",
+    "eslint-config",
+    "style checker",
+    "style linter"
+  ],
+  "private": false,
+  "author": "himynameisdave <d@velunny.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/himynameisdave/eslint-config-himynameisdave#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/himynameisdave/eslint-config-himynameisdave.git"
+  }
+}
