@@ -28,7 +28,7 @@ module.exports = {
       // Enforce ES5 or ES6 class for React Components
       "react/prefer-es6-class": 2,
       // Enforce stateless React Components to be written as a pure function
-      "prefer-stateless-function": [2, { "ignorePureComponents": true }],
+      "react/prefer-stateless-function": [2, { "ignorePureComponents": true }],
       // Prevent missing props validation in a React component definition
       "react/prop-types": 2,
       // Prevent missing React when using JSX
@@ -36,13 +36,13 @@ module.exports = {
       // Restrict file extensions that may be required
       "react/require-extension": 0,
       // Enforce ES5 or ES6 class for returning value in render function
-      "require-render-return": 2,
+      "react/require-render-return": 2,
       // Prevent extra closing tags for components without children
       "react/self-closing-comp": 2,
       // Enforce component methods order
       "react/sort-comp": 2,
       // Enforce propTypes declarations alphabetical sorting
-      "sort-prop-types": 2,
+      "react/sort-prop-types": 2,
       // Prevent missing parentheses around multilines JSX
       "react/jsx-wrap-multilines": 2,
 

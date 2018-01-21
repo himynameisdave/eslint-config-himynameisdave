@@ -3,11 +3,7 @@ module.exports = {
         // enforce spacing inside array brackets
         "array-bracket-spacing": 0,
         // disallow or enforce spaces inside of single line blocks
-        "block-spacing": [2, "always", {
-            "singleValue": false,
-            "objectsInArrays": false,
-            "arraysInArrays": false
-        }],
+        "block-spacing": [2, "always"],
         // enforce one true brace style
         "brace-style": [2, "1tbs", { allowSingleLine: true }],
         // require camel case names
@@ -119,7 +115,7 @@ module.exports = {
         // require quotes around object literal property names
         "quote-props": [2, "as-needed"],
         // specify whether double or single quotes should be used
-        quotes: [2, "double", { allowTemplateLiterals: true }],
+        quotes: [2, "single", { allowTemplateLiterals: true }],
         // Require JSDoc comment
         "require-jsdoc": 0,
         // require or disallow use of semicolons instead of ASI
