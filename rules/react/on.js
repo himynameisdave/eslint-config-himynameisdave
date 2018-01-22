@@ -65,11 +65,11 @@ module.exports = {
       // Validate JSX indentation
       "react/jsx-indent": [2, 4],
       // Validate props indentation in JSX
-      "react/jsx-indent-props": [2, 2],
+      "react/jsx-indent-props": [2, 4],
       // Validate JSX has key prop when in array or iterator
       "react/jsx-key": 2,
       // Limit maximum of props on a single line in JSX
-      "react/jsx-max-props-per-line": 2,
+      "react/jsx-max-props-per-line": [2, { "maximum": 3 }],
       // Prevent usage of .bind() and arrow functions in JSX props
       "react/jsx-no-bind": [2, {
           "ignoreRefs": true,
@@ -88,7 +88,11 @@ module.exports = {
       // Enforce PascalCase for user-defined JSX components
       "react/jsx-pascal-case": 2,
       // Enforce propTypes declarations alphabetical sorting
-      "react/jsx-sort-props": 2,
+      "react/jsx-sort-props": [2, {
+          "callbacksLast": true,
+          "reservedFirst": true,
+          "shorthandLast": true
+      }],
       // Validate spacing before closing bracket in JSX
       "react/jsx-space-before-closing": 0,
       // Prevent React to be incorrectly marked as unused
