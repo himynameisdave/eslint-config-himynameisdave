@@ -60,6 +60,8 @@ module.exports = {
     'func-call-spacing': ['error', 'never'],
     // require function names to match the name of the variable or property to which they are assigned
     'func-name-matching': 'off',
+    //  Is there a newline for every function argument when called?
+    'function-call-argument-newline': ['error', 'consistent'],
     // require function expressions to have a name
     // https://eslint.org/docs/rules/func-names
     'func-names': 'off',

@@ -22,6 +22,8 @@ module.exports = {
     'func-names': 0,
     // enforces use of function declarations or expressions
     'func-style': 0,
+    //  Is there a newline for every function argument when called?
+    'function-call-argument-newline': 0,
     // disallow certain identifiers to prevent them being used
     'id-blacklist': 0,
     // this option enforces minimum and maximum identifier lengths (variable names, property names etc.)

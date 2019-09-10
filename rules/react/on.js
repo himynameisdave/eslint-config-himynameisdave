@@ -202,5 +202,20 @@ module.exports = {
     //  Enforces proper use of JSX fragments
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-fragments.md
     'react/jsx-fragments': ['error', 'element'],
+    //  Newlines inside of JSX curlies
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-newline.md
+    'react/jsx-curly-newline': 'off',
+    //  Disallow JSX props spreading
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
+    'react/jsx-props-no-spreading': 'warn',
+    //  For Flow types
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-read-only-props.md
+    'react/prefer-read-only-props': 'off',
+    //  Enforce state initialization style
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/state-in-constructor.md
+    'react/state-in-constructor': ['warn', 'never'],
+    //  Enforces where React component static properties should be positioned.
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/static-property-placement.md
+    'react/static-property-placement': ['error', 'static public field'],
   },
 };

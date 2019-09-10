@@ -159,5 +159,19 @@ module.export = {
     'react/jsx-closing-tag-location': 0,
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-fragments.md
     'react/jsx-fragments': 0,
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-newline.md
+    'react/jsx-curly-newline': 0,
+    //  Disallow JSX props spreading
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
+    'react/jsx-props-no-spreading': 0,
+    //  For Flow types
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-read-only-props.md
+    'react/prefer-read-only-props': 0,
+    //  Enforce state initialization style
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/state-in-constructor.md
+    'react/state-in-constructor': 0,
+    //  Enforces where React component static properties should be positioned.
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/static-property-placement.md
+    'react/static-property-placement': 0,
   },
 };

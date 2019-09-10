@@ -57,5 +57,32 @@ module.exports = {
     //  Disallow empty titles
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-empty-title.md
     'jest/no-empty-title': 0,
+    //  Disallow commented out tests
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-commented-out-tests.md
+    'jest/no-commented-out-tests': 0,
+    //  Disallow duplicate setup and teardown hooks
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-duplicate-hooks.md
+    'jest/no-duplicate-hooks': 0,
+    //  Avoid using expect().resolves
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-expect-resolves.md
+    'jest/no-expect-resolves': 0,
+    //  No exports from test file
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-export.md
+    'jest/no-export': 0,
+    //  Disallow conditional logic in tests
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-if.md
+    'jest/no-if': 0,
+    //  Disallow manually importing from __mocks__
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-mocks-import.md
+    'jest/no-mocks-import': 0,
+    //  Prevents expect statements outside of a test or it block.
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-standalone-expect.md
+    'jest/no-standalone-expect': 0,
+    //  This rule prevents the use of expect inside catch blocks.
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-try-expect.md
+    'jest/no-try-expect': 0,
+    //  Require top-level describe block
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/require-top-level-describe.md
+    'jest/require-top-level-describe': 0,
   },
 };
