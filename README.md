@@ -1,53 +1,194 @@
-## eslint-config-himynameisdave
-🗒️  An opinionated eslint config by and for [himynameisdave](https://github.com/himynameisdave).
+<div align="center" margin="0 auto 20px">
+    <h1>eslint-config-himynameisdave</h1>
+    <p style="font-style: italic;">
+        📄 An opinionated ESLint config, by and for <a href="http://himynameisdave.com">himynameisdave</a>.
+    </p>
+    <div>
+        <a href='https://travis-ci.org/himynameisdave/eslint-config-himynameisdave'>
+            <img src="https://api.travis-ci.org/himynameisdave/eslint-config-himynameisdave.svg?branch=master" alt="Travis Badge" />
+        </a>
+        <a href="https://www.npmjs.com/package/eslint-config-himynameisdave">
+            <img src="https://img.shields.io/npm/dt/eslint-config-himynameisdave.svg" alt="Downloads">
+        </a>
+    </div>
+</div>
 
-### Motivations
-
-The structure of this config is based heavily on [`eslint-config-walmart`](https://github.com/walmartlabs/eslint-config-walmart) (and [`eslint-config-formidable`](https://github.com/FormidableLabs/eslint-config-formidable) which was inspired by it).
-
-If you checkout `/rules`, it's broken up by plugin. The `eslint` plugins are further broken up as they are in [this overview of all the rules](https://eslint.org/docs/rules/).
-
+---
 
 ### Installation
+
+**Yarn**
 
 ```
 yarn add -D eslint eslint-config-himynameisdave
 ```
 
-You'll also need to install any plugins required by the config you choose (read more below), and these ones are required by all of them:
+**NPM**
 
 ```
-yarn add -D babel-eslint eslint-plugin-filenames
+npm install -D eslint eslint-config-himynameisdave
 ```
 
-### Usage
+Add this to your `.eslintrc` config file:
 
-Add this config under the `"extends"` part of your `.eslintrc` file:
-
-```json
+```
 {
-    "extends": "himynameisdave"
+    "extends": ["himynameisdave"]
 }
 ```
 
+You will also need to install a [parser](#Parser), additional plugins, and (optionally) a formatter. See more below.
+
 ### Configurations
 
-There are other configurations you can use as well:
-
-- `himynameisdave` - Uses `node`, see below
-- `himynameisdave/configurations/off` - For when rules are for squares
-- `himynameisdave/configurations/node` - ES6 Node config
-- `himynameisdave/configurations/browser` - ES6 React browser config
-    - You'll also need to install the React plugin for this one:
-    ```
-    yarn add -D eslint-plugin-react
-    ```
+This package exports a few different configurations which you can use in your project. Each configuration requires you to install various plugins.
 
 
-### Plugins
+#### all-dressed
 
-This config uses the following plugins/dependencies, you can read more about them here:
+The [All Dressed](https://img.buzzfeed.com/buzzfeed-static/static/2015-09/15/14/enhanced/webdr06/anigif_original-grid-image-7412-1442342581-9.gif) config has everything on. Use with caution. Install all dependencies like so:
 
-- [`babel-eslint`](https://www.npmjs.com/package/babel-eslint)
-- [`eslint-plugin-filenames`](https://www.npmjs.com/package/eslint-plugin-filenames)
-- [`eslint-plugin-react`](https://www.npmjs.com/package/eslint-plugin-react)
+```
+yarn add -D \
+    eslint \
+    eslint-plugin-filenames \
+    eslint-plugin-import \
+    eslint-plugin-jest \
+    eslint-plugin-jsx-a11y \
+    eslint-plugin-promise \
+    eslint-plugin-react \
+    eslint-plugin-react-hooks
+    eslint-plugin-unicorn
+```
+
+Add this to your `.eslintrc` config:
+
+```js
+extends: [
+    'himynameisdave/configurations/all-dressed/on'
+]
+```
+
+#### babel-node
+
+For Node environments where you're using Babel to transpile stuff.
+
+```
+yarn add -D \
+    eslint \
+    eslint-plugin-filenames \
+    eslint-plugin-import \
+    eslint-plugin-jest \
+    eslint-plugin-promise \
+    eslint-plugin-unicorn
+```
+
+Add this to your `.eslintrc` config:
+
+```js
+extends: [
+    'himynameisdave/configurations/babel-node/on'
+]
+```
+
+#### babel-node
+
+For classic Node environments where you're NOT using Babel to transpile stuff.
+
+```
+yarn add -D \
+    eslint \
+    eslint-plugin-filenames \
+    eslint-plugin-import \
+    eslint-plugin-jest \
+    eslint-plugin-promise \
+    eslint-plugin-unicorn
+```
+
+Add this to your `.eslintrc` config:
+
+```js
+extends: [
+    'himynameisdave/configurations/node/on'
+]
+```
+
+#### browser
+
+Targets modern React browser environments.
+
+```
+yarn add -D \
+    eslint \
+    eslint-plugin-filenames \
+    eslint-plugin-import \
+    eslint-plugin-jest \
+    eslint-plugin-jsx-a11y \
+    eslint-plugin-promise \
+    eslint-plugin-react \
+    eslint-plugin-react-hooks
+    eslint-plugin-unicorn
+```
+
+Add this to your `.eslintrc` config:
+
+```js
+extends: [
+    'himynameisdave/configurations/browser/on'
+]
+```
+
+#### off
+
+Don't like playing by the rules? You can turn it all off with `himynameisdave/configurations/off`:
+
+```js
+extends: [
+    'himynameisdave/configurations/off/on'
+]
+```
+
+Pretty goofy though, not sure who would use this.
+
+### Parser
+
+You'll need to install the [`babel-eslint`](https://github.com/babel/babel-eslint) parser to use most of the configurations exported by this package (except [`node`](https://github.com/himynameisdave/eslint-config-himynameisdave/blob/master/configurations/node.js)).
+
+```
+yarn add -D babel-eslint
+
+npm install -D babel-eslint
+```
+
+What is `babel-eslint`?
+
+> **babel-eslint allows you to lint ALL valid Babel code with the fantastic ESLint.**
+
+> _ESLint's default parser and core rules only support the latest final ECMAScript standard and do not support experimental (such as new features) and non-standard (such as Flow or TypeScript types) syntax provided by Babel. babel-eslint is a parser that allows ESLint to run on source code that is transformed by Babel._
+
+> _Note: You only need to use babel-eslint if you are using Babel to transform your code. If this is not the case, please use the relevant parser for your chosen flavor of ECMAScript (note that the default parser supports all non-experimental syntax as well as JSX)._
+
+**Note:** `babel-config` expects that you've got a [`@babel/core`](https://www.npmjs.com/package/@babel/core) and `.babelrc` (or other config file) in your project. [Read more about that here](https://babeljs.io/docs/en/configuration).
+
+### Formatter
+
+[`git-log`](https://github.com/JamieMason/eslint-formatter-git-log) is a very nice formatter that I'd recommend using in your project. In the lint report in your console, it will display how old the code is and whomst wrote it.
+
+You just need to add the `--format` flag to your script which you're using, like perhaps in your `package.json`:
+
+```
+"lint": "eslint --format ./node_modules/eslint-config-himynameisdave/formatters/git-log.js"
+```
+
+Optionally you could just [install and configure](https://github.com/JamieMason/eslint-formatter-git-log) it yourself:
+
+
+```
+yarn add -D eslint-formatter-git-log
+
+npm install -D eslint-formatter-git-log
+```
+
+### Inspiration
+
+Inspired very heavily by [`eslint-config-7geese`](https://github.com/7Geese/eslint-config-7geese), which was in turn inspired by [`eslint-config-walmart`](https://github.com/walmartlabs/eslint-config-walmart), [`eslint-config-formidable`](https://github.com/FormidableLabs/eslint-config-formidable), and many others.
