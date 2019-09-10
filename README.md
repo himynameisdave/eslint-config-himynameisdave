@@ -115,7 +115,7 @@ extends: [
 ]
 ```
 
-#### babel-node
+#### node
 
 For classic Node environments where you're NOT using Babel to transpile stuff.
 
