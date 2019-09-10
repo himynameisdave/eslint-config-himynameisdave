@@ -1,24 +1,30 @@
 module.exports = {
-    rules: {
-        // enforce return after a callback
-        "callback-return": 2,
-        // disallow require() outside of the top-level module scope
-        "global-require": 1,
-        // enforces error handling in callbacks (node environment)
-        "handle-callback-err": 0,
-        // disallow mixing regular variable and require declarations
-        "no-mixed-requires": 2,
-        // disallow use of new operator with the require function
-        "no-new-require": 2,
-        // disallow string concatenation with __dirname and __filename
-        "no-path-concat": 1,
-        // disallow use of process.env
-        "no-process-env": 0,
-        // disallow process.exit()
-        "no-process-exit": 0,
-        // restrict usage of specified node modules
-        "no-restricted-modules": 0,
-        // disallow use of synchronous methods (off by default)
-        "no-sync": 0
-    }
+  env: {
+    node: true,
+  },
+  rules: {
+    // enforce return after a callback
+    'callback-return': 'off',
+    // disallow require() outside of the top-level module scope
+    'global-require': 'warn',
+    // enforces error handling in callbacks (node environment)
+    'handle-callback-err': 'off',
+    //  https://eslint.org/docs/4.0.0/rules/no-buffer-constructor
+    'no-buffer-constructor': 'off',
+    // disallow mixing regular variable and require declarations
+    'no-mixed-requires': ['off', false],
+    // disallow use of new operator with the require function
+    'no-new-require': 'error',
+    // disallow string concatenation with __dirname and __filename
+    // https://eslint.org/docs/rules/no-path-concat
+    'no-path-concat': 'error',
+    // disallow use of process.env
+    'no-process-env': 'off',
+    // disallow process.exit()
+    'no-process-exit': 'off',
+    // restrict usage of specified node modules
+    'no-restricted-modules': 'off',
+    // disallow use of synchronous methods (off by default)
+    'no-sync': 'off',
+  },
 };
