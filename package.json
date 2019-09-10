@@ -1,11 +1,14 @@
 {
   "name": "eslint-config-himynameisdave",
   "version": "0.0.3",
-  "description": "🗒️ An opinionated eslint config by and for himynameisdave",
-  "main": "configurations/node.js",
+  "description": "🗒️ An opinionated ESLint config by and for himynameisdave",
+  "main": "configurations/all-dressed.js",
   "scripts": {
     "lint": "eslint ./",
     "lint:fix": "eslint ./ --fix",
+    "find-rules": "eslint-find-rules --unused",
+    "print-config": "eslint --print-config index.js > config-full.json",
+    "test": "npm outdated && npm run find-rules && npm run lint",
     "release": "np --no-yarn"
   },
   "devDependencies": {
@@ -19,7 +22,11 @@
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-promise": "4.2.1",
     "eslint-plugin-react": "7.14.3",
+    "eslint-plugin-react-hooks": "2.0.1",
     "eslint-plugin-unicorn": "10.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^>= 6.3.0"
   },
   "engines": {
     "node": ">= 8.16.0"
