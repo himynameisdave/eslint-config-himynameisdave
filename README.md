@@ -48,6 +48,8 @@ extends: [
     'himynameisdave/configurations/all-dressed'
 ]
 ```
+
+```
 npm install -D eslint eslint-config-himynameisdave
 ```
 
