@@ -15,16 +15,38 @@
 
 ---
 
-### Installation
+You will also need to install a [parser](#Parser), additional plugins, and (optionally) a formatter. See more below.
+
+### Configurations
+
+This package exports a few different configurations which you can use in your project. Each configuration requires you to install various plugins.
+
+
+#### all-dressed
+
+The [All Dressed](https://img.buzzfeed.com/buzzfeed-static/static/2015-09/15/14/enhanced/webdr06/anigif_original-grid-image-7412-1442342581-9.gif) config has everything on. Use with caution. Install all dependencies like so:
 
 **Yarn**
 
 ```
-yarn add -D eslint eslint-config-himynameisdave
+yarn add -D \
+    eslint \
+    eslint-plugin-filenames \
+    eslint-plugin-import \
+    eslint-plugin-jest \
+    eslint-plugin-jsx-a11y \
+    eslint-plugin-promise \
+    eslint-plugin-react \
+    eslint-plugin-react-hooks
+    eslint-plugin-unicorn
 ```
 
 **NPM**
 
+```js
+extends: [
+    'himynameisdave/configurations/all-dressed'
+]
 ```
 npm install -D eslint eslint-config-himynameisdave
 ```
@@ -192,3 +214,10 @@ npm install -D eslint-formatter-git-log
 ### Inspiration
 
 Inspired very heavily by [`eslint-config-7geese`](https://github.com/7Geese/eslint-config-7geese), which was in turn inspired by [`eslint-config-walmart`](https://github.com/walmartlabs/eslint-config-walmart), [`eslint-config-formidable`](https://github.com/FormidableLabs/eslint-config-formidable), and many others.
+
+### Some neat ESLint stuff
+
+- [`eslint-rule-documentation`](https://github.com/jfmengels/eslint-rule-documentation) - Tool to find the url for the documentation of an ESLint rule.
+- [`eslint-nibble`](https://github.com/IanVS/eslint-nibble) - When you/your team don't have time to fix all the ESLint violations in your codebase, you should just nibble them.
+- [`eslint-multiplexer`](https://github.com/pimlie/eslint-multiplexer) - When you have multiple of the same error in the same file, this groups them in the output.
+- [`eslint-plugin-svelte3`](https://github.com/sveltejs/eslint-plugin-svelte3) - Because [Svelte](https://svelte.dev).

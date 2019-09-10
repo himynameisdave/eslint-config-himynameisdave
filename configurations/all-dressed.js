@@ -1,6 +1,8 @@
+// Like the chips.
 module.exports = {
+  parser: 'babel-eslint',
   parserOptions: {
-    ecmaVersion: 5,
+    ecmaVersion: 6,
     sourceType: 'module',
     ecmaFeatures: {
       impliedStrict: true,
@@ -8,13 +10,14 @@ module.exports = {
   },
   env: {
     amd: true,
+    es6: true,
     node: true,
   },
   globals: {},
   'extends': [
     '../rules/eslint/best-practices/on',
     '../rules/eslint/errors/on',
-    '../rules/eslint/es6/off',
+    '../rules/eslint/es6/on',
     '../rules/eslint/node/on',
     '../rules/eslint/strict/on',
     '../rules/eslint/style/on',
@@ -22,10 +25,10 @@ module.exports = {
     '../rules/filenames/on',
     '../rules/import/on',
     '../rules/jest/on',
-    '../rules/jsx-a11y/off',
+    '../rules/jsx-a11y/on',
     '../rules/promise/on',
-    '../rules/react/off',
-    '../rules/react-hooks/off',
+    '../rules/react/on',
+    '../rules/react-hooks/on',
     '../rules/unicorn/on',
   ],
   rules: {},

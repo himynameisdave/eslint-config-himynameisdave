@@ -1,19 +1,27 @@
 module.exports = {
-    extends: [
-        "himynameisdave/rules/eslint/best-practices/off",
-        "himynameisdave/rules/eslint/errors/off",
-        "himynameisdave/rules/eslint/es6/off",
-        "himynameisdave/rules/eslint/node/off",
-        "himynameisdave/rules/eslint/strict/off",
-        "himynameisdave/rules/eslint/style/off",
-        "himynameisdave/rules/eslint/variables/off"
-    ],
-    parserOptions: {
-        ecmaVersion: 5,
-        sourceType: "script",
-        ecmaFeatures: {}
-    },
-    env: {},
-    globals: {},
-    rules: {}
+  parserOptions: {
+    ecmaVersion: 5,
+    sourceType: 'script',
+    ecmaFeatures: {},
+  },
+  env: {},
+  globals: {},
+  'extends': [
+    '../rules/eslint/best-practices/off',
+    '../rules/eslint/errors/off',
+    '../rules/eslint/es6/off',
+    '../rules/eslint/node/off',
+    '../rules/eslint/strict/off',
+    '../rules/eslint/style/off',
+    '../rules/eslint/variables/off',
+    '../rules/filenames/off',
+    '../rules/import/off',
+    '../rules/jest/off',
+    '../rules/jsx-a11y/off',
+    '../rules/promise/off',
+    '../rules/react/off',
+    '../rules/react-hooks/off',
+    '../rules/unicorn/off',
+  ],
+  rules: {},
 };
