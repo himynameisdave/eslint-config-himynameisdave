@@ -29,5 +29,7 @@ module.exports = {
     '../rules/react-hooks/off',
     '../rules/unicorn/on',
   ],
-  rules: {},
+  rules: {
+    'unicorn/no-process-exit': 'off',
+  },
 };
