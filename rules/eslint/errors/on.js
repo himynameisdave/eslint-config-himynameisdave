@@ -5,7 +5,9 @@ module.exports = {
     'for-direction': 'error',
     // Enforces that a return statement is present in property getters
     // https://eslint.org/docs/rules/getter-return
-    'getter-return': ['error', { allowImplicit: true }],
+    'getter-return': ['error', {
+      allowImplicit: true,
+    }],
     // Disallow await inside of loops
     // https://eslint.org/docs/rules/no-await-in-loop
     'no-await-in-loop': 'error',
@@ -88,6 +90,11 @@ module.exports = {
     'valid-jsdoc': 'off',
     // ensure that the results of typeof are compared against a valid string
     // https://eslint.org/docs/rules/valid-typeof
-    'valid-typeof': ['error', { requireStringLiterals: true }],
+    'valid-typeof': ['error', {
+      requireStringLiterals: true,
+    }],
+    //  Don't reassign imports
+    //  https://eslint.org/docs/rules/no-import-assign
+    'no-import-assign': 'error',
   },
 };

@@ -39,5 +39,10 @@ module.exports = {
     'unicorn/prevent-abbreviations': 'off',
     'unicorn/regex-shorthand': 'off',
     'unicorn/throw-new-error': 'off',
+    'unicorn/consistent-function-scoping': 'off',
+    'unicorn/expiring-todo-comments': 'off',
+    'unicorn/no-nested-ternary': 'off',
+    'unicorn/prefer-dataset': 'off',
+    'unicorn/prefer-reflect-apply': 'off',
   },
 };

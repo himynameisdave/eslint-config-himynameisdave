@@ -60,5 +60,8 @@ module.exports = {
     'valid-jsdoc': 0,
     // ensure that the results of typeof are compared against a valid string
     'valid-typeof': 0,
+    //  Don't reassign imports
+    //  https://eslint.org/docs/rules/no-import-assign
+    'no-import-assign': 0,
   },
 };

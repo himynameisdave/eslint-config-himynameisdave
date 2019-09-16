@@ -180,5 +180,11 @@ module.exports = {
     //  Encourage use of named capture groups in regular expressions
     //  https://eslint.org/docs/rules/prefer-named-capture-group
     'prefer-named-capture-group': 0,
+    //  Encourage default params to come last
+    //  https://eslint.org/docs/rules/default-param-last
+    'default-param-last': 0,
+    //  Prefer regex literals over new RegExp() constructor
+    //  https://eslint.org/docs/rules/prefer-regex-literals
+    'prefer-regex-literals': 0,
   },
 };

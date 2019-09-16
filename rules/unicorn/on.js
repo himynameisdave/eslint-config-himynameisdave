@@ -6,9 +6,7 @@ module.exports = {
     ecmaVersion: 2020,
     sourceType: 'module',
   },
-  plugins: [
-    'unicorn',
-  ],
+  plugins: ['unicorn'],
   rules: {
     'unicorn/catch-error-name': 'error',
     // 'unicorn/consistent-function-scoping': 'error',
@@ -49,5 +47,10 @@ module.exports = {
     'unicorn/prevent-abbreviations': 'error',
     'unicorn/regex-shorthand': 'error',
     'unicorn/throw-new-error': 'error',
+    'unicorn/consistent-function-scoping': 'error',
+    'unicorn/expiring-todo-comments': 'error',
+    'unicorn/no-nested-ternary': 'error',
+    'unicorn/prefer-dataset': 'error',
+    'unicorn/prefer-reflect-apply': 'error',
   },
 };

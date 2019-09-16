@@ -31,7 +31,9 @@ module.exports = {
       allowKeywords: true,
     }],
     // require the use of === and !==
-    eqeqeq: ['error', 'always', { 'null': 'ignore' }],
+    eqeqeq: ['error', 'always', {
+      'null': 'ignore',
+    }],
     // make sure for-in loops have an if statement
     'guard-for-in': 'error',
     // disallow the use of alert, confirm, and prompt
@@ -72,7 +74,9 @@ module.exports = {
     'no-floating-decimal': 'error',
     // disallow reassignments of native objects or read-only globals
     // http://eslint.org/docs/rules/no-global-assign
-    'no-global-assign': ['error', { exceptions: [] }],
+    'no-global-assign': ['error', {
+      exceptions: [],
+    }],
     // deprecated in favor of no-global-assign
     'no-native-reassign': 'off',
     // disallow the type conversions with shorter notations
@@ -93,7 +97,8 @@ module.exports = {
     'no-iterator': 'error',
     // disallow use of labels for anything other then loops and switches
     'no-labels': ['error', {
-      allowLoop: false, allowSwitch: false,
+      allowLoop: false,
+      allowSwitch: false,
     }],
     // disallow unnecessary nested blocks
     'no-lone-blocks': 'error',
@@ -218,5 +223,11 @@ module.exports = {
     //  Encourage use of named capture groups in regular expressions
     //  https://eslint.org/docs/rules/prefer-named-capture-group
     'prefer-named-capture-group': 'error',
+    //  Encourage default params to come last
+    //  https://eslint.org/docs/rules/default-param-last
+    'default-param-last': 'error',
+    //  Prefer regex literals over new RegExp() constructor
+    //  https://eslint.org/docs/rules/prefer-regex-literals
+    'prefer-regex-literals': 'error',
   },
 };
