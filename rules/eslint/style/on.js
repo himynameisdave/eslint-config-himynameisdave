@@ -14,7 +14,9 @@ module.exports = {
     'block-spacing': ['error', 'always'],
     // enforce one true brace style
     // https://eslint.org/docs/rules/brace-style
-    'brace-style': ['error', '1tbs', { allowSingleLine: true }],
+    'brace-style': ['error', '1tbs', {
+      allowSingleLine: true,
+    }],
     // require camel case names
     camelcase: 'off',
     // enforce or disallow capitalization of the first letter of a comment
@@ -67,7 +69,9 @@ module.exports = {
     'func-names': 'off',
     // enforces use of function declarations or expressions
     // https://eslint.org/docs/rules/func-style
-    'func-style': ['error', 'expression', { allowArrowFunctions: true }],
+    'func-style': ['error', 'expression', {
+      allowArrowFunctions: true,
+    }],
     // enforce consistent line breaks inside function parentheses
     // https://eslint.org/docs/rules/function-paren-newline
     'function-paren-newline': 'off',
@@ -158,7 +162,9 @@ module.exports = {
     'linebreak-style': ['error', 'unix'],
     // require or disallow an empty line between class members
     // https://eslint.org/docs/rules/lines-between-class-members
-    'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: false }],
+    'lines-between-class-members': ['error', 'always', {
+      exceptAfterSingleLine: false,
+    }],
     // enforces empty lines around comments
     'lines-around-comment': 'off',
     // require or disallow newlines around directives
@@ -183,7 +189,9 @@ module.exports = {
     'max-statements': ['off', 12],
     // specify the maximum number of statements allowed per line
     // https://eslint.org/docs/rules/max-statements-per-line
-    'max-statements-per-line': ['off', { max: 1 }],
+    'max-statements-per-line': ['off', {
+      max: 1,
+    }],
     // enforce a particular style for multiline comments
     // https://eslint.org/docs/rules/multiline-comment-style
     'multiline-comment-style': ['off', 'starred-block'],
@@ -204,7 +212,9 @@ module.exports = {
     // require newline before return statement
     'newline-before-return': 'off',
     // enforce newline after each call when chaining the calls
-    'newline-per-chained-call': ['error', { ignoreChainWithDepth: 4 }],
+    'newline-per-chained-call': ['error', {
+      ignoreChainWithDepth: 4,
+    }],
     // disallow use of the Array constructor
     'no-array-constructor': 'error',
     // disallow use of bitwise operators
@@ -235,7 +245,7 @@ module.exports = {
     // https://eslint.org/docs/rules/no-negated-condition
     'no-negated-condition': 'off',
     // disallow nested ternary expressions
-    'no-nested-ternary': 'error',
+    'no-nested-ternary': 'off', // Using unicorn/no-nested-ternary instead: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-nested-ternary.md
     // disallow use of the Object constructor
     'no-new-object': 'error',
     // disallow use of unary operators, ++ and --
@@ -290,7 +300,9 @@ module.exports = {
     // disallow the use of Boolean literals in conditional expressions
     // also, prefer `a || b` over `a ? a : b`
     // https://eslint.org/docs/rules/no-unneeded-ternary
-    'no-unneeded-ternary': ['error', { defaultAssignment: false }],
+    'no-unneeded-ternary': ['error', {
+      defaultAssignment: false,
+    }],
     // disallow whitespace before properties
     // https://eslint.org/docs/rules/no-whitespace-before-property
     'no-whitespace-before-property': 'error',
@@ -305,20 +317,30 @@ module.exports = {
     // https://eslint.org/docs/rules/object-curly-newline
     'object-curly-newline': ['error', {
       ObjectExpression: {
-        minProperties: 2,
+        minProperties: 1,
         multiline: true,
-        consistent: true,
+        consistent: false,
       },
       ObjectPattern: {
         minProperties: 2,
         multiline: true,
-        consistent: true,
+        consistent: false,
+      },
+      ImportDeclaration: {
+        minProperties: 3,
+        multiline: true,
+        consistent: false,
+      },
+      ExportDeclaration: {
+        minProperties: 3,
+        multiline: true,
+        consistent: false,
       },
     }],
     // enforce "same line" or "multiple line" on object properties.
     // https://eslint.org/docs/rules/object-property-newline
     'object-property-newline': ['error', {
-      allowAllPropertiesOnSameLine: true,
+      allowAllPropertiesOnSameLine: false,
     }],
     // allow just one var statement per function
     'one-var': 'off',

@@ -5,7 +5,7 @@ module.exports = {
   rules: {
     // require braces in arrow function body
     // https://eslint.org/docs/rules/arrow-body-style
-    'arrow-body-style': 'off',
+    'arrow-body-style': ['error', 'as-needed'],
     // require parens in arrow function arguments
     // https://eslint.org/docs/rules/arrow-parens
     'arrow-parens': ['error', 'always'],
@@ -58,7 +58,9 @@ module.exports = {
     'no-var': 'error',
     // require method and property shorthand syntax for object literals
     // https://eslint.org/docs/rules/object-shorthand
-    'object-shorthand': ['error', 'always', { avoidQuotes: true }],
+    'object-shorthand': ['error', 'always', {
+      avoidQuotes: true,
+    }],
     // suggest using arrow functions as callbacks
     'prefer-arrow-callback': ['error', {
       allowNamedFunctions: false,

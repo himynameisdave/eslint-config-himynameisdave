@@ -108,7 +108,9 @@ module.exports = {
     'import/no-restricted-paths': 'off',
     // Forbid modules to have too many dependencies
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/max-dependencies.md
-    'import/max-dependencies': ['warn', { max: 12 }],
+    'import/max-dependencies': ['warn', {
+      max: 12,
+    }],
     // Forbid import of modules using absolute paths
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-absolute-path.md
     'import/no-absolute-path': 'error',

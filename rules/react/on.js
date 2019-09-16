@@ -183,7 +183,9 @@ module.exports = {
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md
     'react/void-dom-elements-no-children': 'error',
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/boolean-prop-naming.md
-    'react/boolean-prop-naming': ['warn', { message: 'Please name your boolean prop ({{propName}}) to start with "is" or "has", like "isBruceLoose"' }],
+    'react/boolean-prop-naming': ['warn', {
+      message: 'Please name your boolean prop ({{propName}}) to start with "is" or "has", like "isBruceLoose"',
+    }],
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/button-has-type.md
     'react/button-has-type': 'warn',
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/default-props-match-prop-types.md
