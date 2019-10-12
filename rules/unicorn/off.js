@@ -44,5 +44,6 @@ module.exports = {
     'unicorn/no-nested-ternary': 'off',
     'unicorn/prefer-dataset': 'off',
     'unicorn/prefer-reflect-apply': 'off',
+    'unicorn/prefer-string-slice': 'off',
   },
 };

@@ -173,5 +173,7 @@ module.export = {
     //  Enforces where React component static properties should be positioned.
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/static-property-placement.md
     'react/static-property-placement': 0,
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-useless-fragment.md
+    'react/jsx-no-useless-fragment': 0,
   },
 };

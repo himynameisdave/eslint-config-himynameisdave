@@ -52,5 +52,7 @@ module.exports = {
     'unicorn/no-nested-ternary': 'error',
     'unicorn/prefer-dataset': 'error',
     'unicorn/prefer-reflect-apply': 'error',
+    //  https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/prefer-string-slice.md
+    'unicorn/prefer-string-slice': 'error',
   },
 };
