@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-himynameisdave",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "🗒️ An opinionated ESLint config by and for himynameisdave",
   "main": "configurations/all-dressed.js",
   "scripts": {
