@@ -46,7 +46,7 @@ module.exports = {
     'jest/no-test-return-statement': 0,
     'jest/prefer-strict-equal': 0,
     'jest/no-alias-methods': 0,
-    'jest/require-tothrow-message': 0,
+    'jest/require-to-throw-message': 0,
     'jest/prefer-to-contain': 0,
     'jest/no-test-callback': 0,
     'jest/prefer-spy-on': 0,
@@ -84,5 +84,7 @@ module.exports = {
     //  Require top-level describe block
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/require-top-level-describe.md
     'jest/require-top-level-describe': 0,
+    'jest/prefer-hooks-on-top': 0,
+    'jest/valid-title': 0,
   },
 };

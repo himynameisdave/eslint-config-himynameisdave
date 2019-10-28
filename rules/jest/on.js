@@ -67,7 +67,7 @@ module.exports = {
     'jest/no-alias-methods': 'error',
     //  .toThrow should have an argument/message
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/require-tothrow-message.md
-    'jest/require-tothrow-message': 'error',
+    'jest/require-to-throw-message': 'error',
     //  Use .toContain when checking Array.includes
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-to-contain.md
     'jest/prefer-to-contain': 'error',
@@ -115,5 +115,11 @@ module.exports = {
     //  Require top-level describe block
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/require-top-level-describe.md
     'jest/require-top-level-describe': 'error',
+    //  Put all hooks at the top-most level
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-hooks-on-top.md
+    'jest/prefer-hooks-on-top': 'error',
+    //  Checks that the title of Jest blocks are valid by ensuring that titles are valid
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/valid-title.md
+    'jest/valid-title': 'error',
   },
 };
