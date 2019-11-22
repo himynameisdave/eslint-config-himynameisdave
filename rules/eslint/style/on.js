@@ -430,5 +430,8 @@ module.exports = {
     'unicode-bom': ['error', 'never'],
     // require regex literals to be wrapped in parentheses
     'wrap-regex': 'off',
+    //  Prefer ** over Math.pow
+    //  https://github.com/eslint/eslint/blob/master/docs/rules/prefer-exponentiation-operator.md
+    'prefer-exponentiation-operator': 'error',
   },
 };

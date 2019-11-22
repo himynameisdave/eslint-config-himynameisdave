@@ -63,5 +63,11 @@ module.exports = {
     //  Don't reassign imports
     //  https://eslint.org/docs/rules/no-import-assign
     'no-import-assign': 0,
+    //  Don't duplicate conditions in if/else blocks
+    //  https://github.com/eslint/eslint/blob/master/docs/rules/no-dupe-else-if.md
+    'no-dupe-else-if': 0,
+    //  Don't return from setters
+    //  https://github.com/eslint/eslint/blob/master/docs/rules/no-setter-return.md
+    'no-setter-return': 0,
   },
 };

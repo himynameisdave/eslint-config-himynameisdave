@@ -229,5 +229,11 @@ module.exports = {
     //  Prefer regex literals over new RegExp() constructor
     //  https://eslint.org/docs/rules/prefer-regex-literals
     'prefer-regex-literals': 'error',
+    //  Ensure getters and setters appear together
+    //  https://github.com/eslint/eslint/blob/master/docs/rules/grouped-accessor-pairs.md
+    'grouped-accessor-pairs': 'error',
+    //  Don't return in constructors
+    //  https://github.com/eslint/eslint/blob/master/docs/rules/no-constructor-return.md
+    'no-constructor-return': 'error',
   },
 };

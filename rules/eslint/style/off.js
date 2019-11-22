@@ -152,5 +152,7 @@ module.exports = {
     'spaced-comment': 0,
     // require regex literals to be wrapped in parentheses
     'wrap-regex': 0,
+    //  Prefer ** over Math.pow
+    'prefer-exponentiation-operator': 0,
   },
 };
