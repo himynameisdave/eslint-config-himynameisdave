@@ -175,5 +175,11 @@ module.export = {
     'react/static-property-placement': 0,
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-useless-fragment.md
     'react/jsx-no-useless-fragment': 0,
+    //  This option enforces a specific function type for function components.
+    'react/function-component-definition': 0,
+    //  Disallow `javascript:` URLs
+    'react/jsx-no-script-url': 0,
+    //  Disallow adjacent inline elements, needs whitespace
+    'react/no-adjacent-inline-elements': 0,
   },
 };
