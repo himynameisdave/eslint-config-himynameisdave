@@ -90,9 +90,9 @@ module.exports = {
     // Enforce event handler naming conventions in JSX
     'react/jsx-handler-names': 'warn',
     // Validate JSX indentation
-    'react/jsx-indent': ['error', 4],
+    'react/jsx-indent': ['error', 2],
     // Validate props indentation in JSX
-    'react/jsx-indent-props': ['error', 4],
+    'react/jsx-indent-props': ['error', 2],
     // Validate JSX has key prop when in array or iterator
     'react/jsx-key': 'error',
     // Limit maximum of props on a single line in JSX

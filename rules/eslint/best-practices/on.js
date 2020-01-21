@@ -51,8 +51,6 @@ module.exports = {
     'no-empty-function': ['error', {
       allow: [
         'arrowFunctions',
-        'functions',
-        'methods',
       ],
     }],
     // disallow use of empty destructuring patterns
