@@ -23,9 +23,7 @@ module.exports = {
   rules: {
     // ensure imports point to files/modules that can be resolved
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
-    'import/no-unresolved': ['error', {
-      ignore: ['base-components'],
-    }],
+    'import/no-unresolved': 'error',
     // ensure named imports coupled with named exports
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md#when-not-to-use-it
     'import/named': 'error',
