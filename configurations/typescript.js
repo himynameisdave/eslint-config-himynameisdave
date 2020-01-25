@@ -4,6 +4,6 @@ module.exports = {
     '@typescript-eslint',
   ],
   'extends': [
-    '../rules/typescript/on',
+    '../rules/typescript/on.js',
   ],
 };
