@@ -213,6 +213,57 @@ yarn add -D eslint-formatter-git-log
 npm install -D eslint-formatter-git-log
 ```
 
+### Typescript
+
+You'll need to modify some things in order to get this ESLint config to work with Typescript. Start by installing the TS [parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser), [plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin) and [resolver](https://www.npmjs.com/package/eslint-import-resolver-typescript):
+
+```
+yarn add -D @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-import-resolver-typescript
+
+npm install -D @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-import-resolver-typescript
+```
+
+Next, modify the command you're using to run `eslint` to include `.ts` extensions [with the `--ext` flag](https://eslint.org/docs/user-guide/configuring#specifying-file-extensions-to-lint) (usually in a `package.json`'s scripts):
+
+```diff
+"scripts": {
++    "lint": "eslint --ext .js,.ts"
+-    "lint": "eslint"
+},
+```
+
+Next you need to modify your `.eslintrc.js` file. Add the Typescript configuration in your (after whatever [configuration](Configurations) you want to use):
+
+```diff
+extends: [
+    'himynameisdave/configurations/all-dressed'
++   'himynameisdave/configurations/typescript'
+]
+```
+
+Include the following `parserOptions` and `settings` for getting the `@typescript` and `eslint-plugin-import` stuff working together properly:
+
+```diff
++"parserOptions": {
++    "sourceType": "module",
++    "tsconfigRootDir": __dirname,
++    "project": "./tsconfig.json"
++},
++"settings": {
++    "import/parsers": {
++        "@typescript-eslint/parser": [".ts"]
++    },
++    "import/extensions": [".ts"],
++    "import/resolver": {
++        "typescript": {
++            "alwaysTryTypes": true 
++        },
++    },
++},
+```
+
+You may need to tweak things in your `tsconfig.json` (or other files) in order to get everything working properly.
+
 ### Inspiration
 
 Inspired very heavily by [`eslint-config-7geese`](https://github.com/7Geese/eslint-config-7geese), which was in turn inspired by [`eslint-config-walmart`](https://github.com/walmartlabs/eslint-config-walmart), [`eslint-config-formidable`](https://github.com/FormidableLabs/eslint-config-formidable), and many others.
