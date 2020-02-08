@@ -34,7 +34,7 @@ module.exports = {
     'unicorn/number-literal-case': 'error',
     'unicorn/prefer-add-event-listener': 'error',
     'unicorn/prefer-event-key': 'error',
-    'unicorn/prefer-exponentiation-operator': 'error',
+    'unicorn/prefer-exponentiation-operator': 'off', // Turned on in eslint/style rules
     'unicorn/prefer-flat-map': 'error',
     'unicorn/prefer-includes': 'error',
     'unicorn/prefer-node-append': 'error',
@@ -54,5 +54,9 @@ module.exports = {
     'unicorn/prefer-reflect-apply': 'error',
     //  https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/prefer-string-slice.md
     'unicorn/prefer-string-slice': 'error',
+    'unicorn/prefer-modern-dom-apis': 'error',
+    'unicorn/prefer-negative-index': 'error',
+    'unicorn/prefer-trim-start-end': 'error',
+    'unicorn/prefer-replace-all': 'error',
   },
 };

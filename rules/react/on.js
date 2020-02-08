@@ -90,9 +90,9 @@ module.exports = {
     // Enforce event handler naming conventions in JSX
     'react/jsx-handler-names': 'warn',
     // Validate JSX indentation
-    'react/jsx-indent': ['error', 4],
+    'react/jsx-indent': ['error', 2],
     // Validate props indentation in JSX
-    'react/jsx-indent-props': ['error', 4],
+    'react/jsx-indent-props': ['error', 2],
     // Validate JSX has key prop when in array or iterator
     'react/jsx-key': 'error',
     // Limit maximum of props on a single line in JSX
@@ -221,5 +221,17 @@ module.exports = {
     'react/static-property-placement': ['error', 'static public field'],
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-useless-fragment.md
     'react/jsx-no-useless-fragment': 'error',
+    //  This option enforces a specific function type for function components.
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/function-component-definition.md
+    'react/function-component-definition': ['error', {
+      namedComponents: 'arrow-function',
+      unnamedComponent: 'arrow-function',
+    }],
+    //  Disallow `javascript:` URLs
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-script-url.md
+    'react/jsx-no-script-url': 'error',
+    //  Disallow adjacent inline elements, needs whitespace
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-adjacent-inline-elements.md
+    'react/no-adjacent-inline-elements': 'error',
   },
 };

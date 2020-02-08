@@ -45,5 +45,9 @@ module.exports = {
     'unicorn/prefer-dataset': 'off',
     'unicorn/prefer-reflect-apply': 'off',
     'unicorn/prefer-string-slice': 'off',
+    'unicorn/prefer-modern-dom-apis': 'off',
+    'unicorn/prefer-negative-index': 'off',
+    'unicorn/prefer-trim-start-end': 'off',
+    'unicorn/prefer-replace-all': 'off',
   },
 };
