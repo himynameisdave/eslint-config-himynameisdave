@@ -57,5 +57,6 @@ module.exports = {
     'unicorn/prefer-modern-dom-apis': 'error',
     'unicorn/prefer-negative-index': 'error',
     'unicorn/prefer-trim-start-end': 'error',
+    'unicorn/prefer-replace-all': 'error',
   },
 };
