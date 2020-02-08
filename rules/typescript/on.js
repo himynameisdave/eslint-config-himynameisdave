@@ -29,7 +29,9 @@ module.exports = {
     '@typescript-eslint/no-floating-promises': 'error',
     '@typescript-eslint/no-for-in-array': 'error',
     '@typescript-eslint/no-implied-eval': 'error',
-    '@typescript-eslint/no-inferrable-types': 'error',
+    '@typescript-eslint/no-inferrable-types': ['error', {
+      ignoreParameters: true,
+    }],
     '@typescript-eslint/no-misused-new': 'error',
     '@typescript-eslint/no-misused-promises': 'error',
     '@typescript-eslint/no-namespace': 'error',
@@ -39,7 +41,10 @@ module.exports = {
     '@typescript-eslint/no-require-imports': 'error',
     '@typescript-eslint/no-this-alias': 'error',
     '@typescript-eslint/no-throw-literal': 'error',
-    '@typescript-eslint/no-type-alias': 'error',
+    '@typescript-eslint/no-type-alias': ['error', {
+      allowAliases: 'in-unions-and-intersections',
+      allowCallbacks: 'always',
+    }],
     '@typescript-eslint/no-unnecessary-condition': 'error',
     '@typescript-eslint/no-unnecessary-qualifier': 'error',
     '@typescript-eslint/no-unnecessary-type-arguments': 'error',

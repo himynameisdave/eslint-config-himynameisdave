@@ -34,7 +34,7 @@ module.exports = {
     'unicorn/number-literal-case': 'error',
     'unicorn/prefer-add-event-listener': 'error',
     'unicorn/prefer-event-key': 'error',
-    'unicorn/prefer-exponentiation-operator': 'error',
+    'unicorn/prefer-exponentiation-operator': 'off', // Turned on in eslint/style rules
     'unicorn/prefer-flat-map': 'error',
     'unicorn/prefer-includes': 'error',
     'unicorn/prefer-node-append': 'error',
