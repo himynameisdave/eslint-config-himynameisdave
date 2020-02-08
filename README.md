@@ -8,7 +8,7 @@
             <img src="https://api.travis-ci.org/himynameisdave/eslint-config-himynameisdave.svg?branch=master" alt="Travis Badge" />
         </a>
         <a href="https://www.npmjs.com/package/eslint-config-himynameisdave">
-            <img alt="npm" src="https://img.shields.io/npm/v/browser-event-utils?color=%2300aacc&label=version&logo=browser-event-utils">
+            <img alt="npm" src="https://img.shields.io/npm/v/eslint-config-himynameisdave?color=%2300aacc&label=version&logo=eslint-config-himynameisdave">
         </a>
         <a href="https://www.npmjs.com/browse/depended/eslint-config-himynameisdave">
             <img alt="Dependents (via libraries.io)" src="https://img.shields.io/librariesio/dependents/npm/eslint-config-himynameisdave?label=used%20by">
