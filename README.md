@@ -8,27 +8,61 @@
             <img src="https://api.travis-ci.org/himynameisdave/eslint-config-himynameisdave.svg?branch=master" alt="Travis Badge" />
         </a>
         <a href="https://www.npmjs.com/package/eslint-config-himynameisdave">
-            <img src="https://img.shields.io/npm/dt/eslint-config-himynameisdave.svg" alt="Downloads">
+            <img alt="npm" src="https://img.shields.io/npm/v/browser-event-utils?color=%2300aacc&label=version&logo=browser-event-utils">
+        </a>
+        <a href="https://www.npmjs.com/browse/depended/eslint-config-himynameisdave">
+            <img alt="Dependents (via libraries.io)" src="https://img.shields.io/librariesio/dependents/npm/eslint-config-himynameisdave?label=used%20by">
         </a>
     </div>
 </div>
 
 ---
 
-You will also need to install a [parser](#Parser), additional plugins, and (optionally) a formatter. See more below.
+
+A personally curated ESLint configuration, for all of my personal projects. This helps save me time by reducing the setup time for new projects, and enabling a consistent coding style across my projects. It's secondary purpose is to show how fun it is to create and maintain your own ESLint config, for you or your team's projects.
+
+This config aims to be composable; that is there are multiple configurations which target different environments/setups (such as TypeScript) which can be composed together to achive a linting setup that is more project-aware.
+
+
+### Contents
+
+- [Installation](#Installation)
+- [Configurations](#Configurations)
+  - [all-dressed](#all-dressed)
+  - [babel-node](#babel-node)
+  - [node](#node)
+  - [browser](#browser)
+  - [off](#off)
+- [Parser](#Parser)
+- [Formatter](#Formatter)
+- [Typescript](#Typescript)
+- [Inspiration](#Inspiration)
+- [Neat ESLint Stuff](#Some-neat-ESLint-stuff)
+
+### Installation
+
+Install this config with one of the following commands:
+
+```bash
+yarn add -D eslint eslint-config-himynameisdave
+
+npm install -D eslint eslint-config-himynameisdave
+
+```
+
+You will need to install more plugins, a [parser](#Parser), and perhaps (optionally) a formatter. Read on for more about how to get set up.
+
 
 ### Configurations
 
-This package exports a few different configurations which you can use in your project. Each configuration requires you to install various plugins.
-
+This package exports a few different configurations which you can use in your project. Each configuration requires you to install various plugins. These plugins are what actually provide the rules which are to be run on your codebase.
 
 #### all-dressed
 
 The [All Dressed](https://img.buzzfeed.com/buzzfeed-static/static/2015-09/15/14/enhanced/webdr06/anigif_original-grid-image-7412-1442342581-9.gif) config has everything on. Use with caution. Install all dependencies like so:
 
-**Yarn**
-
-```
+```bash
+# You could also use `npm install`
 yarn add -D \
     eslint \
     eslint-plugin-filenames \
@@ -39,57 +73,13 @@ yarn add -D \
     eslint-plugin-react \
     eslint-plugin-react-hooks
     eslint-plugin-unicorn
-```
-
-**NPM**
-
-```js
-extends: [
-    'himynameisdave/configurations/all-dressed'
-]
-```
-
-```
-npm install -D eslint eslint-config-himynameisdave
 ```
 
 Add this to your `.eslintrc` config file:
 
-```
-{
-    "extends": ["himynameisdave"]
-}
-```
-
-You will also need to install a [parser](#Parser), additional plugins, and (optionally) a formatter. See more below.
-
-### Configurations
-
-This package exports a few different configurations which you can use in your project. Each configuration requires you to install various plugins.
-
-
-#### all-dressed
-
-The [All Dressed](https://img.buzzfeed.com/buzzfeed-static/static/2015-09/15/14/enhanced/webdr06/anigif_original-grid-image-7412-1442342581-9.gif) config has everything on. Use with caution. Install all dependencies like so:
-
-```
-yarn add -D \
-    eslint \
-    eslint-plugin-filenames \
-    eslint-plugin-import \
-    eslint-plugin-jest \
-    eslint-plugin-jsx-a11y \
-    eslint-plugin-promise \
-    eslint-plugin-react \
-    eslint-plugin-react-hooks
-    eslint-plugin-unicorn
-```
-
-Add this to your `.eslintrc` config:
-
 ```js
 extends: [
-    'himynameisdave/configurations/all-dressed/on'
+    'himynameisdave/configurations/all-dressed'
 ]
 ```
 
@@ -172,7 +162,15 @@ extends: [
 ]
 ```
 
-Pretty goofy though, not sure who would use this.
+Pretty goofy though, not sure who would use this. You can instead just extend entire plugins/rulesets like so:
+
+```js
+extends: [
+    'himynameisdave/configurations/browser/on',
+    'himynameisdave/rules/react/off'
+    'himynameisdave/rules/react-hooks/off'
+]
+```
 
 ### Parser
 
