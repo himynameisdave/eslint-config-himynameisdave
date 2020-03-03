@@ -101,7 +101,7 @@ Add this to your `.eslintrc` config:
 
 ```js
 extends: [
-    'himynameisdave/configurations/babel-node/on'
+    'himynameisdave/configurations/babel-node'
 ]
 ```
 
@@ -123,7 +123,7 @@ Add this to your `.eslintrc` config:
 
 ```js
 extends: [
-    'himynameisdave/configurations/node/on'
+    'himynameisdave/configurations/node'
 ]
 ```
 
@@ -148,7 +148,7 @@ Add this to your `.eslintrc` config:
 
 ```js
 extends: [
-    'himynameisdave/configurations/browser/on'
+    'himynameisdave/configurations/browser'
 ]
 ```
 
@@ -158,7 +158,7 @@ Don't like playing by the rules? You can turn it all off with `himynameisdave/co
 
 ```js
 extends: [
-    'himynameisdave/configurations/off/on'
+    'himynameisdave/configurations/off'
 ]
 ```
 
@@ -166,7 +166,7 @@ Pretty goofy though, not sure who would use this. You can instead just extend en
 
 ```js
 extends: [
-    'himynameisdave/configurations/browser/on',
+    'himynameisdave/configurations/browser',
     'himynameisdave/rules/react/off'
     'himynameisdave/rules/react-hooks/off'
 ]
