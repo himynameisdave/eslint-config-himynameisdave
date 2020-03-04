@@ -239,8 +239,6 @@ extends: [
 ]
 ```
 
-Note that the `all-dressed` configuration already includes typescript by default.
-
 Include the following `parserOptions` and `settings` for getting the `@typescript` and `eslint-plugin-import` stuff working together properly:
 
 ```diff

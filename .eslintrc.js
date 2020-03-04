@@ -21,6 +21,6 @@ module.exports = {
     "./rules/react/off.js",
     "./rules/react-hooks/off.js",
     "./rules/unicorn/on.js",
-    "./rules/typescript/on.js",
+    "./rules/typescript/off.js",
   ]
 };

@@ -167,5 +167,19 @@ module.exports = {
       named: 'never',
       asyncArrow: 'always',
     }],
+    '@typescript-eslint/ban-ts-comment': 'error',
+    'comma-spacing': 'off', // overridden by below: https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/comma-spacing.md
+    '@typescript-eslint/comma-spacing': ['error', {
+      before: false,
+      after: true,
+    }],
+    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+    '@typescript-eslint/no-base-to-string': 'error',
+    'no-dupe-class-members': 'off',
+    '@typescript-eslint/no-dupe-class-members': 'error',
+    '@typescript-eslint/no-unnecessary-boolean-literal-compare': 'error',
+    '@typescript-eslint/prefer-as-const': 'error',
+    '@typescript-eslint/prefer-readonly-parameter-types': 'error',
+    '@typescript-eslint/switch-exhaustiveness-check': 'error',
   },
 };

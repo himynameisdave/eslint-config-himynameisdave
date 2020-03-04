@@ -30,7 +30,7 @@ module.exports = {
     '../rules/react/on.js',
     '../rules/react-hooks/on.js',
     '../rules/unicorn/on.js',
-    '../rules/typescript/on.js',
+    '../rules/typescript/off.js',
   ],
   rules: {},
 };
