@@ -234,10 +234,12 @@ Next you need to modify your `.eslintrc.js` file. Add the Typescript configurati
 
 ```diff
 extends: [
-    'himynameisdave/configurations/all-dressed'
-+   'himynameisdave/configurations/typescript'
+    'himynameisdave/configurations/babel-node',
++   'himynameisdave/configurations/typescript',
 ]
 ```
+
+Note that the `all-dressed` configuration already includes typescript by default.
 
 Include the following `parserOptions` and `settings` for getting the `@typescript` and `eslint-plugin-import` stuff working together properly:
 

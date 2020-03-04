@@ -21,8 +21,6 @@ module.exports = {
     "./rules/react/off.js",
     "./rules/react-hooks/off.js",
     "./rules/unicorn/on.js",
-  ],
-  rules: {
-    'unicorn/prevent-abbreviations': 'off'
-  }
+    "./rules/typescript/on.js",
+  ]
 };
