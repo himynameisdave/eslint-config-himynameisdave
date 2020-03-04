@@ -31,6 +31,7 @@ This config aims to be composable; that is there are multiple configurations whi
   - [all-dressed](#all-dressed)
   - [babel-node](#babel-node)
   - [node](#node)
+  - [jest](#jest)
   - [browser](#browser)
   - [off](#off)
 - [Parser](#Parser)
@@ -151,6 +152,10 @@ extends: [
     'himynameisdave/configurations/browser'
 ]
 ```
+
+#### jest
+
+If you are using Jest for testing, extend with the Jest config. Note that the `all-dressed` config turns this on by default.
 
 #### off
 

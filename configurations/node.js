@@ -21,14 +21,11 @@ module.exports = {
     '../rules/eslint/variables/on.js',
     '../rules/filenames/on.js',
     '../rules/import/on.js',
-    '../rules/jest/on.js',
-    '../rules/jsx-a11y/off.js',
     '../rules/promise/on.js',
-    '../rules/react/off.js',
-    '../rules/react-hooks/off.js',
     '../rules/unicorn/on.js',
   ],
   rules: {
     'unicorn/no-process-exit': 'off',
+    'no-console': 'warn',
   },
 };

@@ -23,7 +23,6 @@ module.exports = {
     '../rules/eslint/variables/on.js',
     '../rules/filenames/on.js',
     '../rules/import/on.js',
-    '../rules/jest/on.js',
     '../rules/jsx-a11y/on.js',
     '../rules/promise/on.js',
     '../rules/react/on.js',
