@@ -44,7 +44,13 @@ module.exports = {
     'unicorn/prefer-starts-ends-with': 'error',
     'unicorn/prefer-text-content': 'error',
     'unicorn/prefer-type-error': 'error',
-    'unicorn/prevent-abbreviations': 'error',
+    'unicorn/prevent-abbreviations': ['error', {
+      replacements: {
+        rej: {
+          reject: true,
+        },
+      },
+    }],
     'unicorn/regex-shorthand': 'error',
     'unicorn/throw-new-error': 'error',
     'unicorn/consistent-function-scoping': 'error',
