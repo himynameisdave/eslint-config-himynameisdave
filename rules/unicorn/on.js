@@ -51,7 +51,7 @@ module.exports = {
         },
       },
     }],
-    'unicorn/regex-shorthand': 'error',
+    'unicorn/better-regex': 'error',
     'unicorn/throw-new-error': 'error',
     'unicorn/consistent-function-scoping': 'error',
     'unicorn/expiring-todo-comments': 'error',
@@ -64,5 +64,6 @@ module.exports = {
     'unicorn/prefer-negative-index': 'error',
     'unicorn/prefer-trim-start-end': 'error',
     'unicorn/prefer-replace-all': 'error',
+    'unicorn/string-content': 'off',
   },
 };

@@ -37,7 +37,7 @@ module.exports = {
     'unicorn/prefer-text-content': 'off',
     'unicorn/prefer-type-error': 'off',
     'unicorn/prevent-abbreviations': 'off',
-    'unicorn/regex-shorthand': 'off',
+    'unicorn/better-regex': 'off',
     'unicorn/throw-new-error': 'off',
     'unicorn/consistent-function-scoping': 'off',
     'unicorn/expiring-todo-comments': 'off',
@@ -49,5 +49,6 @@ module.exports = {
     'unicorn/prefer-negative-index': 'off',
     'unicorn/prefer-trim-start-end': 'off',
     'unicorn/prefer-replace-all': 'off',
+    'unicorn/string-content': 'off',
   },
 };

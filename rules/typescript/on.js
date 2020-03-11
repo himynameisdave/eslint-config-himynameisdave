@@ -72,6 +72,9 @@ module.exports = {
     '@typescript-eslint/typedef': 'error',
     '@typescript-eslint/unbound-method': 'error',
     '@typescript-eslint/unified-signatures': 'error',
+    '@typescript-eslint/no-unsafe-call': 'error',
+    '@typescript-eslint/no-unsafe-member-access': 'error',
+    '@typescript-eslint/no-unsafe-return': 'error',
     /*
       Extension Rules
       https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
