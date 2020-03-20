@@ -8,7 +8,8 @@
     "lint:fix": "eslint ./ --fix",
     "find-rules": "eslint-find-rules --unused",
     "print-config": "eslint --print-config index.js > config-full.json",
-    "test": "npm outdated && npm run find-rules && npm run lint",
+    "test": "npm run find-rules && npm run lint",
+    "test:od": "npm outdated && npm run find-rules && npm run lint",
     "release": "np --no-yarn"
   },
   "devDependencies": {
