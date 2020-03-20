@@ -37,6 +37,7 @@ module.exports = {
     'unicorn/prefer-text-content': 'off',
     'unicorn/prefer-type-error': 'off',
     'unicorn/prevent-abbreviations': 'off',
+    'unicorn/regex-shorthand': 'off', //  Deprecated, renamed to better-regex
     'unicorn/better-regex': 'off',
     'unicorn/throw-new-error': 'off',
     'unicorn/consistent-function-scoping': 'off',

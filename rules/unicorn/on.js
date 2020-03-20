@@ -51,6 +51,7 @@ module.exports = {
         },
       },
     }],
+    'unicorn/regex-shorthand': 'off', //  Deprecated, renamed to better-regex
     'unicorn/better-regex': 'error',
     'unicorn/throw-new-error': 'error',
     'unicorn/consistent-function-scoping': 'error',
