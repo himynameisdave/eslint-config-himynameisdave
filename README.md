@@ -1,19 +1,19 @@
 <div align="center" margin="0 auto 20px">
-    <h1>eslint-config-himynameisdave</h1>
-    <p style="font-style: italic;">
-        📄 An opinionated ESLint config, by and for <a href="http://himynameisdave.com">himynameisdave</a>.
-    </p>
-    <div>
-        <a href='https://travis-ci.org/himynameisdave/eslint-config-himynameisdave'>
-            <img src="https://api.travis-ci.org/himynameisdave/eslint-config-himynameisdave.svg?branch=master" alt="Travis Badge" />
-        </a>
-        <a href="https://www.npmjs.com/package/eslint-config-himynameisdave">
-            <img alt="npm" src="https://img.shields.io/npm/v/eslint-config-himynameisdave?color=%2300aacc&label=version&logo=eslint-config-himynameisdave">
-        </a>
-        <a href="https://www.npmjs.com/browse/depended/eslint-config-himynameisdave">
-            <img alt="Dependents (via libraries.io)" src="https://img.shields.io/librariesio/dependents/npm/eslint-config-himynameisdave?label=used%20by">
-        </a>
-    </div>
+  <h1>eslint-config-himynameisdave</h1>
+  <p style="font-style: italic;">
+    📄 An opinionated ESLint config, by and for <a href="http://himynameisdave.com">himynameisdave</a>.
+  </p>
+  <div>
+    <a href='https://travis-ci.org/himynameisdave/eslint-config-himynameisdave'>
+      <img src="https://api.travis-ci.org/himynameisdave/eslint-config-himynameisdave.svg?branch=master" alt="Travis Badge" />
+    </a>
+    <a href="https://www.npmjs.com/package/eslint-config-himynameisdave">
+      <img alt="npm" src="https://img.shields.io/npm/v/eslint-config-himynameisdave?color=%2300aacc&label=version&logo=eslint-config-himynameisdave">
+    </a>
+    <a href="https://www.npmjs.com/browse/depended/eslint-config-himynameisdave">
+      <img alt="Dependents (via libraries.io)" src="https://img.shields.io/librariesio/dependents/npm/eslint-config-himynameisdave?label=used%20by">
+    </a>
+  </div>
 </div>
 
 ---
@@ -65,22 +65,24 @@ The [All Dressed](https://img.buzzfeed.com/buzzfeed-static/static/2015-09/15/14/
 ```bash
 # You could also use `npm install`
 yarn add -D \
-    eslint \
-    eslint-plugin-filenames \
-    eslint-plugin-import \
-    eslint-plugin-jest \
-    eslint-plugin-jsx-a11y \
-    eslint-plugin-promise \
-    eslint-plugin-react \
-    eslint-plugin-react-hooks
-    eslint-plugin-unicorn
+  eslint \
+  babel-eslint \
+  eslint-plugin-filenames \
+  eslint-plugin-import \
+  eslint-plugin-jest \
+  eslint-plugin-jsx-a11y \
+  eslint-plugin-promise \
+  eslint-plugin-react \
+  eslint-plugin-react-hooks
+  eslint-plugin-unicorn
+
 ```
 
 Add this to your `.eslintrc` config file:
 
 ```js
 extends: [
-    'himynameisdave/configurations/all-dressed'
+  'himynameisdave/configurations/all-dressed'
 ]
 ```
 
@@ -90,19 +92,21 @@ For Node environments where you're using Babel to transpile stuff.
 
 ```
 yarn add -D \
-    eslint \
-    eslint-plugin-filenames \
-    eslint-plugin-import \
-    eslint-plugin-jest \
-    eslint-plugin-promise \
-    eslint-plugin-unicorn
+  eslint \
+  babel-eslint \
+  eslint-plugin-filenames \
+  eslint-plugin-import \
+  eslint-plugin-jest \
+  eslint-plugin-promise \
+  eslint-plugin-unicorn
+
 ```
 
 Add this to your `.eslintrc` config:
 
 ```js
 extends: [
-    'himynameisdave/configurations/babel-node'
+  'himynameisdave/configurations/babel-node'
 ]
 ```
 
@@ -112,19 +116,21 @@ For classic Node environments where you're NOT using Babel to transpile stuff.
 
 ```
 yarn add -D \
-    eslint \
-    eslint-plugin-filenames \
-    eslint-plugin-import \
-    eslint-plugin-jest \
-    eslint-plugin-promise \
-    eslint-plugin-unicorn
+  eslint \
+  babel-eslint \
+  eslint-plugin-filenames \
+  eslint-plugin-import \
+  eslint-plugin-jest \
+  eslint-plugin-promise \
+  eslint-plugin-unicorn
+
 ```
 
 Add this to your `.eslintrc` config:
 
 ```js
 extends: [
-    'himynameisdave/configurations/node'
+  'himynameisdave/configurations/node'
 ]
 ```
 
@@ -134,22 +140,24 @@ Targets modern React browser environments.
 
 ```
 yarn add -D \
-    eslint \
-    eslint-plugin-filenames \
-    eslint-plugin-import \
-    eslint-plugin-jest \
-    eslint-plugin-jsx-a11y \
-    eslint-plugin-promise \
-    eslint-plugin-react \
-    eslint-plugin-react-hooks
-    eslint-plugin-unicorn
+  eslint \
+  babel-eslint \
+  eslint-plugin-filenames \
+  eslint-plugin-import \
+  eslint-plugin-jest \
+  eslint-plugin-jsx-a11y \
+  eslint-plugin-promise \
+  eslint-plugin-react \
+  eslint-plugin-react-hooks
+  eslint-plugin-unicorn
+
 ```
 
 Add this to your `.eslintrc` config:
 
 ```js
 extends: [
-    'himynameisdave/configurations/browser'
+  'himynameisdave/configurations/browser'
 ]
 ```
 
@@ -163,7 +171,7 @@ Don't like playing by the rules? You can turn it all off with `himynameisdave/co
 
 ```js
 extends: [
-    'himynameisdave/configurations/off'
+  'himynameisdave/configurations/off'
 ]
 ```
 
@@ -171,15 +179,15 @@ Pretty goofy though, not sure who would use this. You can instead just extend en
 
 ```js
 extends: [
-    'himynameisdave/configurations/browser',
-    'himynameisdave/rules/react/off'
-    'himynameisdave/rules/react-hooks/off'
+  'himynameisdave/configurations/browser',
+  'himynameisdave/rules/react/off'
+  'himynameisdave/rules/react-hooks/off'
 ]
 ```
 
 ### Parser
 
-You'll need to install the [`babel-eslint`](https://github.com/babel/babel-eslint) parser to use most of the configurations exported by this package (except [`node`](https://github.com/himynameisdave/eslint-config-himynameisdave/blob/master/configurations/node.js)).
+You'll need to install the [`babel-eslint`](https://github.com/babel/babel-eslint) parser to use most of the configurations exported by this package, unless you are using TypeScript (see [Typescript](#Typescript) documentation below).
 
 ```
 yarn add -D babel-eslint
@@ -230,8 +238,8 @@ Next, modify the command you're using to run `eslint` to include `.ts` extension
 
 ```diff
 "scripts": {
-+    "lint": "eslint --ext .js,.ts"
--    "lint": "eslint"
++  "lint": "eslint --ext .js,.ts"
+-  "lint": "eslint"
 },
 ```
 
@@ -239,30 +247,30 @@ Next you need to modify your `.eslintrc.js` file. Add the Typescript configurati
 
 ```diff
 extends: [
-    'himynameisdave/configurations/babel-node',
-+   'himynameisdave/configurations/typescript',
+  'himynameisdave/configurations/babel-node',
++ 'himynameisdave/configurations/typescript',
 ]
 ```
 
 Include the following `parserOptions` and `settings` for getting the `@typescript` and `eslint-plugin-import` stuff working together properly:
 
-```diff
-+"parserOptions": {
-+    "sourceType": "module",
-+    "tsconfigRootDir": __dirname,
-+    "project": "./tsconfig.json"
-+},
-+"settings": {
-+    "import/parsers": {
-+        "@typescript-eslint/parser": [".ts"]
-+    },
-+    "import/extensions": [".ts"],
-+    "import/resolver": {
-+        "typescript": {
-+            "alwaysTryTypes": true 
-+        },
-+    },
-+},
+```js
+parserOptions: {
+  sourceType: 'module',
+  tsconfigRootDir: __dirname,
+  project: './tsconfig.json'
+},
+settings: {
+  'import/parsers: {
+    '@typescript-eslint/parser': ['.ts']
+  },
+  'import/extensions': ['.ts'],
+  'import/resolver': {
+    typescript: {
+      'alwaysTryTypes': true,
+    },
+  },
+},
 ```
 
 You may need to tweak things in your `tsconfig.json` (or other files) in order to get everything working properly.
