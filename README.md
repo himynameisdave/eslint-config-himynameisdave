@@ -28,6 +28,7 @@ This config aims to be composable; that is there are multiple configurations whi
 
 - [Installation](#Installation)
 - [Configurations](#Configurations)
+  - [core](#core)
   - [all-dressed](#all-dressed)
   - [babel-node](#babel-node)
   - [node](#node)
@@ -57,6 +58,19 @@ You will need to install more plugins, a [parser](#Parser), and perhaps (optiona
 ### Configurations
 
 This package exports a few different configurations which you can use in your project. Each configuration requires you to install various plugins. These plugins are what actually provide the rules which are to be run on your codebase.
+
+#### core
+
+This is a sort of base configuration, which only turns on rules exposed by the ESLint package itself. Therefore, no other plugins or parsers are needed to use this configuration.
+
+This is a useful jumping off point if you want to pick specific plugins and rulesets to extend from. For example, maybe you just want core + the `filenames` plugin:
+
+```js
+extends: [
+  'himynameisdave/configurations/core',
+  'himynameisdave/rules/filenames/on'
+]
+```
 
 #### all-dressed
 
