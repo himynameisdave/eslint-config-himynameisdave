@@ -209,7 +209,7 @@ module.exports = {
     'react/jsx-curly-newline': 'off',
     //  Disallow JSX props spreading
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
-    'react/jsx-props-no-spreading': 'warn',
+    'react/jsx-props-no-spreading': 'off',
     //  For Flow types
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-read-only-props.md
     'react/prefer-read-only-props': 'off',
