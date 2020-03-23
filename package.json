@@ -65,6 +65,9 @@
     "email": "d@velunny.com",
     "url": "https://twitter.com/dave_lunny"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "license": "MIT",
   "homepage": "https://github.com/himynameisdave/eslint-config-himynameisdave#readme",
   "repository": {
