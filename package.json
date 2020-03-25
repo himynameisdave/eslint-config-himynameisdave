@@ -28,7 +28,7 @@
     "eslint-plugin-react-hooks": "^2.5.1",
     "eslint-plugin-unicorn": "^17.2.0",
     "husky": "^4.2.3",
-    "lint-staged": "^10.0.8",
+    "lint-staged": "^10.0.9",
     "np": "^6.2.0",
     "typescript": "^3.8.3"
   },
@@ -64,9 +64,6 @@
     "name": "Dave Lunny",
     "email": "d@velunny.com",
     "url": "https://twitter.com/dave_lunny"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   },
   "license": "MIT",
   "homepage": "https://github.com/himynameisdave/eslint-config-himynameisdave#readme",
