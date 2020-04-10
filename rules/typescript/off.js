@@ -65,6 +65,7 @@ module.exports = {
     '@typescript-eslint/no-unsafe-member-access': 'off',
     '@typescript-eslint/no-unsafe-return': 'off',
     '@typescript-eslint/class-literal-property-style': 'off',
+    '@typescript-eslint/method-signature-style': 'off',
     /*
       Extension Rules
       https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules

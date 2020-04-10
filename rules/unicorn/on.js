@@ -66,5 +66,7 @@ module.exports = {
     'unicorn/prefer-trim-start-end': 'error',
     'unicorn/prefer-replace-all': 'error',
     'unicorn/string-content': 'off',
+    'unicorn/prefer-number-properties': 'error',
+    'unicorn/prefer-set-has': 'error',
   },
 };

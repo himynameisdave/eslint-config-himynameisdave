@@ -51,5 +51,7 @@ module.exports = {
     'unicorn/prefer-trim-start-end': 'off',
     'unicorn/prefer-replace-all': 'off',
     'unicorn/string-content': 'off',
+    'unicorn/prefer-number-properties': 'off',
+    'unicorn/prefer-set-has': 'off',
   },
 };
