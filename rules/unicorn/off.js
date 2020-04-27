@@ -53,5 +53,6 @@ module.exports = {
     'unicorn/string-content': 'off',
     'unicorn/prefer-number-properties': 'off',
     'unicorn/prefer-set-has': 'off',
+    'unicorn/no-null': 'off',
   },
 };

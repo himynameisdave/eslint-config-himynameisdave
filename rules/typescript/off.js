@@ -66,6 +66,10 @@ module.exports = {
     '@typescript-eslint/no-unsafe-return': 'off',
     '@typescript-eslint/class-literal-property-style': 'off',
     '@typescript-eslint/method-signature-style': 'off',
+    '@typescript-eslint/no-invalid-void-type': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    '@typescript-eslint/prefer-reduce-type-parameter': 'off',
+    '@typescript-eslint/prefer-ts-expect-error': 'off',
     /*
       Extension Rules
       https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
@@ -97,5 +101,8 @@ module.exports = {
     '@typescript-eslint/prefer-as-const': 'off',
     '@typescript-eslint/prefer-readonly-parameter-types': 'off',
     '@typescript-eslint/switch-exhaustiveness-check': 'off',
+    '@typescript-eslint/dot-notation': 'off',
+    '@typescript-eslint/init-declarations': 'off',
+    '@typescript-eslint/keyword-spacing': 'off',
   },
 };
