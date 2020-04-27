@@ -18,11 +18,9 @@
 
 ---
 
-
 A personally curated ESLint configuration, for all of my personal projects. This helps save me time by reducing the setup time for new projects, and enabling a consistent coding style across my projects. It's secondary purpose is to show how fun it is to create and maintain your own ESLint config, for you or your team's projects.
 
 This config aims to be composable; that is there are multiple configurations which target different environments/setups (such as TypeScript) which can be composed together to achive a linting setup that is more project-aware.
-
 
 ### Contents
 
@@ -38,6 +36,7 @@ This config aims to be composable; that is there are multiple configurations whi
 - [Parser](#Parser)
 - [Formatter](#Formatter)
 - [Typescript](#Typescript)
+- [Releases](#Releases)
 - [Inspiration](#Inspiration)
 - [Neat ESLint Stuff](#Some-neat-ESLint-stuff)
 
@@ -53,7 +52,6 @@ npm install -D eslint eslint-config-himynameisdave
 ```
 
 You will need to install more plugins, a [parser](#Parser), and perhaps (optionally) a formatter. Read on for more about how to get set up.
-
 
 ### Configurations
 
@@ -104,7 +102,7 @@ extends: [
 
 For Node environments where you're using Babel to transpile stuff.
 
-```
+```bash
 yarn add -D \
   eslint \
   babel-eslint \
@@ -128,7 +126,7 @@ extends: [
 
 For classic Node environments where you're NOT using Babel to transpile stuff.
 
-```
+```bash
 yarn add -D \
   eslint \
   babel-eslint \
@@ -152,7 +150,7 @@ extends: [
 
 Targets modern React browser environments.
 
-```
+```bash
 yarn add -D \
   eslint \
   babel-eslint \
@@ -203,7 +201,7 @@ extends: [
 
 You'll need to install the [`babel-eslint`](https://github.com/babel/babel-eslint) parser to use most of the configurations exported by this package, unless you are using TypeScript (see [Typescript](#Typescript) documentation below).
 
-```
+```bash
 yarn add -D babel-eslint
 
 npm install -D babel-eslint
@@ -225,14 +223,13 @@ What is `babel-eslint`?
 
 You just need to add the `--format` flag to your script which you're using, like perhaps in your `package.json`:
 
-```
+```json
 "lint": "eslint --format ./node_modules/eslint-config-himynameisdave/formatters/git-log.js"
 ```
 
 Optionally you could just [install and configure](https://github.com/JamieMason/eslint-formatter-git-log) it yourself:
 
-
-```
+```bash
 yarn add -D eslint-formatter-git-log
 
 npm install -D eslint-formatter-git-log
@@ -242,7 +239,7 @@ npm install -D eslint-formatter-git-log
 
 You'll need to modify some things in order to get this ESLint config to work with Typescript. Start by installing the TS [parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser), [plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin) and [resolver](https://www.npmjs.com/package/eslint-import-resolver-typescript):
 
-```
+```bash
 yarn add -D @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-import-resolver-typescript
 
 npm install -D @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-import-resolver-typescript
@@ -288,6 +285,10 @@ settings: {
 ```
 
 You may need to tweak things in your `tsconfig.json` (or other files) in order to get everything working properly.
+
+### Releases
+
+Read more about the release guidelines for this project [over here](https://github.com/himynameisdave/eslint-config-himynameisdave/blob/master/.github/RELEASING.md).
 
 ### Inspiration
 
