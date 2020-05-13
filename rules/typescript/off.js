@@ -104,5 +104,7 @@ module.exports = {
     '@typescript-eslint/dot-notation': 'off',
     '@typescript-eslint/init-declarations': 'off',
     '@typescript-eslint/keyword-spacing': 'off',
+    '@typescript-eslint/lines-between-class-members': 'off',
+    '@typescript-eslint/no-invalid-this': 'off',
   },
 };

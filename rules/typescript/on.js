@@ -211,5 +211,11 @@ module.exports = {
         },
       },
     }],
+    'lines-between-class-members': 'off',
+    '@typescript-eslint/lines-between-class-members': ['error', 'always', {
+      exceptAfterSingleLine: false,
+    }],
+    'no-invalid-this': 'off',
+    '@typescript-eslint/no-invalid-this': 'off',
   },
 };
