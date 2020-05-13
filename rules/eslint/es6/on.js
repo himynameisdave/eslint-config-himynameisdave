@@ -118,5 +118,8 @@ module.exports = {
     // enforce spacing around the * in yield* expressions
     // https://eslint.org/docs/rules/yield-star-spacing
     'yield-star-spacing': ['error', 'after'],
+    //  Disallow specified names in exports
+    //  https://github.com/eslint/eslint/blob/master/docs/rules/no-restricted-exports.md
+    'no-restricted-exports': 'off',
   },
 };

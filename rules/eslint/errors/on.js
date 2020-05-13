@@ -102,5 +102,8 @@ module.exports = {
     //  Don't return from setters
     //  https://github.com/eslint/eslint/blob/master/docs/rules/no-setter-return.md
     'no-setter-return': 'error',
+    //  Disallow useless backreferences in regular expressions
+    //  https://github.com/eslint/eslint/blob/master/docs/rules/no-useless-backreference.md
+    'no-useless-backreference': 'error',
   },
 };
