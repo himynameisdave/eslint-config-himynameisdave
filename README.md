@@ -51,7 +51,7 @@ npm install -D eslint eslint-config-himynameisdave
 
 ```
 
-You will need to install more plugins, a [parser](#Parser), and perhaps (optionally) a formatter. Read on for more about how to get set up.
+You will need to install more plugins, a [parser](#Parser), and (optionally) a formatter. Read on for more about how to get set up.
 
 ### Configurations
 
@@ -83,6 +83,7 @@ yarn add -D \
   eslint-plugin-import \
   eslint-plugin-jest \
   eslint-plugin-jsx-a11y \
+  eslint-plugin-node \
   eslint-plugin-promise \
   eslint-plugin-react \
   eslint-plugin-react-hooks
@@ -109,6 +110,7 @@ yarn add -D \
   eslint-plugin-filenames \
   eslint-plugin-import \
   eslint-plugin-jest \
+  eslint-plugin-node \
   eslint-plugin-promise \
   eslint-plugin-unicorn
 
@@ -133,6 +135,7 @@ yarn add -D \
   eslint-plugin-filenames \
   eslint-plugin-import \
   eslint-plugin-jest \
+  eslint-plugin-node \
   eslint-plugin-promise \
   eslint-plugin-unicorn
 

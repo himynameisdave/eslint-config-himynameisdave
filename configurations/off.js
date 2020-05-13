@@ -18,6 +18,7 @@ module.exports = {
     '../rules/import/off.js',
     '../rules/jest/off.js',
     '../rules/jsx-a11y/off.js',
+    '../rules/node/off.js',
     '../rules/promise/off.js',
     '../rules/react/off.js',
     '../rules/react-hooks/off.js',
