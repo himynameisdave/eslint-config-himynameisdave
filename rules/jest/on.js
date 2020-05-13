@@ -118,5 +118,15 @@ module.exports = {
     //  Checks that the title of Jest blocks are valid by ensuring that titles are valid
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/valid-title.md
     'jest/valid-title': 'error',
+    //  Disallow use of deprecated functions
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-deprecated-functions.md
+    'jest/no-deprecated-functions': 'error',
+    //  Disallow specific matchers & modifiers
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-restricted-matchers.md
+    'jest/no-restricted-matchers': ['error', {
+      'toBeFalsy': 'Use `toBe(false)` for strict equality',
+      'toBeTruthy': 'Use `toBe(true)` for strict equality',
+      'toBeCloseTo': 'Use `toBe(n)` for strict equality',
+    }],
   },
 };

@@ -83,5 +83,6 @@ module.exports = {
     'jest/require-top-level-describe': 0,
     'jest/prefer-hooks-on-top': 0,
     'jest/valid-title': 0,
+    'jest/no-deprecated-functions': 0,
   },
 };

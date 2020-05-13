@@ -54,5 +54,8 @@ module.exports = {
     'unicorn/prefer-number-properties': 'off',
     'unicorn/prefer-set-has': 'off',
     'unicorn/no-null': 'off',
+    'unicorn/no-reduce': 'off',
+    'unicorn/no-useless-undefined': 'off',
+    'unicorn/prefer-optional-catch-binding': 'off',
   },
 };
