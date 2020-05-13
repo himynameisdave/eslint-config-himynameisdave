@@ -34,8 +34,8 @@ This config aims to be composable; that is there are multiple configurations whi
   - [browser](#browser)
   - [off](#off)
 - [Parser](#Parser)
-- [Formatter](#Formatter)
 - [Typescript](#Typescript)
+- [Formatter](#Formatter)
 - [Releases](#Releases)
 - [Inspiration](#Inspiration)
 - [Neat ESLint Stuff](#Some-neat-ESLint-stuff)
@@ -217,24 +217,6 @@ What is `babel-eslint`?
 
 **Note:** `babel-config` expects that you've got a [`@babel/core`](https://www.npmjs.com/package/@babel/core) and `.babelrc` (or other config file) in your project. [Read more about that here](https://babeljs.io/docs/en/configuration).
 
-### Formatter
-
-[`git-log`](https://github.com/JamieMason/eslint-formatter-git-log) is a very nice formatter that I'd recommend using in your project. In the lint report in your console, it will display how old the code is and whomst wrote it.
-
-You just need to add the `--format` flag to your script which you're using, like perhaps in your `package.json`:
-
-```json
-"lint": "eslint --format ./node_modules/eslint-config-himynameisdave/formatters/git-log.js"
-```
-
-Optionally you could just [install and configure](https://github.com/JamieMason/eslint-formatter-git-log) it yourself:
-
-```bash
-yarn add -D eslint-formatter-git-log
-
-npm install -D eslint-formatter-git-log
-```
-
 ### Typescript
 
 You'll need to modify some things in order to get this ESLint config to work with Typescript. Start by installing the TS [parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser), [plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin) and [resolver](https://www.npmjs.com/package/eslint-import-resolver-typescript):
@@ -285,6 +267,16 @@ settings: {
 ```
 
 You may need to tweak things in your `tsconfig.json` (or other files) in order to get everything working properly.
+
+### Formatter
+
+Although you don't need a formatter (ESLint ships with one), [`git-log`](https://github.com/JamieMason/eslint-formatter-git-log) is a very nice formatter that I'd recommend using in your project. In the lint report in your console, it will display how old the code is and whomst wrote it. [Install and configure](https://github.com/JamieMason/eslint-formatter-git-log) it in your project if you want to use it.
+
+```bash
+yarn add -D eslint-formatter-git-log
+
+npm install -D eslint-formatter-git-log
+```
 
 ### Releases
 
