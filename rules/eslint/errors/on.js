@@ -105,5 +105,14 @@ module.exports = {
     //  Disallow useless backreferences in regular expressions
     //  https://github.com/eslint/eslint/blob/master/docs/rules/no-useless-backreference.md
     'no-useless-backreference': 'error',
+    //  Disallow Number Literals That Lose Precision
+    //  https://eslint.org/docs/rules/no-loss-of-precision
+    'no-loss-of-precision': 'error',
+    //  Disallow returning values from Promise executor functions
+    //  https://eslint.org/docs/rules/no-promise-executor-return
+    'no-promise-executor-return': 'off',
+    //  Disallow loops with a body that allows only one iteration
+    //  https://eslint.org/docs/rules/no-unreachable-loop
+    'no-unreachable-loop': 'error',
   },
 };

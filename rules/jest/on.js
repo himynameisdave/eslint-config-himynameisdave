@@ -52,6 +52,7 @@ module.exports = {
     'jest/valid-expect-in-promise': 'error',
     //  Suggest using inline snapshots
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-inline-snapshots.md
+    //  DEPRECATED => jest/no-restricted-matchers
     'jest/prefer-inline-snapshots': 'off',
     //  Ensure there is an expect call in each test block
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/expect-expect.md
@@ -79,7 +80,8 @@ module.exports = {
     'jest/prefer-spy-on': 'off',
     //  Disallow .toBeTruthy()/.toBeFalsy()
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-truthy-falsy.md
-    'jest/no-truthy-falsy': 'error',
+    //  DEPRECATED => jest/no-restricted-matchers
+    'jest/no-truthy-falsy': 'off',
     //  When test cases are empty, it is better to mark them as test.todo as it will be highlighted in the summary output.
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-todo.md
     'jest/prefer-todo': 'off',
@@ -93,7 +95,8 @@ module.exports = {
     'jest/no-duplicate-hooks': 'error',
     //  Avoid using expect().resolves
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-expect-resolves.md
-    'jest/no-expect-resolves': 'error',
+    //  DEPRECATED => jest/no-restricted-matchers
+    'jest/no-expect-resolves': 'off',
     //  No exports from test file
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-export.md
     'jest/no-export': 'error',
@@ -127,6 +130,9 @@ module.exports = {
       'toBeFalsy': 'Use `toBe(false)` for strict equality',
       'toBeTruthy': 'Use `toBe(true)` for strict equality',
       'toBeCloseTo': 'Use `toBe(n)` for strict equality',
+      'resolves': 'Use `expect(await promise)` instead.',
+      'toThrowErrorMatchingSnapshot': 'Use `toThrowErrorMatchingInlineSnapshot()` instead',
+      'toMatchSnapshot': 'Use `toMatchInlineSnapshot()` instead',
     }],
   },
 };

@@ -70,6 +70,8 @@ module.exports = {
     '@typescript-eslint/no-unsafe-assignment': 'off',
     '@typescript-eslint/prefer-reduce-type-parameter': 'off',
     '@typescript-eslint/prefer-ts-expect-error': 'off',
+    '@typescript-eslint/ban-tslint-comment': 'off',
+    '@typescript-eslint/no-confusing-non-null-assertion': 'off',
     /*
       Extension Rules
       https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
