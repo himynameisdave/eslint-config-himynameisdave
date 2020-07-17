@@ -156,5 +156,7 @@ module.exports = {
     'prefer-exponentiation-operator': 0,
     // require or disallow an empty line between class members
     'lines-between-class-members': 0,
+    //  Deny generic names in identifiers
+    'id-denylist': 0,
   },
 };

@@ -9,7 +9,7 @@ module.exports = {
     //  Tests should use `it()` instead of `test()`
     //  https://github.com/jest-community/eslint-plugin-jest/blob/HEAD/docs/rules/consistent-test-it.md
     'jest/consistent-test-it': ['error', {
-      fn: 'it',
+      fn: 'it', // eslint-disable-line id-denylist
     }],
     //  https://github.com/jest-community/eslint-plugin-jest/blob/HEAD/docs/rules/lowercase-name.md
     'jest/lowercase-name': 'off',
@@ -111,7 +111,8 @@ module.exports = {
     'jest/no-standalone-expect': 'error',
     //  This rule prevents the use of expect inside catch blocks.
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-try-expect.md
-    'jest/no-try-expect': 'error',
+    //  DEPRECATED: use no-conditional-expect instead
+    'jest/no-try-expect': 'off',
     //  Require top-level describe block
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/require-top-level-describe.md
     'jest/require-top-level-describe': 'error',
@@ -134,5 +135,8 @@ module.exports = {
       'toThrowErrorMatchingSnapshot': 'Use `toThrowErrorMatchingInlineSnapshot()` instead',
       'toMatchSnapshot': 'Use `toMatchInlineSnapshot()` instead',
     }],
+    //  Prevents the use of expect in conditional blocks
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-conditional-expect.md
+    'jest/no-conditional-expect': 'error',
   },
 };

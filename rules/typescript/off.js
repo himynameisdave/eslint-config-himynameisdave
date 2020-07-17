@@ -70,6 +70,7 @@ module.exports = {
     '@typescript-eslint/prefer-ts-expect-error': 'off',
     '@typescript-eslint/ban-tslint-comment': 'off',
     '@typescript-eslint/no-confusing-non-null-assertion': 'off',
+    '@typescript-eslint/prefer-literal-enum-member': 'off',
     /*
       Extension Rules
       https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
@@ -106,5 +107,6 @@ module.exports = {
     '@typescript-eslint/keyword-spacing': 'off',
     '@typescript-eslint/lines-between-class-members': 'off',
     '@typescript-eslint/no-invalid-this': 'off',
+    '@typescript-eslint/no-loss-of-precision': 'off',
   },
 };

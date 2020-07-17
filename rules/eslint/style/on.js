@@ -433,5 +433,7 @@ module.exports = {
     //  Prefer ** over Math.pow
     //  https://github.com/eslint/eslint/blob/master/docs/rules/prefer-exponentiation-operator.md
     'prefer-exponentiation-operator': 'error',
+    //  Deny generic names in identifiers
+    'id-denylist': ['error', 'callback', 'cb', 'fn', 'f', 'd', 'e', 'err'],
   },
 };

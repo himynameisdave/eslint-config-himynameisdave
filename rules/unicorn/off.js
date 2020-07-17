@@ -57,5 +57,7 @@ module.exports = {
     'unicorn/no-reduce': 'off',
     'unicorn/no-useless-undefined': 'off',
     'unicorn/prefer-optional-catch-binding': 'off',
+    'unicorn/prefer-array-find': 'off',
+    'unicorn/no-object-as-default-parameter': 'off',
   },
 };

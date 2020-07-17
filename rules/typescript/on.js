@@ -81,6 +81,7 @@ module.exports = {
     '@typescript-eslint/prefer-ts-expect-error': 'error',
     '@typescript-eslint/ban-tslint-comment': 'error',
     '@typescript-eslint/no-confusing-non-null-assertion': 'error',
+    '@typescript-eslint/prefer-literal-enum-member': 'error',
     /*
       Extension Rules
       https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
@@ -217,5 +218,7 @@ module.exports = {
     }],
     'no-invalid-this': 'off',
     '@typescript-eslint/no-invalid-this': 'off',
+    'no-loss-of-precision': 'off',
+    '@typescript-eslint/no-loss-of-precision': 'error',
   },
 };
