@@ -82,8 +82,14 @@ module.exports = {
     '@typescript-eslint/ban-tslint-comment': 'error',
     '@typescript-eslint/no-confusing-non-null-assertion': 'error',
     '@typescript-eslint/prefer-literal-enum-member': 'error',
+    '@typescript-eslint/consistent-indexed-object-style': ['error', 'index-signature'],
+    '@typescript-eslint/consistent-type-imports': 'error',
+    '@typescript-eslint/no-implicit-any-catch': ['error', {
+      allowExplicitAny: true,
+    }],
+    '@typescript-eslint/prefer-enum-initializers': 'error',
     /*
-      Extension Rules
+      Extension Rules: these rules "extend" existing ESLint rules, therefore they turn off the rules they are extending.
       https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
     */
     'brace-style': 'off',
@@ -220,5 +226,24 @@ module.exports = {
     '@typescript-eslint/no-invalid-this': 'off',
     'no-loss-of-precision': 'off',
     '@typescript-eslint/no-loss-of-precision': 'error',
+    'comma-dangle': 'off',
+    '@typescript-eslint/comma-dangle': ['error', {
+      arrays: 'always-multiline',
+      objects: 'always-multiline',
+      imports: 'always-multiline',
+      exports: 'always-multiline',
+      functions: 'always-multiline',
+      enums: 'always-multiline',
+      generics: 'always-multiline',
+      tuples: 'always-multiline',
+    }],
+    'no-duplicate-imports': 'off',
+    '@typescript-eslint/no-duplicate-imports': 'error',
+    'no-loop-func': 'off',
+    '@typescript-eslint/no-loop-func': 'error',
+    'no-redeclare': 'off',
+    '@typescript-eslint/no-redeclare': 'error',
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': 'error',
   },
 };

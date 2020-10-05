@@ -59,5 +59,6 @@ module.exports = {
     'unicorn/prefer-optional-catch-binding': 'off',
     'unicorn/prefer-array-find': 'off',
     'unicorn/no-object-as-default-parameter': 'off',
+    'unicorn/import-style': 'off',
   },
 };

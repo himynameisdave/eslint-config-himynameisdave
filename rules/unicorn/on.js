@@ -74,5 +74,6 @@ module.exports = {
     'unicorn/prefer-optional-catch-binding': 'error',
     'unicorn/prefer-array-find': 'error',
     'unicorn/no-object-as-default-parameter': 'error',
+    'unicorn/import-style': 'off',
   },
 };

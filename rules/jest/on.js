@@ -72,7 +72,7 @@ module.exports = {
     //  Use .toContain when checking Array.includes
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-to-contain.md
     'jest/prefer-to-contain': 'error',
-    //  Prefer that you just return a promise instead of calling done()
+    //  [DEPRECATED] Prefer that you just return a promise instead of calling done()
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-test-callback.md
     'jest/no-test-callback': 'error',
     //  .spyOn doesn't mess with the original implementation
@@ -138,5 +138,11 @@ module.exports = {
     //  Prevents the use of expect in conditional blocks
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-conditional-expect.md
     'jest/no-conditional-expect': 'error',
+    //  Prevents the use of string interpolations in snapshots.
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-interpolation-in-snapshots.md
+    'jest/no-interpolation-in-snapshots': 'error',
+    //  Prefer that you just return a promise instead of calling done()
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-done-callback.md
+    'jest/no-done-callback': 'error',
   },
 };

@@ -48,6 +48,7 @@ module.exports = {
     'jest/no-alias-methods': 0,
     'jest/require-to-throw-message': 0,
     'jest/prefer-to-contain': 0,
+    //  DEPRECATED:
     'jest/no-test-callback': 0,
     'jest/prefer-spy-on': 0,
     'jest/no-truthy-falsy': 0,
@@ -86,5 +87,7 @@ module.exports = {
     'jest/valid-title': 0,
     'jest/no-deprecated-functions': 0,
     'jest/no-conditional-expect': 0,
+    'jest/no-interpolation-in-snapshots': 0,
+    'jest/no-done-callback': 0,
   },
 };
