@@ -2,9 +2,7 @@ module.exports = {
   env: {
     node: true,
   },
-  plugins: [
-    'node',
-  ],
+  plugins: ['node'],
   rules: {
     //  Core rules:
     //  require return statements after callbacks

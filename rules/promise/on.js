@@ -1,7 +1,5 @@
 module.exports = {
-  plugins: [
-    'promise',
-  ],
+  plugins: ['promise'],
   rules: {
     //  https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/always-return.md
     'promise/always-return': 'off',

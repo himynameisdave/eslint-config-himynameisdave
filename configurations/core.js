@@ -7,7 +7,6 @@ module.exports = {
     '../rules/eslint/strict/on.js',
     '../rules/eslint/style/on.js',
     '../rules/eslint/variables/on.js',
-    '../rules/node/on.js',
   ],
   rules: {},
 };

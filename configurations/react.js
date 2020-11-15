@@ -1,17 +1,4 @@
 module.exports = {
-  parser: 'babel-eslint',
-  parserOptions: {
-    ecmaVersion: 2021,
-    sourceType: 'module',
-    ecmaFeatures: {
-      impliedStrict: true,
-    },
-  },
-  env: {
-    es6: true,
-    node: true,
-  },
-  globals: {},
   'extends': [
     '../rules/eslint/best-practices/on.js',
     '../rules/eslint/errors/on.js',
@@ -20,13 +7,12 @@ module.exports = {
     '../rules/eslint/strict/on.js',
     '../rules/eslint/style/on.js',
     '../rules/eslint/variables/on.js',
-    '../rules/import/on.js',
-    '../rules/node/on.js',
+
+    '../rules/jsx-a11y/on.js',
     '../rules/promise/on.js',
+    '../rules/react/on.js',
+    '../rules/react-hooks/on.js',
     '../rules/unicorn/on.js',
   ],
-  rules: {
-    'unicorn/no-process-exit': 'off',
-    'no-console': 'warn',
-  },
+  rules: {},
 };

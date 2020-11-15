@@ -1,6 +1,6 @@
 module.exports = {
   parserOptions: {
-    ecmaVersion: 5,
+    ecmaVersion: 2021,
     sourceType: 'module',
     ecmaFeatures: {
       impliedStrict: true,
@@ -10,7 +10,6 @@ module.exports = {
     amd: true,
     node: true,
   },
-  globals: {},
   'extends': [
     '../rules/eslint/best-practices/on.js',
     '../rules/eslint/errors/on.js',
