@@ -69,7 +69,7 @@ module.exports = {
     'func-names': 'off',
     // enforces use of function declarations or expressions
     // https://eslint.org/docs/rules/func-style
-    'func-style': ['error', 'expression', {
+    'func-style': ['error', 'declaration', {
       allowArrowFunctions: true,
     }],
     // enforce consistent line breaks inside function parentheses
@@ -326,13 +326,9 @@ module.exports = {
         multiline: true,
         consistent: false,
       },
-      ImportDeclaration: {
-        minProperties: 3,
-        multiline: true,
-        consistent: false,
-      },
+      ImportDeclaration: 'never',
       ExportDeclaration: {
-        minProperties: 3,
+        minProperties: 1,
         multiline: true,
         consistent: false,
       },
@@ -434,6 +430,6 @@ module.exports = {
     //  https://github.com/eslint/eslint/blob/master/docs/rules/prefer-exponentiation-operator.md
     'prefer-exponentiation-operator': 'error',
     //  Deny generic names in identifiers
-    'id-denylist': ['error', 'callback', 'cb', 'fn', 'f', 'd', 'e', 'err'],
+    'id-denylist': ['error', 'callback', 'cb', 'f', 'd', 'e', 'err'],
   },
 };
