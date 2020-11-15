@@ -61,12 +61,11 @@ This package exports a few different configurations which you can use in your pr
 
 This is a sort of base configuration, which only turns on rules exposed by the ESLint package itself. Therefore, no other plugins or parsers are needed to use this configuration.
 
-This is a useful jumping off point if you want to pick specific plugins and rulesets to extend from. For example, maybe you just want core + the `filenames` plugin:
+This is a useful jumping off point if you want to pick specific plugins and rulesets to extend from. For example, maybe you just want core:
 
 ```js
 extends: [
   'himynameisdave/configurations/core',
-  'himynameisdave/rules/filenames/on'
 ]
 ```
 
@@ -79,7 +78,6 @@ The [All Dressed](https://img.buzzfeed.com/buzzfeed-static/static/2015-09/15/14/
 yarn add -D \
   eslint \
   babel-eslint \
-  eslint-plugin-filenames \
   eslint-plugin-import \
   eslint-plugin-jest \
   eslint-plugin-jsx-a11y \
@@ -107,7 +105,6 @@ For Node environments where you're using Babel to transpile stuff.
 yarn add -D \
   eslint \
   babel-eslint \
-  eslint-plugin-filenames \
   eslint-plugin-import \
   eslint-plugin-jest \
   eslint-plugin-node \
@@ -132,7 +129,6 @@ For classic Node environments where you're NOT using Babel to transpile stuff.
 yarn add -D \
   eslint \
   babel-eslint \
-  eslint-plugin-filenames \
   eslint-plugin-import \
   eslint-plugin-jest \
   eslint-plugin-node \
@@ -157,7 +153,6 @@ Targets modern React browser environments.
 yarn add -D \
   eslint \
   babel-eslint \
-  eslint-plugin-filenames \
   eslint-plugin-import \
   eslint-plugin-jest \
   eslint-plugin-jsx-a11y \

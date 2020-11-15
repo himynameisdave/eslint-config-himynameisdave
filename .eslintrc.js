@@ -14,7 +14,6 @@ module.exports = {
     './rules/eslint/node/off.js',
     './rules/eslint/style/on.js',
     './rules/eslint/variables/on.js',
-    './rules/filenames/on.js',
     './rules/import/off.js',
     './rules/jest/off.js',
     './rules/node/on.js',
