@@ -11,14 +11,8 @@ module.exports = {
     node: true,
   },
   'extends': [
-    '../rules/eslint/best-practices/on.js',
-    '../rules/eslint/errors/on.js',
-    '../rules/eslint/es6/off.js',
     '../rules/eslint/node/off.js',
-    '../rules/eslint/strict/on.js',
-    '../rules/eslint/style/on.js',
-    '../rules/eslint/variables/on.js',
-    '../rules/import/on.js',
+
     '../rules/node/on.js',
     '../rules/promise/on.js',
     '../rules/unicorn/on.js',
