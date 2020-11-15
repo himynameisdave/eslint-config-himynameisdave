@@ -20,6 +20,7 @@ module.exports = {
     './rules/promise/on.js',
     './rules/react/off.js',
     './rules/react-hooks/off.js',
+    './rules/svelte/off.js',
     './rules/typescript/off.js',
     './rules/unicorn/on.js',
   ],

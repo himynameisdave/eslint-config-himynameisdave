@@ -166,6 +166,8 @@ yarn add -D eslint-plugin-promise eslint-plugin-unicorn eslint-plugin-svelte3
 }
 ```
 
+You may need to [read more about configuring your editor](https://github.com/sveltejs/eslint-plugin-svelte3/blob/master/INTEGRATIONS.md) for this plugin to work.
+
 _Note: You probably shouldn't use the `import` config below if you're using Svelte, as it has [been known not to work properly](https://github.com/sveltejs/eslint-plugin-svelte3/blob/master/OTHER_PLUGINS.md#eslint-plugin-import)._
 
 #### Import
