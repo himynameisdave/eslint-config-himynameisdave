@@ -127,6 +127,7 @@ yarn add -D @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-im
   }
 }
 ```
+
 #### React
 
 Extends the base config with React support. This config may conflict with the Node config, so should be placed after it if using both.
