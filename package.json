@@ -2,11 +2,11 @@
   "name": "eslint-config-himynameisdave",
   "version": "3.0.0-rc5",
   "description": "🗒️ An opinionated ESLint config by and for himynameisdave",
-  "main": "configurations/all-dressed.js",
+  "main": "configurations/core.js",
   "scripts": {
     "lint": "eslint ./",
     "lint:fix": "eslint ./ --fix",
-    "find-rules": "eslint-find-rules --unused",
+    "find-rules": "eslint-find-rules --unused ./configurations/all.js",
     "print-config": "eslint --print-config index.js > config-full.json",
     "test": "npm run find-rules && npm run lint",
     "test:od": "npm outdated && npm run find-rules && npm run lint",
