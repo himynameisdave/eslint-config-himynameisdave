@@ -60,5 +60,8 @@ module.exports = {
     'unicorn/prefer-array-find': 'off',
     'unicorn/no-object-as-default-parameter': 'off',
     'unicorn/import-style': 'off',
+    'unicorn/prefer-ternary': 'off',
+    'unicorn/prefer-math-trunc': 'off',
+    'unicorn/numeric-separators-style': 'off',
   },
 };

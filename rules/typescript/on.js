@@ -87,6 +87,11 @@ module.exports = {
       allowExplicitAny: true,
     }],
     '@typescript-eslint/prefer-enum-initializers': 'error',
+    '@typescript-eslint/no-confusing-void-expression': ['error', {
+      ignoreArrowShorthand: true,
+      ignoreVoidOperator: true,
+    }],
+    '@typescript-eslint/no-unnecessary-type-constraint': 'error',
     /*
       Extension Rules: these rules "extend" existing ESLint rules, therefore they turn off the rules they are extending.
       https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
@@ -244,5 +249,7 @@ module.exports = {
     '@typescript-eslint/no-redeclare': 'error',
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'error',
+    'space-infix-ops': 'off',
+    '@typescript-eslint/space-infix-ops': 'error',
   },
 };

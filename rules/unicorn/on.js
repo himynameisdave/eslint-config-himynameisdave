@@ -78,5 +78,13 @@ module.exports = {
     'unicorn/prefer-array-find': 'error',
     'unicorn/no-object-as-default-parameter': 'error',
     'unicorn/import-style': 'off',
+    'unicorn/prefer-ternary': 'error',
+    'unicorn/prefer-math-trunc': 'error',
+    'unicorn/numeric-separators-style': ['error', {
+      'number': {
+        'minimumDigits': 5,
+        'groupLength': 3,
+      },
+    }],
   },
 };
