@@ -69,7 +69,7 @@ module.exports = {
     'func-names': 'off',
     // enforces use of function declarations or expressions
     // https://eslint.org/docs/rules/func-style
-    'func-style': ['error', 'expression', {
+    'func-style': ['error', 'declaration', {
       allowArrowFunctions: true,
     }],
     // enforce consistent line breaks inside function parentheses
@@ -317,24 +317,24 @@ module.exports = {
     // https://eslint.org/docs/rules/object-curly-newline
     'object-curly-newline': ['error', {
       ObjectExpression: {
-        minProperties: 1,
-        multiline: true,
-        consistent: false,
-      },
-      ObjectPattern: {
         minProperties: 2,
         multiline: true,
-        consistent: false,
+        consistent: true,
+      },
+      ObjectPattern: {
+        minProperties: 3,
+        multiline: true,
+        consistent: true,
       },
       ImportDeclaration: {
-        minProperties: 3,
+        minProperties: 4,
         multiline: true,
-        consistent: false,
+        consistent: true,
       },
       ExportDeclaration: {
-        minProperties: 3,
+        minProperties: 4,
         multiline: true,
-        consistent: false,
+        consistent: true,
       },
     }],
     // enforce "same line" or "multiple line" on object properties.
@@ -433,5 +433,7 @@ module.exports = {
     //  Prefer ** over Math.pow
     //  https://github.com/eslint/eslint/blob/master/docs/rules/prefer-exponentiation-operator.md
     'prefer-exponentiation-operator': 'error',
+    //  Deny generic names in identifiers
+    'id-denylist': ['error', 'callback', 'cb', 'f', 'd', 'e', 'err'],
   },
 };

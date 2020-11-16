@@ -26,7 +26,7 @@ module.exports = {
     'import/no-unresolved': 'error',
     // ensure named imports coupled with named exports
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md#when-not-to-use-it
-    'import/named': 'error',
+    'import/named': 'off',
     // ensure default import coupled with default export
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md#when-not-to-use-it
     'import/default': 'off',

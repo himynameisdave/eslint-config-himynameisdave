@@ -1,5 +1,6 @@
 module.exports = {
   'extends': [
-    '../rules/jest/on.js',
+    '../rules/import/on.js',
   ],
+  rules: {},
 };

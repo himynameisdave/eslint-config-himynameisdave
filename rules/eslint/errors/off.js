@@ -69,5 +69,17 @@ module.exports = {
     //  Don't return from setters
     //  https://github.com/eslint/eslint/blob/master/docs/rules/no-setter-return.md
     'no-setter-return': 0,
+    //  Disallow useless backreferences in regular expressions
+    //  https://github.com/eslint/eslint/blob/master/docs/rules/no-useless-backreference.md
+    'no-useless-backreference': 0,
+    //  Disallow Number Literals That Lose Precision
+    //  https://eslint.org/docs/rules/no-loss-of-precision
+    'no-loss-of-precision': 0,
+    //  Disallow returning values from Promise executor functions
+    //  https://eslint.org/docs/rules/no-promise-executor-return
+    'no-promise-executor-return': 0,
+    //  Disallow loops with a body that allows only one iteration
+    //  https://eslint.org/docs/rules/no-unreachable-loop
+    'no-unreachable-loop': 0,
   },
 };

@@ -192,5 +192,8 @@ module.exports = {
     //  Don't return in constructors
     //  https://github.com/eslint/eslint/blob/master/docs/rules/no-constructor-return.md
     'no-constructor-return': 0,
+    //  Enforce default clauses in switch statements to be last
+    //  https://github.com/eslint/eslint/blob/master/docs/rules/default-case-last.md
+    'default-case-last': 0,
   },
 };

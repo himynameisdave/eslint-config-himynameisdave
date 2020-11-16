@@ -6,10 +6,8 @@ module.exports = {
     '@typescript-eslint/adjacent-overload-signatures': 'off',
     '@typescript-eslint/array-type': 'off',
     '@typescript-eslint/await-thenable': 'off',
-    '@typescript-eslint/ban-ts-ignore': 'off',
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/camelcase': 'off',
-    '@typescript-eslint/class-name-casing': 'off',
     '@typescript-eslint/consistent-type-assertions': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/explicit-member-accessibility': 'off',
@@ -70,8 +68,17 @@ module.exports = {
     '@typescript-eslint/no-unsafe-assignment': 'off',
     '@typescript-eslint/prefer-reduce-type-parameter': 'off',
     '@typescript-eslint/prefer-ts-expect-error': 'off',
+    '@typescript-eslint/ban-tslint-comment': 'off',
+    '@typescript-eslint/no-confusing-non-null-assertion': 'off',
+    '@typescript-eslint/prefer-literal-enum-member': 'off',
+    '@typescript-eslint/consistent-indexed-object-style': 'off',
+    '@typescript-eslint/consistent-type-imports': 'off',
+    '@typescript-eslint/no-implicit-any-catch': 'off',
+    '@typescript-eslint/prefer-enum-initializers': 'off',
+    '@typescript-eslint/no-confusing-void-expression': 'off',
+    '@typescript-eslint/no-unnecessary-type-constraint': 'off',
     /*
-      Extension Rules
+      Extension Rules: these rules "extend" existing ESLint rules, therefore they turn off the rules they are extending.
       https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
     */
     '@typescript-eslint/brace-style': 'off',
@@ -104,5 +111,14 @@ module.exports = {
     '@typescript-eslint/dot-notation': 'off',
     '@typescript-eslint/init-declarations': 'off',
     '@typescript-eslint/keyword-spacing': 'off',
+    '@typescript-eslint/lines-between-class-members': 'off',
+    '@typescript-eslint/no-invalid-this': 'off',
+    '@typescript-eslint/no-loss-of-precision': 'off',
+    '@typescript-eslint/comma-dangle': 'off',
+    '@typescript-eslint/no-duplicate-imports': 'off',
+    '@typescript-eslint/no-loop-func': 'off',
+    '@typescript-eslint/no-redeclare': 'off',
+    '@typescript-eslint/no-shadow': 'off',
+    '@typescript-eslint/space-infix-ops': 'off',
   },
 };

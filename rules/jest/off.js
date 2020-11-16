@@ -48,6 +48,7 @@ module.exports = {
     'jest/no-alias-methods': 0,
     'jest/require-to-throw-message': 0,
     'jest/prefer-to-contain': 0,
+    //  DEPRECATED:
     'jest/no-test-callback': 0,
     'jest/prefer-spy-on': 0,
     'jest/no-truthy-falsy': 0,
@@ -77,11 +78,16 @@ module.exports = {
     'jest/no-standalone-expect': 0,
     //  This rule prevents the use of expect inside catch blocks.
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-try-expect.md
+    //  DEPRECATED: use no-conditional-expect instead
     'jest/no-try-expect': 0,
     //  Require top-level describe block
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/require-top-level-describe.md
     'jest/require-top-level-describe': 0,
     'jest/prefer-hooks-on-top': 0,
     'jest/valid-title': 0,
+    'jest/no-deprecated-functions': 0,
+    'jest/no-conditional-expect': 0,
+    'jest/no-interpolation-in-snapshots': 0,
+    'jest/no-done-callback': 0,
   },
 };

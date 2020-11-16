@@ -18,193 +18,238 @@
 
 ---
 
-A personally curated ESLint configuration, for all of my personal projects. This helps save me time by reducing the setup time for new projects, and enabling a consistent coding style across my projects. It's secondary purpose is to show how fun it is to create and maintain your own ESLint config, for you or your team's projects.
-
-This config aims to be composable; that is there are multiple configurations which target different environments/setups (such as TypeScript) which can be composed together to achive a linting setup that is more project-aware.
+A modular, opinionated, and well-maintained `eslint` config made by and for [`himynameisdave`](https://github.com/himynameisdave). Made of small configs which can be composed together to achieve a linting setup that is project-aware.
 
 ### Contents
 
 - [Installation](#Installation)
 - [Configurations](#Configurations)
-  - [core](#core)
-  - [all-dressed](#all-dressed)
-  - [babel-node](#babel-node)
-  - [node](#node)
+  - [core](#Core)
+  - [node](#Node)
+  - [typescript](#Typescript)
+  - [react](#React)
+  - [svelte](#Svelte)
   - [jest](#jest)
-  - [browser](#browser)
   - [off](#off)
+- [Rules](#Rules)
 - [Parser](#Parser)
-- [Formatter](#Formatter)
-- [Typescript](#Typescript)
 - [Releases](#Releases)
 - [Inspiration](#Inspiration)
 - [Neat ESLint Stuff](#Some-neat-ESLint-stuff)
 
 ### Installation
 
-Install this config with one of the following commands:
+Install this `eslint` and this config:
 
 ```bash
 yarn add -D eslint eslint-config-himynameisdave
-
-npm install -D eslint eslint-config-himynameisdave
-
 ```
 
-You will need to install more plugins, a [parser](#Parser), and perhaps (optionally) a formatter. Read on for more about how to get set up.
+You will need to install more plugins depending on which environment you are targeting/which extra plugins you want to use (see [configurations](#Configurations) below). You may also need a [parser](#Parser). Read on for more about how to get set up.
 
 ### Configurations
 
-This package exports a few different configurations which you can use in your project. Each configuration requires you to install various plugins. These plugins are what actually provide the rules which are to be run on your codebase.
+This package provides various configurations which you can extend from. You may need to install additional plugins in order to use them.
 
-#### core
+#### Core
 
-This is a sort of base configuration, which only turns on rules exposed by the ESLint package itself. Therefore, no other plugins or parsers are needed to use this configuration.
-
-This is a useful jumping off point if you want to pick specific plugins and rulesets to extend from. For example, maybe you just want core + the `filenames` plugin:
+The base config turns enables the core `eslint` rules only. No additional plugins are required to use this config. Great for small projects.
 
 ```js
-extends: [
-  'himynameisdave/configurations/core',
-  'himynameisdave/rules/filenames/on'
-]
+// Extend your .eslintrc
+{
+  "extends": ["himynameisdave/configurations/core"]
+}
 ```
 
-#### all-dressed
+#### Node
 
-The [All Dressed](https://img.buzzfeed.com/buzzfeed-static/static/2015-09/15/14/enhanced/webdr06/anigif_original-grid-image-7412-1442342581-9.gif) config has everything on. Use with caution. Install all dependencies like so:
+Extend this config with additional rules for Node projects. Useful for CLI/Node-only projects, although it should be compatible with the browser-based configurations listed below.
 
 ```bash
-# You could also use `npm install`
-yarn add -D \
-  eslint \
-  babel-eslint \
-  eslint-plugin-filenames \
-  eslint-plugin-import \
-  eslint-plugin-jest \
-  eslint-plugin-jsx-a11y \
-  eslint-plugin-promise \
-  eslint-plugin-react \
-  eslint-plugin-react-hooks
-  eslint-plugin-unicorn
-
+# Add the following plugins
+yarn add -D eslint-plugin-node eslint-plugin-promise eslint-plugin-unicorn
 ```
-
-Add this to your `.eslintrc` config file:
 
 ```js
-extends: [
-  'himynameisdave/configurations/all-dressed'
-]
+// Extend your .eslintrc
+{
+  "extends": [
+    "himynameisdave/configurations/core",
+    "himynameisdave/configurations/node"
+  ]
+}
 ```
 
-#### babel-node
+#### Typescript
 
-For Node environments where you're using Babel to transpile stuff.
+Extend this config for Typescript support. Compatible with other configurations in this project, although Typescript should probably be extended last. Requires some additional configuration, as it has it's own parser.
 
 ```bash
-yarn add -D \
-  eslint \
-  babel-eslint \
-  eslint-plugin-filenames \
-  eslint-plugin-import \
-  eslint-plugin-jest \
-  eslint-plugin-promise \
-  eslint-plugin-unicorn
-
+# Add the following plugins
+yarn add -D @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-import-resolver-typescript
 ```
-
-Add this to your `.eslintrc` config:
 
 ```js
-extends: [
-  'himynameisdave/configurations/babel-node'
-]
+// Extend your .eslintrc
+{
+  "extends": [
+    "himynameisdave/configurations/core",
+    "himynameisdave/configurations/typescript"
+  ],
+  "parserOptions": {
+    "sourceType": 'module',
+    "tsconfigRootDir": __dirname,
+    "project": './tsconfig.json'
+  },
+  "settings": {
+    'import/parsers: {
+      '@typescript-eslint/parser': [
+        '.ts',
+        '.tsx', // Only needed if using React
+      ]
+    },
+    'import/extensions': [
+      '.ts',
+      '.tsx', // Only needed if using React
+    ],
+    'import/resolver': {
+      typescript: {
+        'alwaysTryTypes': true,
+      },
+    },
+  },
+  //  If you are also using the node or import configurations, you'll want these rules off:
+  rules: {
+    'import/extensions': 'off',
+    'node/file-extension-in-import': 'off',
+    'node/no-unsupported-features/es-syntax': 'off',
+  }
+}
 ```
 
-#### node
+#### React
 
-For classic Node environments where you're NOT using Babel to transpile stuff.
+Extends the base config with React support. This config may conflict with the Node config, so should be placed after it if using both.
 
 ```bash
-yarn add -D \
-  eslint \
-  babel-eslint \
-  eslint-plugin-filenames \
-  eslint-plugin-import \
-  eslint-plugin-jest \
-  eslint-plugin-promise \
-  eslint-plugin-unicorn
-
+# Add the following plugins
+yarn add -D eslint-plugin-promise eslint-plugin-unicorn eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y
 ```
-
-Add this to your `.eslintrc` config:
 
 ```js
-extends: [
-  'himynameisdave/configurations/node'
-]
+//  Extend your .eslintrc
+{
+  "extends": [
+    "himynameisdave/configurations/core",
+    "himynameisdave/configurations/react",
+    "himynameisdave/configurations/typescript" // If using Typescript, it should come last.
+  ]
+}
 ```
 
-#### browser
+#### Svelte
 
-Targets modern React browser environments.
+Extends the base config with React support. This config may conflict with the Node config, so should be placed after it if using both.
 
 ```bash
-yarn add -D \
-  eslint \
-  babel-eslint \
-  eslint-plugin-filenames \
-  eslint-plugin-import \
-  eslint-plugin-jest \
-  eslint-plugin-jsx-a11y \
-  eslint-plugin-promise \
-  eslint-plugin-react \
-  eslint-plugin-react-hooks
-  eslint-plugin-unicorn
-
+# Add the following plugins
+yarn add -D eslint-plugin-promise eslint-plugin-unicorn eslint-plugin-svelte3
 ```
 
-Add this to your `.eslintrc` config:
-
 ```js
-extends: [
-  'himynameisdave/configurations/browser'
-]
+//  Extend your .eslintrc
+{
+  "extends": [
+    "himynameisdave/configurations/core",
+    "himynameisdave/configurations/svelte"
+  ]
+}
 ```
 
-#### jest
+You may need to [read more about configuring your editor](https://github.com/sveltejs/eslint-plugin-svelte3/blob/master/INTEGRATIONS.md) for this plugin to work.
 
-If you are using Jest for testing, extend with the Jest config. Note that the `all-dressed` config turns this on by default.
+_Note: You probably shouldn't use the `import` config below if you're using Svelte, as it has [been known not to work properly](https://github.com/sveltejs/eslint-plugin-svelte3/blob/master/OTHER_PLUGINS.md#eslint-plugin-import)._
 
-#### off
+#### Import
 
-Don't like playing by the rules? You can turn it all off with `himynameisdave/configurations/off`:
+Extends the base config with [`import`](https://github.com/benmosher/eslint-plugin-import) plugin rules. 
 
-```js
-extends: [
-  'himynameisdave/configurations/off'
-]
+```bash
+# Add the following plugin
+yarn add -D eslint-plugin-import
 ```
 
-Pretty goofy though, not sure who would use this. You can instead just extend entire plugins/rulesets like so:
+```js
+//  Extend your .eslintrc
+{
+  "extends": [
+    "himynameisdave/configurations/core",
+    "himynameisdave/configurations/import"
+  ]
+}
+```
+
+#### Jest
+
+Extends the base config with [`jest`](https://github.com/jest-community/eslint-plugin-jest) plugin rules.
+
+```bash
+# Add the following plugin
+yarn add -D eslint-plugin-jest
+```
 
 ```js
-extends: [
-  'himynameisdave/configurations/browser',
-  'himynameisdave/rules/react/off'
-  'himynameisdave/rules/react-hooks/off'
-]
+//  Extend your .eslintrc
+{
+  "extends": [
+    "himynameisdave/configurations/core",
+    "himynameisdave/configurations/jest"
+  ]
+}
+```
+
+#### Off
+
+In addition to all of these, there is an `off` config which you can use to turn off all rules. Not sure there are a ton of use-cases for this, but it would allow you to extend from individual rulesets, like so:
+
+```js
+//  .eslintrc
+{
+  "extends": [
+    "himynameisdave/configurations/off",
+    "himynameisdave/rules/promises/on",
+    "himynameisdave/rules/unicorn/on"
+  ]
+}
+```
+
+### Rules
+
+Note that in addition to extending a configuration, you can also extend various rulesets. This gives you very granular control of your project.
+
+As an example, let's assume we are using React but don't care about the `jsx-a11y` rules:
+
+```js
+//  .eslintrc
+{
+  "extends": [
+    "himynameisdave/configurations/core",
+    "himynameisdave/rules/promises/on",
+    "himynameisdave/rules/unicorn/on",
+    "himynameisdave/rules/react/on",
+    "himynameisdave/rules/react-hooks/on",
+    "himynameisdave/rules/jsx-a11y/off", // We don't technically need to add this, but note that there are `off` versions for each.
+  ]
+}
 ```
 
 ### Parser
 
-You'll need to install the [`babel-eslint`](https://github.com/babel/babel-eslint) parser to use most of the configurations exported by this package, unless you are using TypeScript (see [Typescript](#Typescript) documentation below).
+You may need to install the [`babel-eslint`](https://github.com/babel/babel-eslint) parser to use some of the configurations exported by this package, unless you are using TypeScript (see [Typescript](#Typescript) configuration above).
 
 ```bash
 yarn add -D babel-eslint
-
-npm install -D babel-eslint
 ```
 
 What is `babel-eslint`?
@@ -216,75 +261,6 @@ What is `babel-eslint`?
 > _Note: You only need to use babel-eslint if you are using Babel to transform your code. If this is not the case, please use the relevant parser for your chosen flavor of ECMAScript (note that the default parser supports all non-experimental syntax as well as JSX)._
 
 **Note:** `babel-config` expects that you've got a [`@babel/core`](https://www.npmjs.com/package/@babel/core) and `.babelrc` (or other config file) in your project. [Read more about that here](https://babeljs.io/docs/en/configuration).
-
-### Formatter
-
-[`git-log`](https://github.com/JamieMason/eslint-formatter-git-log) is a very nice formatter that I'd recommend using in your project. In the lint report in your console, it will display how old the code is and whomst wrote it.
-
-You just need to add the `--format` flag to your script which you're using, like perhaps in your `package.json`:
-
-```json
-"lint": "eslint --format ./node_modules/eslint-config-himynameisdave/formatters/git-log.js"
-```
-
-Optionally you could just [install and configure](https://github.com/JamieMason/eslint-formatter-git-log) it yourself:
-
-```bash
-yarn add -D eslint-formatter-git-log
-
-npm install -D eslint-formatter-git-log
-```
-
-### Typescript
-
-You'll need to modify some things in order to get this ESLint config to work with Typescript. Start by installing the TS [parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser), [plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin) and [resolver](https://www.npmjs.com/package/eslint-import-resolver-typescript):
-
-```bash
-yarn add -D @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-import-resolver-typescript
-
-npm install -D @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-import-resolver-typescript
-```
-
-Next, modify the command you're using to run `eslint` to include `.ts` extensions [with the `--ext` flag](https://eslint.org/docs/user-guide/configuring#specifying-file-extensions-to-lint) (usually in a `package.json`'s scripts):
-
-```diff
-"scripts": {
-+  "lint": "eslint --ext .js,.ts"
--  "lint": "eslint"
-},
-```
-
-Next you need to modify your `.eslintrc.js` file. Add the Typescript configuration in your (after whatever [configuration](Configurations) you want to use):
-
-```diff
-extends: [
-  'himynameisdave/configurations/babel-node',
-+ 'himynameisdave/configurations/typescript',
-]
-```
-
-Include the following `parserOptions` and `settings` for getting the `@typescript` and `eslint-plugin-import` stuff working together properly:
-
-```js
-parserOptions: {
-  sourceType: 'module',
-  tsconfigRootDir: __dirname,
-  project: './tsconfig.json'
-},
-settings: {
-  'import/parsers: {
-    '@typescript-eslint/parser': ['.ts']
-  },
-  'import/extensions': ['.ts'],
-  'import/resolver': {
-    typescript: {
-      'alwaysTryTypes': true,
-    },
-  },
-},
-```
-
-You may need to tweak things in your `tsconfig.json` (or other files) in order to get everything working properly.
 
 ### Releases
 

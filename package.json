@@ -1,39 +1,40 @@
 {
   "name": "eslint-config-himynameisdave",
-  "version": "2.2.0",
+  "version": "3.0.0-rc6",
   "description": "🗒️ An opinionated ESLint config by and for himynameisdave",
-  "main": "configurations/all-dressed.js",
+  "main": "configurations/core.js",
   "scripts": {
     "lint": "eslint ./",
     "lint:fix": "eslint ./ --fix",
-    "find-rules": "eslint-find-rules --unused",
+    "find-rules": "eslint-find-rules --unused ./configurations/all.js",
     "print-config": "eslint --print-config index.js > config-full.json",
     "test": "npm run find-rules && npm run lint",
     "test:od": "npm outdated && npm run find-rules && npm run lint",
     "release": "np --no-yarn"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.30.0",
-    "@typescript-eslint/parser": "^2.30.0",
+    "@typescript-eslint/eslint-plugin": "^4.7.0",
+    "@typescript-eslint/parser": "^4.7.0",
     "babel-eslint": "^10.1.0",
-    "eslint": "^6.8.0",
-    "eslint-find-rules": "^3.4.0",
-    "eslint-formatter-git-log": "^0.5.3",
-    "eslint-plugin-filenames": "^1.3.2",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jest": "^23.8.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint": "^7.13.0",
+    "eslint-find-rules": "^3.6.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.3",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-react": "^7.19.0",
-    "eslint-plugin-react-hooks": "^4.0.0",
-    "eslint-plugin-unicorn": "^19.0.1",
-    "husky": "^4.2.5",
-    "lint-staged": "^10.2.2",
-    "np": "^6.2.3",
-    "typescript": "^3.8.3"
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-svelte3": "^2.7.3",
+    "eslint-plugin-unicorn": "^23.0.0",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.1",
+    "np": "^7.0.0",
+    "svelte": "^3.29.7",
+    "typescript": "^4.0.5"
   },
   "peerDependencies": {
-    "eslint": "^6.8.0"
+    "eslint": "^7.3.0"
   },
   "engines": {
     "node": ">= 10"

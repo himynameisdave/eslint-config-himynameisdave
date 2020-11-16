@@ -58,5 +58,7 @@ module.exports = {
     'template-curly-spacing': 0,
     // enforce spacing around the * in yield* expressions
     'yield-star-spacing': 0,
+    //  Disallow specified names in exports
+    'no-restricted-exports': 0,
   },
 };

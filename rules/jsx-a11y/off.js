@@ -105,5 +105,8 @@ module.exports = {
     //  Enforce that a control (an interactive element) has a text label.
     //  https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/control-has-associated-label.md
     'jsx-a11y/control-has-associated-label': 0,
+    //  Ensure the autocomplete attribute is correct and suitable for the form field it is used with.
+    //  https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/master/docs/rules/autocomplete-valid.md
+    'jsx-a11y/autocomplete-valid': 0,
   },
 };

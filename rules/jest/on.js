@@ -9,7 +9,7 @@ module.exports = {
     //  Tests should use `it()` instead of `test()`
     //  https://github.com/jest-community/eslint-plugin-jest/blob/HEAD/docs/rules/consistent-test-it.md
     'jest/consistent-test-it': ['error', {
-      fn: 'it',
+      fn: 'it', // eslint-disable-line id-denylist
     }],
     //  https://github.com/jest-community/eslint-plugin-jest/blob/HEAD/docs/rules/lowercase-name.md
     'jest/lowercase-name': 'off',
@@ -52,6 +52,7 @@ module.exports = {
     'jest/valid-expect-in-promise': 'error',
     //  Suggest using inline snapshots
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-inline-snapshots.md
+    //  DEPRECATED => jest/no-restricted-matchers
     'jest/prefer-inline-snapshots': 'off',
     //  Ensure there is an expect call in each test block
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/expect-expect.md
@@ -71,7 +72,7 @@ module.exports = {
     //  Use .toContain when checking Array.includes
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-to-contain.md
     'jest/prefer-to-contain': 'error',
-    //  Prefer that you just return a promise instead of calling done()
+    //  [DEPRECATED] Prefer that you just return a promise instead of calling done()
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-test-callback.md
     'jest/no-test-callback': 'error',
     //  .spyOn doesn't mess with the original implementation
@@ -79,7 +80,8 @@ module.exports = {
     'jest/prefer-spy-on': 'off',
     //  Disallow .toBeTruthy()/.toBeFalsy()
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-truthy-falsy.md
-    'jest/no-truthy-falsy': 'error',
+    //  DEPRECATED => jest/no-restricted-matchers
+    'jest/no-truthy-falsy': 'off',
     //  When test cases are empty, it is better to mark them as test.todo as it will be highlighted in the summary output.
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-todo.md
     'jest/prefer-todo': 'off',
@@ -93,7 +95,8 @@ module.exports = {
     'jest/no-duplicate-hooks': 'error',
     //  Avoid using expect().resolves
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-expect-resolves.md
-    'jest/no-expect-resolves': 'error',
+    //  DEPRECATED => jest/no-restricted-matchers
+    'jest/no-expect-resolves': 'off',
     //  No exports from test file
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-export.md
     'jest/no-export': 'error',
@@ -108,7 +111,8 @@ module.exports = {
     'jest/no-standalone-expect': 'error',
     //  This rule prevents the use of expect inside catch blocks.
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-try-expect.md
-    'jest/no-try-expect': 'error',
+    //  DEPRECATED: use no-conditional-expect instead
+    'jest/no-try-expect': 'off',
     //  Require top-level describe block
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/require-top-level-describe.md
     'jest/require-top-level-describe': 'error',
@@ -118,5 +122,27 @@ module.exports = {
     //  Checks that the title of Jest blocks are valid by ensuring that titles are valid
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/valid-title.md
     'jest/valid-title': 'error',
+    //  Disallow use of deprecated functions
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-deprecated-functions.md
+    'jest/no-deprecated-functions': 'error',
+    //  Disallow specific matchers & modifiers
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-restricted-matchers.md
+    'jest/no-restricted-matchers': ['error', {
+      'toBeFalsy': 'Use `toBe(false)` for strict equality',
+      'toBeTruthy': 'Use `toBe(true)` for strict equality',
+      'toBeCloseTo': 'Use `toBe(n)` for strict equality',
+      'resolves': 'Use `expect(await promise)` instead.',
+      'toThrowErrorMatchingSnapshot': 'Use `toThrowErrorMatchingInlineSnapshot()` instead',
+      'toMatchSnapshot': 'Use `toMatchInlineSnapshot()` instead',
+    }],
+    //  Prevents the use of expect in conditional blocks
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-conditional-expect.md
+    'jest/no-conditional-expect': 'error',
+    //  Prevents the use of string interpolations in snapshots.
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-interpolation-in-snapshots.md
+    'jest/no-interpolation-in-snapshots': 'error',
+    //  Prefer that you just return a promise instead of calling done()
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-done-callback.md
+    'jest/no-done-callback': 'error',
   },
 };

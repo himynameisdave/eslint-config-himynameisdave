@@ -3,7 +3,7 @@ module.exports = {
     es6: true,
   },
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 2021,
     sourceType: 'module',
   },
   plugins: ['unicorn'],
@@ -15,7 +15,7 @@ module.exports = {
     'unicorn/escape-case': 'error',
     // 'unicorn/expiring-todo-comments': 'error',
     'unicorn/explicit-length-check': 'error',
-    'unicorn/filename-case': 'error',
+    'unicorn/filename-case': 'off',
     'unicorn/import-index': 'error',
     'unicorn/new-for-builtins': 'error',
     'unicorn/no-abusive-eslint-disable': 'error',
@@ -45,6 +45,9 @@ module.exports = {
     'unicorn/prefer-text-content': 'error',
     'unicorn/prefer-type-error': 'error',
     'unicorn/prevent-abbreviations': ['error', {
+      whitelist: {
+        fn: true,
+      },
       replacements: {
         rej: {
           reject: true,
@@ -69,5 +72,19 @@ module.exports = {
     'unicorn/prefer-number-properties': 'error',
     'unicorn/prefer-set-has': 'error',
     'unicorn/no-null': 'off',
+    'unicorn/no-reduce': 'off',
+    'unicorn/no-useless-undefined': 'error',
+    'unicorn/prefer-optional-catch-binding': 'error',
+    'unicorn/prefer-array-find': 'error',
+    'unicorn/no-object-as-default-parameter': 'error',
+    'unicorn/import-style': 'off',
+    'unicorn/prefer-ternary': 'error',
+    'unicorn/prefer-math-trunc': 'error',
+    'unicorn/numeric-separators-style': ['error', {
+      'number': {
+        'minimumDigits': 5,
+        'groupLength': 3,
+      },
+    }],
   },
 };
