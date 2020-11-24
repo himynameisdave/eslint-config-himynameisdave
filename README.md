@@ -103,7 +103,7 @@ yarn add -D @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-im
     "project": './tsconfig.json'
   },
   "settings": {
-    'import/parsers: {
+    'import/parsers': {
       '@typescript-eslint/parser': [
         '.ts',
         '.tsx', // Only needed if using React
