@@ -236,5 +236,8 @@ module.exports = {
     //  Enforce default clauses in switch statements to be last
     //  https://github.com/eslint/eslint/blob/master/docs/rules/default-case-last.md
     'default-case-last': 'error',
+    //  Disallow `\\8` and `\\9` escape sequences in string literals
+    //  https://eslint.org/docs/rules/no-nonoctal-decimal-escape
+    'no-nonoctal-decimal-escape': 'error',
   },
 };
