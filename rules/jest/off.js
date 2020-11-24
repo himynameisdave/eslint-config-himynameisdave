@@ -49,7 +49,7 @@ module.exports = {
     'jest/require-to-throw-message': 0,
     'jest/prefer-to-contain': 0,
     //  DEPRECATED:
-    'jest/no-test-callback': 0,
+    // 'jest/no-test-callback': 0,
     'jest/prefer-spy-on': 0,
     'jest/no-truthy-falsy': 0,
     'jest/prefer-todo': 0,

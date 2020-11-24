@@ -74,7 +74,7 @@ module.exports = {
     'jest/prefer-to-contain': 'error',
     //  [DEPRECATED] Prefer that you just return a promise instead of calling done()
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-test-callback.md
-    'jest/no-test-callback': 'error',
+    // 'jest/no-test-callback': 'error',
     //  .spyOn doesn't mess with the original implementation
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-spy-on.md
     'jest/prefer-spy-on': 'off',
