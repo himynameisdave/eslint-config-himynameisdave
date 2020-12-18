@@ -63,5 +63,8 @@ module.exports = {
     'unicorn/prefer-ternary': 'off',
     'unicorn/prefer-math-trunc': 'off',
     'unicorn/numeric-separators-style': 'off',
+    'unicorn/no-lonely-if': 'off',
+    'unicorn/empty-brace-spaces': 'off',
+    'unicorn/prefer-date-now': 'off',
   },
 };

@@ -114,5 +114,8 @@ module.exports = {
     //  Disallow loops with a body that allows only one iteration
     //  https://eslint.org/docs/rules/no-unreachable-loop
     'no-unreachable-loop': 'error',
+    //  Disallow use of optional chaining in contexts where the `undefined` value is not allowed
+    //  https://github.com/eslint/eslint/blob/683ad00c41e1ae4d889deff82b2a94318e8c2129/lib/rules/no-unsafe-optional-chaining.js
+    'no-unsafe-optional-chaining': 'error',
   },
 };

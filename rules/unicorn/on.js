@@ -86,5 +86,8 @@ module.exports = {
         'groupLength': 3,
       },
     }],
+    'unicorn/no-lonely-if': 'error',
+    'unicorn/empty-brace-spaces': 'error',
+    'unicorn/prefer-date-now': 'error',
   },
 };
