@@ -93,6 +93,7 @@ module.exports = {
     }],
     '@typescript-eslint/no-unnecessary-type-constraint': 'error',
     '@typescript-eslint/non-nullable-type-assertion-style': 'off',
+    '@typescript-eslint/sort-type-union-intersection-members': 'error',
     /*
       Extension Rules: these rules "extend" existing ESLint rules, therefore they turn off the rules they are extending.
       https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules

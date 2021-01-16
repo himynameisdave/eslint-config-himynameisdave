@@ -181,5 +181,11 @@ module.export = {
     'react/jsx-no-script-url': 0,
     //  Disallow adjacent inline elements, needs whitespace
     'react/no-adjacent-inline-elements': 0,
+    //  Enforce a new line after jsx elements and expressions
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-newline.md
+    'react/jsx-newline': 0,
+    //  Prevent react contexts from taking non-stable values
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-constructed-context-values.md
+    'react/jsx-no-constructed-context-values': 0,
   },
 };
