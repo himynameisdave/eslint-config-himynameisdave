@@ -1,4 +1,4 @@
-name: test
+name: outdated
 on:
   schedule:
     - cron:  '0 12 * * 0' # Once a week, at 12:00 (noon)
