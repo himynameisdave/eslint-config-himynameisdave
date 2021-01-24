@@ -4,11 +4,14 @@
     📄 An opinionated ESLint config, by and for <a href="http://himynameisdave.com">himynameisdave</a>.
   </p>
   <div>
-    <a href='https://travis-ci.org/himynameisdave/eslint-config-himynameisdave'>
-      <img src="https://api.travis-ci.org/himynameisdave/eslint-config-himynameisdave.svg?branch=master" alt="Travis Badge" />
+    <a href='https://github.com/himynameisdave/eslint-config-himynameisdave/actions?query=workflow%3Atest+branch%3Amain'>
+      <img src="https://github.com/himynameisdave/eslint-config-himynameisdave/workflows/test/badge.svg" alt="GitHub Actions - Test Workflow Badge" />
+    </a>
+    <a href='https://github.com/himynameisdave/eslint-config-himynameisdave/actions?query=workflow%3Aoutdated+branch%3Amain'>
+      <img src="https://github.com/himynameisdave/eslint-config-himynameisdave/workflows/outdated/badge.svg" alt="GitHub Actions - Test Workflow Badge" />
     </a>
     <a href="https://www.npmjs.com/package/eslint-config-himynameisdave">
-      <img alt="npm" src="https://img.shields.io/npm/v/eslint-config-himynameisdave?color=%2300aacc&label=version&logo=eslint-config-himynameisdave">
+      <img alt="npm Badge" src="https://img.shields.io/npm/v/eslint-config-himynameisdave?color=%2300aacc&label=version&logo=eslint-config-himynameisdave">
     </a>
     <a href="https://www.npmjs.com/browse/depended/eslint-config-himynameisdave">
       <img alt="Dependents (via libraries.io)" src="https://img.shields.io/librariesio/dependents/npm/eslint-config-himynameisdave?label=used%20by">
@@ -173,7 +176,7 @@ _Note: You probably shouldn't use the `import` config below if you're using Svel
 
 #### Import
 
-Extends the base config with [`import`](https://github.com/benmosher/eslint-plugin-import) plugin rules. 
+Extends the base config with [`import`](https://github.com/benmosher/eslint-plugin-import) plugin rules.
 
 ```bash
 # Add the following plugin
@@ -264,7 +267,7 @@ What is `babel-eslint`?
 
 ### Releases
 
-Read more about the release guidelines for this project [over here](https://github.com/himynameisdave/eslint-config-himynameisdave/blob/master/.github/RELEASING.md).
+Read more about the release guidelines for this project [over here](https://github.com/himynameisdave/eslint-config-himynameisdave/blob/main/.github/RELEASING.md).
 
 ### Inspiration
 
