@@ -72,5 +72,8 @@ module.exports = {
     'unicorn/prefer-array-index-of': 'off',
     'unicorn/prefer-regexp-test': 'off',
     'unicorn/consistent-destructuring': 'off',
+    'unicorn/no-array-for-each': 'off',
+    'unicorn/no-array-push-push': 'off',
+    'unicorn/no-this-assignment': 'off',
   },
 };

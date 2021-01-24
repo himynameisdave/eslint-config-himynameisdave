@@ -253,5 +253,10 @@ module.exports = {
     '@typescript-eslint/no-shadow': 'error',
     'space-infix-ops': 'off',
     '@typescript-eslint/space-infix-ops': 'error',
+    'object-curly-spacing': 'off',
+    '@typescript-eslint/object-curly-spacing': ['error', 'always', {
+      arraysInObjects: true,
+      objectsInObjects: true,
+    }],
   },
 };

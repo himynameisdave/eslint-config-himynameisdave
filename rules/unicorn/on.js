@@ -95,5 +95,8 @@ module.exports = {
     'unicorn/prefer-array-index-of': 'error',
     'unicorn/prefer-regexp-test': 'error',
     'unicorn/consistent-destructuring': 'error',
+    'unicorn/no-array-for-each': 'off',
+    'unicorn/no-array-push-push': 'error',
+    'unicorn/no-this-assignment': 'error',
   },
 };

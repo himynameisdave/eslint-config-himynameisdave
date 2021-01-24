@@ -122,5 +122,6 @@ module.exports = {
     '@typescript-eslint/no-redeclare': 'off',
     '@typescript-eslint/no-shadow': 'off',
     '@typescript-eslint/space-infix-ops': 'off',
+    '@typescript-eslint/object-curly-spacing': 'off',
   },
 };
