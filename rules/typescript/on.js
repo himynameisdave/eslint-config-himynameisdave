@@ -164,6 +164,7 @@ module.exports = {
       allowShortCircuit: false,
       allowTernary: false,
       allowTaggedTemplates: false,
+      enforceForJSX: true,
     }],
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error', {

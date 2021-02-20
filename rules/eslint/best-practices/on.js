@@ -169,6 +169,7 @@ module.exports = {
       allowShortCircuit: false,
       allowTernary: false,
       allowTaggedTemplates: false,
+      enforceForJSX: true,
     }],
     // disallow unused labels
     // http://eslint.org/docs/rules/no-unused-labels
