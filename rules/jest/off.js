@@ -89,5 +89,6 @@ module.exports = {
     'jest/no-conditional-expect': 0,
     'jest/no-interpolation-in-snapshots': 0,
     'jest/no-done-callback': 0,
+    'jest/unbound-method': 0,
   },
 };

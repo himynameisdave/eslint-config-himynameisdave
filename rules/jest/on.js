@@ -144,5 +144,7 @@ module.exports = {
     //  Prefer that you just return a promise instead of calling done()
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-done-callback.md
     'jest/no-done-callback': 'error',
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/unbound-method.md
+    'jest/unbound-method': 'off',
   },
 };
