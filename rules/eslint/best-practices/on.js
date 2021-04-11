@@ -82,6 +82,7 @@ module.exports = {
       'boolean': false,
       number: true,
       string: true,
+      disallowTemplateShorthand: true,
       allow: [],
     }],
     // disallow var and named functions in global scope

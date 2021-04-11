@@ -98,5 +98,7 @@ module.exports = {
     'unicorn/no-array-for-each': 'off',
     'unicorn/no-array-push-push': 'error',
     'unicorn/no-this-assignment': 'error',
+    'unicorn/prefer-array-flat': 'error',
+    'unicorn/no-static-only-class': 'error',
   },
 };

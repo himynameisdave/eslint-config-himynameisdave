@@ -239,5 +239,8 @@ module.exports = {
     //  Prevent react contexts from taking non-stable values
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-constructed-context-values.md
     'react/jsx-no-constructed-context-values': 'error',
+    //  Prevent creating unstable components inside components
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unstable-nested-components.md
+    'react/no-unstable-nested-components': 'error',
   },
 };

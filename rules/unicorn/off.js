@@ -75,5 +75,7 @@ module.exports = {
     'unicorn/no-array-for-each': 'off',
     'unicorn/no-array-push-push': 'off',
     'unicorn/no-this-assignment': 'off',
+    'unicorn/prefer-array-flat': 'off',
+    'unicorn/no-static-only-class': 'off',
   },
 };

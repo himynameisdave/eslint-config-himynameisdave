@@ -38,6 +38,7 @@ module.exports = {
     '@typescript-eslint/no-unnecessary-qualifier': 'off',
     '@typescript-eslint/no-unnecessary-type-arguments': 'off',
     '@typescript-eslint/no-unnecessary-type-assertion': 'off',
+    '@typescript-eslint/no-unsafe-argument': 'off',
     '@typescript-eslint/no-unused-vars-experimental': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/prefer-for-of': 'off',
