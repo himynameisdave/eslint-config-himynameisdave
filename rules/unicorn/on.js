@@ -45,7 +45,7 @@ module.exports = {
     'unicorn/prefer-dom-node-text-content': 'error',
     'unicorn/prefer-type-error': 'error',
     'unicorn/prevent-abbreviations': ['error', {
-      whitelist: {
+      allowList: {
         fn: true,
       },
       replacements: {
@@ -100,5 +100,8 @@ module.exports = {
     'unicorn/no-this-assignment': 'error',
     'unicorn/prefer-array-flat': 'error',
     'unicorn/no-static-only-class': 'error',
+    'unicorn/prefer-switch': 'error',
+    'unicorn/prefer-module': 'off',
+    'unicorn/prefer-node-protocol': 'error',
   },
 };

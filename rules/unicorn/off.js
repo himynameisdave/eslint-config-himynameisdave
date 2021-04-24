@@ -77,5 +77,8 @@ module.exports = {
     'unicorn/no-this-assignment': 'off',
     'unicorn/prefer-array-flat': 'off',
     'unicorn/no-static-only-class': 'off',
+    'unicorn/prefer-switch': 'off',
+    'unicorn/prefer-module': 'off',
+    'unicorn/prefer-node-protocol': 'off',
   },
 };
