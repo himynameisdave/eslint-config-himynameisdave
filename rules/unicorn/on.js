@@ -103,5 +103,6 @@ module.exports = {
     'unicorn/prefer-switch': 'error',
     'unicorn/prefer-module': 'off',
     'unicorn/prefer-node-protocol': 'error',
+    'unicorn/no-document-cookie': 'error',
   },
 };
