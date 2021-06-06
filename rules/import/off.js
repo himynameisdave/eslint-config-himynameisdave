@@ -52,5 +52,9 @@ module.exports = {
     'import/no-named-export': 'off',
     //  https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unused-modules.md
     'import/no-unused-modules': 'off',
+    //  https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-relative-packages.md
+    'import/no-relative-packages': 'off',
+    //  https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-import-module-exports.md
+    'import/no-import-module-exports': 'off',
   },
 };

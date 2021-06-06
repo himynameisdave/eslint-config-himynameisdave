@@ -54,7 +54,7 @@ module.exports = {
     'import/no-mutable-exports': 'error',
     // disallow require()
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md
-    'import/no-commonjs': 'off',
+    'import/no-commonjs': 'warn',
     // disallow AMD require/define
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-amd.md
     'import/no-amd': 'error',
@@ -75,9 +75,10 @@ module.exports = {
         'builtin',
         'external',
         'internal',
-        'sibling',
         'parent',
+        'sibling',
         'index',
+        'type',
       ],
       'newlines-between': 'never',
     }],
@@ -172,5 +173,9 @@ module.exports = {
     'import/no-named-export': 'off',
     //  https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unused-modules.md
     'import/no-unused-modules': 'error',
+    //  https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-relative-packages.md
+    'import/no-relative-packages': 'off',
+    //  https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-import-module-exports.md
+    'import/no-import-module-exports': 'error',
   },
 };

@@ -81,5 +81,9 @@ module.exports = {
     'unicorn/prefer-module': 'off',
     'unicorn/prefer-node-protocol': 'off',
     'unicorn/no-document-cookie': 'off',
+    'unicorn/prefer-object-has-own': 'off',
+    'unicorn/prefer-prototype-methods': 'off',
+    'unicorn/require-array-join-separator': 'off',
+    'unicorn/require-number-to-fixed-digits-argument': 'off',
   },
 };

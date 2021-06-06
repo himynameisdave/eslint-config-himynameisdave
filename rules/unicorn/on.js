@@ -9,11 +9,9 @@ module.exports = {
   plugins: ['unicorn'],
   rules: {
     'unicorn/catch-error-name': 'error',
-    // 'unicorn/consistent-function-scoping': 'error',
     'unicorn/custom-error-definition': 'off',
     'unicorn/error-message': 'error',
     'unicorn/escape-case': 'error',
-    // 'unicorn/expiring-todo-comments': 'error',
     'unicorn/explicit-length-check': 'error',
     'unicorn/filename-case': 'off',
     'unicorn/import-index': 'error',
@@ -104,5 +102,9 @@ module.exports = {
     'unicorn/prefer-module': 'off',
     'unicorn/prefer-node-protocol': 'error',
     'unicorn/no-document-cookie': 'error',
+    'unicorn/prefer-object-has-own': 'error',
+    'unicorn/prefer-prototype-methods': 'off',
+    'unicorn/require-array-join-separator': 'error',
+    'unicorn/require-number-to-fixed-digits-argument': 'error',
   },
 };
