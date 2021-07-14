@@ -3,7 +3,7 @@ module.exports = {
     es6: true,
   },
   parserOptions: {
-    ecmaVersion: 2021,
+    ecmaVersion: 'latest',
     sourceType: 'module',
   },
   plugins: ['unicorn'],
@@ -106,5 +106,9 @@ module.exports = {
     'unicorn/prefer-prototype-methods': 'off',
     'unicorn/require-array-join-separator': 'error',
     'unicorn/require-number-to-fixed-digits-argument': 'error',
+    'unicorn/no-array-method-this-argument': 'error',
+    'unicorn/require-post-message-target-origin': 'error',
+    'unicorn/prefer-top-level-await': 'off',
+    'unicorn/prefer-at': 'error',
   },
 };

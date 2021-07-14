@@ -85,5 +85,9 @@ module.exports = {
     'unicorn/prefer-prototype-methods': 'off',
     'unicorn/require-array-join-separator': 'off',
     'unicorn/require-number-to-fixed-digits-argument': 'off',
+    'unicorn/no-array-method-this-argument': 'off',
+    'unicorn/require-post-message-target-origin': 'off',
+    'unicorn/prefer-top-level-await': 'off',
+    'unicorn/prefer-at': 'off',
   },
 };
