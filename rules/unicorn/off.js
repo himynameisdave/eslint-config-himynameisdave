@@ -89,5 +89,8 @@ module.exports = {
     'unicorn/require-post-message-target-origin': 'off',
     'unicorn/prefer-top-level-await': 'off',
     'unicorn/prefer-at': 'off',
+    'unicorn/prefer-object-from-entries': 'off',
+    'unicorn/no-useless-length-check': 'off',
+    'unicorn/no-useless-spread': 'off',
   },
 };

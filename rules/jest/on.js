@@ -146,5 +146,8 @@ module.exports = {
     'jest/no-done-callback': 'error',
     //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/unbound-method.md
     'jest/unbound-method': 'off',
+    //  Limit the number of nested describe calls (default: max 5)
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/max-nested-describe.md
+    'jest/max-nested-describe': 'error',
   },
 };
