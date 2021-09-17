@@ -115,7 +115,12 @@ module.exports = {
     // Prevent usage of unwrapped JSX strings
     'react/jsx-no-literals': 'off',
     // Prevent usage of unsafe target='_blank'
-    'react/jsx-no-target-blank': 'error',
+    'react/jsx-no-target-blank': ['error', {
+      'allowReferrer': false,
+      'enforceDynamicLinks': 'always',
+      'links': true,
+      'forms': true,
+    }],
     // Disallow undeclared variables in JSX
     'react/jsx-no-undef': 'error',
     // Enforce PascalCase for user-defined JSX components
@@ -157,7 +162,9 @@ module.exports = {
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-array-index-key.md
     'react/no-array-index-key': 'error',
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-children-prop.md
-    'react/no-children-prop': 'error',
+    'react/no-children-prop': ['error', {
+      allowFunctions: true,
+    }],
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger-with-children.md
     'react/no-danger-with-children': 'error',
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-redundant-should-component-update.md
@@ -242,5 +249,8 @@ module.exports = {
     //  Prevent creating unstable components inside components
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unstable-nested-components.md
     'react/no-unstable-nested-components': 'error',
+    //  Prefer exact proptype definitions
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-exact-props.md
+    'react/prefer-exact-props': 'off',
   },
 };

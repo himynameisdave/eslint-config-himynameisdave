@@ -190,5 +190,8 @@ module.export = {
     //  Prevent creating unstable components inside components
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unstable-nested-components.md
     'react/no-unstable-nested-components': 0,
+    //  Prefer exact proptype definitions
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-exact-props.md
+    'react/prefer-exact-props': 0,
   },
 };

@@ -113,5 +113,7 @@ module.exports = {
     'unicorn/prefer-object-from-entries': 'error',
     'unicorn/no-useless-length-check': 'error',
     'unicorn/no-useless-spread': 'error',
+    'unicorn/no-useless-fallback-in-spread': 'error',
+    'unicorn/no-invalid-remove-event-listener': 'error',
   },
 };

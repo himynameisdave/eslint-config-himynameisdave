@@ -81,6 +81,7 @@ module.exports = {
     '@typescript-eslint/non-nullable-type-assertion-style': 'off',
     '@typescript-eslint/sort-type-union-intersection-members': 'off',
     '@typescript-eslint/prefer-return-this-type': 'off',
+    '@typescript-eslint/no-meaningless-void-operator': 'off',
     /*
       Extension Rules: these rules "extend" existing ESLint rules, therefore they turn off the rules they are extending.
       https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
@@ -125,5 +126,6 @@ module.exports = {
     '@typescript-eslint/no-shadow': 'off',
     '@typescript-eslint/space-infix-ops': 'off',
     '@typescript-eslint/object-curly-spacing': 'off',
+    '@typescript-eslint/padding-line-between-statements': 'off',
   },
 };

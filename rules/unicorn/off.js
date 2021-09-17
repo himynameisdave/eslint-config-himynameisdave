@@ -92,5 +92,7 @@ module.exports = {
     'unicorn/prefer-object-from-entries': 'off',
     'unicorn/no-useless-length-check': 'off',
     'unicorn/no-useless-spread': 'off',
+    'unicorn/no-useless-fallback-in-spread': 'off',
+    'unicorn/no-invalid-remove-event-listener': 'off',
   },
 };
