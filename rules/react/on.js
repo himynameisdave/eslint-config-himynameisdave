@@ -96,9 +96,12 @@ module.exports = {
     // Validate JSX has key prop when in array or iterator
     'react/jsx-key': 'error',
     // Limit maximum of props on a single line in JSX
+    // Up to 2 on one line, but one each per multi-line
     'react/jsx-max-props-per-line': ['error', {
-      maximum: 2,
-      when: 'always',
+      maximum: {
+        single: 2,
+        multi: 1,
+      },
     }],
     // Prevent usage of .bind() and arrow functions in JSX props
     'react/jsx-no-bind': ['error', {
@@ -252,5 +255,8 @@ module.exports = {
     //  Prefer exact proptype definitions
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-exact-props.md
     'react/prefer-exact-props': 'off',
+    //  Enforce that namespaces are not used in React elements
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-namespace.md
+    'react/no-namespace': 'error',
   },
 };

@@ -193,5 +193,8 @@ module.export = {
     //  Prefer exact proptype definitions
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-exact-props.md
     'react/prefer-exact-props': 0,
+    //  Enforce that namespaces are not used in React elements
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-namespace.md
+    'react/no-namespace': 0,
   },
 };

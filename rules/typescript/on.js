@@ -97,6 +97,7 @@ module.exports = {
     '@typescript-eslint/sort-type-union-intersection-members': 'error',
     '@typescript-eslint/prefer-return-this-type': 'error',
     '@typescript-eslint/no-meaningless-void-operator': 'error',
+    '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
     /*
       Extension Rules: these rules "extend" existing ESLint rules, therefore they turn off the rules they are extending.
       https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
@@ -264,5 +265,7 @@ module.exports = {
     }],
     'padding-line-between-statements': 'off',
     '@typescript-eslint/padding-line-between-statements': 'off',
+    'no-restricted-imports': 'off',
+    '@typescript-eslint/no-restricted-imports': 'off',
   },
 };

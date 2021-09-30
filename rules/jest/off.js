@@ -91,5 +91,7 @@ module.exports = {
     'jest/no-done-callback': 0,
     'jest/unbound-method': 0,
     'jest/max-nested-describe': 0,
+    'jest/prefer-to-be': 0,
+    'jest/prefer-expect-resolves': 0,
   },
 };

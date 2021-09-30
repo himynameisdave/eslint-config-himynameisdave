@@ -149,5 +149,11 @@ module.exports = {
     //  Limit the number of nested describe calls (default: max 5)
     //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/max-nested-describe.md
     'jest/max-nested-describe': 'error',
+    //  Suggest using toBe() for primitive literals
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-to-be.md
+    'jest/prefer-to-be': 'error',
+    //  Prefer await expect(...).resolves over expect(await ...) syntax
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-expect-resolves.md
+    'jest/prefer-expect-resolves': 'error',
   },
 };
