@@ -1,16 +1,16 @@
 module.exports = {
+  //  As of ESLint 7.x, these rules are deprecated / moved to eslint-plugin-node
   rules: {
-    //  As of ESLint 7.x, these rules are deprecated / moved to eslint-plugin-node
-    'callback-return': 'off',
-    'global-require': 'off',
-    'handle-callback-err': 'off',
-    'no-buffer-constructor': 'off',
-    'no-mixed-requires': 'off',
-    'no-new-require': 'off',
-    'no-path-concat': 'off',
-    'no-process-env': 'off',
-    'no-process-exit': 'off',
-    'no-restricted-modules': 'off',
-    'no-sync': 'off',
+    'callback-return': 0,
+    'global-require': 0,
+    'handle-callback-err': 0,
+    'no-buffer-constructor': 0,
+    'no-mixed-requires': 0,
+    'no-new-require': 0,
+    'no-path-concat': 0,
+    'no-process-env': 0,
+    'no-process-exit': 0,
+    'no-restricted-modules': 0,
+    'no-sync': 0,
   },
 };

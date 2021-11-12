@@ -12,16 +12,16 @@ module.exports = {
     // require space before/after arrow function's arrow
     // https://eslint.org/docs/rules/arrow-spacing
     'arrow-spacing': ['error', {
-      before: true,
       after: true,
+      before: true,
     }],
     // verify super() callings in constructors
     'constructor-super': 'error',
     // enforce no space before * and space after * in generator functions
     // https://eslint.org/docs/rules/generator-star-spacing
     'generator-star-spacing': ['warn', {
-      before: false,
       after: true,
+      before: false,
     }],
     // disallow modifying variables of class declarations
     'no-class-assign': 'error',
@@ -39,6 +39,9 @@ module.exports = {
     // disallow use of the new operator with the Symbol object
     // https://eslint.org/docs/rules/no-new-symbol
     'no-new-symbol': 'error',
+    //  Disallow specified names in exports
+    //  https://github.com/eslint/eslint/blob/master/docs/rules/no-restricted-exports.md
+    'no-restricted-exports': 'off',
     // restrict usage of specified modules when loaded by import declaration
     'no-restricted-imports': 'off',
     // disallow to use this/super before super() calling in constructors.
@@ -51,8 +54,8 @@ module.exports = {
     // https://eslint.org/docs/rules/no-useless-rename
     'no-useless-rename': ['error', {
       ignoreDestructuring: false,
-      ignoreImport: false,
       ignoreExport: false,
+      ignoreImport: false,
     }],
     // require let or const instead of var
     'no-var': 'error',
@@ -74,8 +77,8 @@ module.exports = {
     // Prefer destructuring from arrays and objects
     // https://eslint.org/docs/rules/prefer-destructuring
     'prefer-destructuring': ['error', {
-      object: true,
       array: false,
+      object: true,
     }, {
       enforceForRenamedProperties: false,
     }],
@@ -118,8 +121,5 @@ module.exports = {
     // enforce spacing around the * in yield* expressions
     // https://eslint.org/docs/rules/yield-star-spacing
     'yield-star-spacing': ['error', 'after'],
-    //  Disallow specified names in exports
-    //  https://github.com/eslint/eslint/blob/master/docs/rules/no-restricted-exports.md
-    'no-restricted-exports': 'off',
   },
 };

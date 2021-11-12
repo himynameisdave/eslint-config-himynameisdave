@@ -9,12 +9,12 @@ module.exports = {
     }],
     // treat var statements as if they were block scoped
     'block-scoped-var': 'error',
-    // specify the maximum cyclomatic complexity allowed in a program
-    // https://eslint.org/docs/3.0.0/rules/complexity
-    complexity: ['error', 10],
     // enforce that class methods use "this"
     // http://eslint.org/docs/rules/class-methods-use-this
     'class-methods-use-this': 'off',
+    // specify the maximum cyclomatic complexity allowed in a program
+    // https://eslint.org/docs/3.0.0/rules/complexity
+    complexity: ['error', 10],
     // require return statements to either always or never specify values
     'consistent-return': 'off',
     // specify curly brace conventions for multi-line control statements
@@ -23,6 +23,12 @@ module.exports = {
     'default-case': ['error', {
       commentPattern: '^no default$',
     }],
+    //  Enforce default clauses in switch statements to be last
+    //  https://github.com/eslint/eslint/blob/master/docs/rules/default-case-last.md
+    'default-case-last': 'error',
+    //  Encourage default params to come last
+    //  https://eslint.org/docs/rules/default-param-last
+    'default-param-last': 'error',
     // enforces consistent newlines before or after dots
     // http://eslint.org/docs/rules/dot-location
     'dot-location': ['error', 'property'],
@@ -34,14 +40,27 @@ module.exports = {
     eqeqeq: ['error', 'always', {
       'null': 'ignore',
     }],
+    //  Ensure getters and setters appear together
+    //  https://github.com/eslint/eslint/blob/master/docs/rules/grouped-accessor-pairs.md
+    'grouped-accessor-pairs': 'error',
     // make sure for-in loops have an if statement
     'guard-for-in': 'error',
+    //  https://github.com/eslint/eslint/blob/master/docs/rules/max-classes-per-file.md
+    'max-classes-per-file': 'error',
+    //  https://github.com/eslint/eslint/blob/master/docs/rules/max-lines-per-function.md
+    'max-lines-per-function': 'off',
     // disallow the use of alert, confirm, and prompt
     'no-alert': 'error',
+    //  Promise executor function shouldn't be async
+    //  https://eslint.org/docs/rules/no-async-promise-executor
+    'no-async-promise-executor': 'error',
     // disallow use of arguments.caller or arguments.callee
     'no-caller': 'error',
     // disallow lexical declarations in case clauses
     'no-case-declarations': 'error',
+    //  Don't return in constructors
+    //  https://github.com/eslint/eslint/blob/master/docs/rules/no-constructor-return.md
+    'no-constructor-return': 'error',
     // disallow division operators explicitly at beginning of regular expression
     'no-div-regex': 'off',
     // disallow else after a return in an if
@@ -49,9 +68,7 @@ module.exports = {
     // disallow empty functions, except for standalone funcs/arrows
     // http://eslint.org/docs/rules/no-empty-function
     'no-empty-function': ['error', {
-      allow: [
-        'arrowFunctions',
-      ],
+      allow: ['arrowFunctions'],
     }],
     // disallow use of empty destructuring patterns
     'no-empty-pattern': 'error',
@@ -75,15 +92,13 @@ module.exports = {
     'no-global-assign': ['error', {
       exceptions: [],
     }],
-    // deprecated in favor of no-global-assign
-    'no-native-reassign': 'off',
     // disallow the type conversions with shorter notations
     'no-implicit-coercion': ['off', {
+      allow: [],
       'boolean': false,
+      disallowTemplateShorthand: true,
       number: true,
       string: true,
-      disallowTemplateShorthand: true,
-      allow: [],
     }],
     // disallow var and named functions in global scope
     // http://eslint.org/docs/rules/no-implicit-globals
@@ -106,16 +121,24 @@ module.exports = {
     // disallow magic numbers
     // http://eslint.org/docs/rules/no-magic-numbers
     'no-magic-numbers': 'off',
+    //  Don't allow weird unicode stuff in regexes
+    //  https://eslint.org/docs/rules/no-misleading-character-class
+    'no-misleading-character-class': 'error',
     // disallow use of multiple spaces
     'no-multi-spaces': 'error',
     // disallow use of multiline strings
     'no-multi-str': 'error',
+    // deprecated in favor of no-global-assign
+    'no-native-reassign': 'off',
     // disallow use of new operator when not part of the assignment or comparison
     'no-new': 'error',
     // disallow use of new operator for Function object
     'no-new-func': 'error',
     // disallows creating new instances of String,Number, a`nd Boolean
     'no-new-wrappers': 'error',
+    //  Disallow `\\8` and `\\9` escape sequences in string literals
+    //  https://eslint.org/docs/rules/no-nonoctal-decimal-escape
+    'no-nonoctal-decimal-escape': 'error',
     // disallow use of (old style) octal literals
     'no-octal': 'error',
     // disallow use of octal escape sequences in string literals, such as
@@ -125,13 +148,9 @@ module.exports = {
     // disallow parameter object manipulation except for specific exclusions
     // rule: http://eslint.org/docs/rules/no-param-reassign.html
     'no-param-reassign': ['error', {
+      ignorePropertyModificationsFor: ['acc'],
       props: true,
-      ignorePropertyModificationsFor: [
-        'acc', // for reduce accumulators
-      ],
     }],
-    //  https://eslint.org/docs/4.0.0/rules/no-useless-return
-    'no-useless-return': 'error',
     // disallow usage of __proto__ property
     'no-proto': 'error',
     // disallow declaring the same variable more then once
@@ -139,13 +158,13 @@ module.exports = {
     // disallow certain object properties
     // http://eslint.org/docs/rules/no-restricted-properties
     'no-restricted-properties': ['error', {
+      message: 'Please use Number.isNaN instead',
       object: 'window',
       property: 'isNaN',
-      message: 'Please use Number.isNaN instead',
     }, {
+      message: 'Use the ES6 exponentiation operator (**) instead.',
       object: 'Math',
       property: 'pow',
-      message: 'Use the ES6 exponentiation operator (**) instead.',
     }],
     // disallow use of assignment in return statement
     'no-return-assign': ['error', 'always'],
@@ -168,8 +187,8 @@ module.exports = {
     // disallow usage of expressions in statement position
     'no-unused-expressions': ['error', {
       allowShortCircuit: false,
-      allowTernary: false,
       allowTaggedTemplates: false,
+      allowTernary: false,
       enforceForJSX: true,
     }],
     // disallow unused labels
@@ -177,12 +196,17 @@ module.exports = {
     'no-unused-labels': 'error',
     // disallow unnecessary .call() and .apply()
     'no-useless-call': 'warn',
+    // Prevents catch clauses which just throw the original error
+    // https://eslint.org/docs/rules/no-useless-catch
+    'no-useless-catch': 'error',
     // disallow unnecessary concatenation of literals or template literals
     // http://eslint.org/docs/rules/no-useless-concat
     'no-useless-concat': 'error',
     // disallow unnecessary usage of escape character
     // http://eslint.org/docs/rules/no-useless-escape
     'no-useless-escape': 'error',
+    //  https://eslint.org/docs/4.0.0/rules/no-useless-return
+    'no-useless-return': 'error',
     // disallow use of void operator
     // http://eslint.org/docs/rules/no-void
     'no-void': 'error',
@@ -190,8 +214,20 @@ module.exports = {
     'no-warning-comments': 'off',
     // disallow use of the with statement
     'no-with': 'error',
+    //  Encourage use of named capture groups in regular expressions
+    //  https://eslint.org/docs/rules/prefer-named-capture-group
+    'prefer-named-capture-group': 'error',
+    //  Prefer regex literals over new RegExp() constructor
+    //  https://eslint.org/docs/rules/prefer-regex-literals
+    'prefer-regex-literals': 'error',
     // require use of the second argument for parseInt()
     radix: 'off',
+    //  Don't make silly mistakes with await/yeild
+    //  https://eslint.org/docs/rules/require-atomic-updates
+    'require-atomic-updates': 'error',
+    //  Enforce using the unicode flag for Regex
+    //  https://eslint.org/docs/rules/require-unicode-regexp
+    'require-unicode-regexp': 'off',
     // requires to declare all vars on top of their containing scope
     'vars-on-top': 'error',
     // require immediate function invocation to be wrapped in parentheses
@@ -201,45 +237,5 @@ module.exports = {
     }],
     // require or disallow Yoda conditions
     yoda: ['error', 'never'],
-    //  https://github.com/eslint/eslint/blob/master/docs/rules/max-classes-per-file.md
-    'max-classes-per-file': 'error',
-    //  https://github.com/eslint/eslint/blob/master/docs/rules/max-lines-per-function.md
-    'max-lines-per-function': 'off',
-    //  Promise executor function shouldn't be async
-    //  https://eslint.org/docs/rules/no-async-promise-executor
-    'no-async-promise-executor': 'error',
-    //  Don't allow weird unicode stuff in regexes
-    //  https://eslint.org/docs/rules/no-misleading-character-class
-    'no-misleading-character-class': 'error',
-    //  Don't make silly mistakes with await/yeild
-    //  https://eslint.org/docs/rules/require-atomic-updates
-    'require-atomic-updates': 'error',
-    //  Enforce using the unicode flag for Regex
-    //  https://eslint.org/docs/rules/require-unicode-regexp
-    'require-unicode-regexp': 'off',
-    // Prevents catch clauses which just throw the original error
-    // https://eslint.org/docs/rules/no-useless-catch
-    'no-useless-catch': 'error',
-    //  Encourage use of named capture groups in regular expressions
-    //  https://eslint.org/docs/rules/prefer-named-capture-group
-    'prefer-named-capture-group': 'error',
-    //  Encourage default params to come last
-    //  https://eslint.org/docs/rules/default-param-last
-    'default-param-last': 'error',
-    //  Prefer regex literals over new RegExp() constructor
-    //  https://eslint.org/docs/rules/prefer-regex-literals
-    'prefer-regex-literals': 'error',
-    //  Ensure getters and setters appear together
-    //  https://github.com/eslint/eslint/blob/master/docs/rules/grouped-accessor-pairs.md
-    'grouped-accessor-pairs': 'error',
-    //  Don't return in constructors
-    //  https://github.com/eslint/eslint/blob/master/docs/rules/no-constructor-return.md
-    'no-constructor-return': 'error',
-    //  Enforce default clauses in switch statements to be last
-    //  https://github.com/eslint/eslint/blob/master/docs/rules/default-case-last.md
-    'default-case-last': 'error',
-    //  Disallow `\\8` and `\\9` escape sequences in string literals
-    //  https://eslint.org/docs/rules/no-nonoctal-decimal-escape
-    'no-nonoctal-decimal-escape': 'error',
   },
 };

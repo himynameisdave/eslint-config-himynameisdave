@@ -2,8 +2,8 @@ module.exports = {
   env: {
     node: true,
   },
+  //  As of ESLint 7.x, these rules are deprecated / moved to eslint-plugin-node
   rules: {
-    //  As of ESLint 7.x, these rules are deprecated / moved to eslint-plugin-node
     'callback-return': 'off',
     'global-require': 'off',
     'handle-callback-err': 'off',

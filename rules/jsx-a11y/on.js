@@ -28,9 +28,15 @@ module.exports = {
     //  aria-unsupported-elements - Enforce that elements that do not support ARIA roles, states, and properties do not have those attributes.
     //  https://github.com/evcohen/eslint-plugin-jsx-a11y/tree/master/docs/rules/aria-unsupported-elements.md
     'jsx-a11y/aria-unsupported-elements': 'error',
+    //  Ensure the autocomplete attribute is correct and suitable for the form field it is used with.
+    //  https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/master/docs/rules/autocomplete-valid.md
+    'jsx-a11y/autocomplete-valid': 'error',
     //  click-events-have-key-events - Enforce a clickable non-interactive element has at least one keyboard event listener.
     //  https://github.com/evcohen/eslint-plugin-jsx-a11y/tree/master/docs/rules/click-events-have-key-events.md
     'jsx-a11y/click-events-have-key-events': 'error',
+    //  Enforce that a control (an interactive element) has a text label.
+    //  https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/control-has-associated-label.md
+    'jsx-a11y/control-has-associated-label': 'error',
     //  heading-has-content - Enforce heading (`h1`, `h2`, etc) elements contain accessible content.
     //  https://github.com/evcohen/eslint-plugin-jsx-a11y/tree/master/docs/rules/heading-has-content.md
     'jsx-a11y/heading-has-content': 'error',
@@ -46,12 +52,12 @@ module.exports = {
     //  interactive-supports-focus - Enforce that elements with interactive handlers like `onClick` must be focusable.
     //  https://github.com/evcohen/eslint-plugin-jsx-a11y/tree/master/docs/rules/interactive-supports-focus.md
     'jsx-a11y/interactive-supports-focus': 'error',
-    //  [DEPRECATED] label-has-for - Enforce that `<label>` elements have the `htmlFor` prop.
-    //  https://github.com/evcohen/eslint-plugin-jsx-a11y/tree/master/docs/rules/label-has-for.md
-    'jsx-a11y/label-has-for': 'off',
     //  label-has-associated-control - Enforce that a label tag has a text label and an associated control.
     //  https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-associated-control.md
     'jsx-a11y/label-has-associated-control': 'error',
+    //  [DEPRECATED] label-has-for - Enforce that `<label>` elements have the `htmlFor` prop.
+    //  https://github.com/evcohen/eslint-plugin-jsx-a11y/tree/master/docs/rules/label-has-for.md
+    'jsx-a11y/label-has-for': 'off',
     //  lang - Enforce lang attribute has a valid value.
     //  https://github.com/evcohen/eslint-plugin-jsx-a11y/tree/master/docs/rules/lang.md
     'jsx-a11y/lang': 'error',
@@ -103,11 +109,5 @@ module.exports = {
     //  tabindex-no-positive - Enforce `tabIndex` value is not greater than zero.
     //  https://github.com/evcohen/eslint-plugin-jsx-a11y/tree/master/docs/rules/tabindex-no-positive.md
     'jsx-a11y/tabindex-no-positive': 'error',
-    //  Enforce that a control (an interactive element) has a text label.
-    //  https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/control-has-associated-label.md
-    'jsx-a11y/control-has-associated-label': 'error',
-    //  Ensure the autocomplete attribute is correct and suitable for the form field it is used with.
-    //  https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/master/docs/rules/autocomplete-valid.md
-    'jsx-a11y/autocomplete-valid': 'error',
   },
 };

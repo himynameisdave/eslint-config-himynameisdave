@@ -55,10 +55,6 @@ module.exports = {
     'node/no-unpublished-require': 'error',
     //  [deprecated]
     'node/no-unsupported-features': 'off',
-    //  make process.exit() expressions the same code path as throw
-    'node/process-exit-as-throw': 'error',
-    //  suggest correct usage of shebang
-    'node/shebang': 'off',
     //  No unsupported features:
     'node/no-unsupported-features/es-builtins': 'error',
     'node/no-unsupported-features/es-syntax': 'error',
@@ -69,10 +65,14 @@ module.exports = {
     'node/prefer-global/process': 'error',
     'node/prefer-global/text-decoder': 'error',
     'node/prefer-global/text-encoder': 'error',
-    'node/prefer-global/url-search-params': 'error',
     'node/prefer-global/url': 'error',
+    'node/prefer-global/url-search-params': 'error',
     //  Prefer promises:
     'node/prefer-promises/dns': 'error',
     'node/prefer-promises/fs': 'error',
+    //  make process.exit() expressions the same code path as throw
+    'node/process-exit-as-throw': 'error',
+    //  suggest correct usage of shebang
+    'node/shebang': 'off',
   },
 };
