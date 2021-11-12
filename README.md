@@ -25,6 +25,7 @@ A modular, opinionated, and well-maintained `eslint` config made by and for [`hi
 
 ### Contents
 
+- [Requirements](#Requirements)
 - [Installation](#Installation)
 - [Configurations](#Configurations)
   - [core](#Core)
@@ -39,6 +40,13 @@ A modular, opinionated, and well-maintained `eslint` config made by and for [`hi
 - [Releases](#Releases)
 - [Inspiration](#Inspiration)
 - [Neat ESLint Stuff](#Some-neat-ESLint-stuff)
+
+### Requirements
+
+Requires at least:
+
+- Node v14.x+
+- ESLint v8.x+
 
 ### Installation
 
