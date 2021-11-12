@@ -155,5 +155,16 @@ module.exports = {
     //  Prefer await expect(...).resolves over expect(await ...) syntax
     //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-expect-resolves.md
     'jest/prefer-expect-resolves': 'error',
+    //  Enforce lowercase test names
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-lowercase-title.md
+    'jest/prefer-lowercase-title': ['error', {
+      'ignore': ['describe'],
+    }],
+    //  Require setup and teardown code to be within a hook
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/require-hook.md
+    'jest/require-hook': 'error',
+    //  Enforce valid describe() callback
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/valid-describe-callback.md
+    'jest/valid-describe-callback': 'error',
   },
 };

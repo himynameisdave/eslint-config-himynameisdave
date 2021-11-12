@@ -94,5 +94,8 @@ module.exports = {
     'unicorn/no-useless-spread': 'off',
     'unicorn/no-useless-fallback-in-spread': 'off',
     'unicorn/no-invalid-remove-event-listener': 'off',
+    'unicorn/no-empty-file': 'off',
+    'unicorn/prefer-export-from': 'off',
+    'unicorn/template-indent': 'off',
   },
 };

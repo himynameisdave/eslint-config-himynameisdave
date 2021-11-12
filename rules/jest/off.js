@@ -93,5 +93,8 @@ module.exports = {
     'jest/max-nested-describe': 0,
     'jest/prefer-to-be': 0,
     'jest/prefer-expect-resolves': 0,
+    'jest/prefer-lowercase-title': 0,
+    'jest/require-hook': 0,
+    'jest/valid-describe-callback': 0,
   },
 };

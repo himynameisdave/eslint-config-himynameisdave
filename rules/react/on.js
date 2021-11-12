@@ -258,5 +258,14 @@ module.exports = {
     //  Enforce that namespaces are not used in React elements
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-namespace.md
     'react/no-namespace': 'error',
+    //  Lifecycle methods should be methods on the prototype, not class fields
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-arrow-function-lifecycle.md
+    'react/no-arrow-function-lifecycle': 'error',
+    //  Prevent usage of invalid attributes
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-invalid-html-attribute.md
+    'react/no-invalid-html-attribute': 'error',
+    //  Prevent declaring unused methods of component class
+    //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unused-class-component-methods.md
+    'react/no-unused-class-component-methods': 'error',
   },
 };

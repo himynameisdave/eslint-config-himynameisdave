@@ -84,5 +84,8 @@ module.exports = {
     //  Disallow use of optional chaining in contexts where the `undefined` value is not allowed
     //  https://github.com/eslint/eslint/blob/683ad00c41e1ae4d889deff82b2a94318e8c2129/lib/rules/no-unsafe-optional-chaining.js
     'no-unsafe-optional-chaining': 0,
+    //  Disallow Unused Private Class Members
+    //  https://github.com/eslint/eslint/blob/main/lib/rules/no-unused-private-class-members.js
+    'no-unused-private-class-members': 0,
   },
 };

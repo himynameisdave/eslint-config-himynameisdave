@@ -98,6 +98,7 @@ module.exports = {
     '@typescript-eslint/prefer-return-this-type': 'error',
     '@typescript-eslint/no-meaningless-void-operator': 'error',
     '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
+    '@typescript-eslint/consistent-type-exports': 'error',
     /*
       Extension Rules: these rules "extend" existing ESLint rules, therefore they turn off the rules they are extending.
       https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
