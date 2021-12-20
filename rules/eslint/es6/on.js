@@ -82,6 +82,9 @@ module.exports = {
     }, {
       enforceForRenamedProperties: false,
     }],
+    //  disallow use of `Object.prototype.hasOwnProperty.call()`
+    //  https://eslint.org/docs/rules/prefer-object-has-own
+    'prefer-object-has-own': 'error',
     // https://eslint.org/docs/4.0.0/rules/prefer-promise-reject-errors
     'prefer-promise-reject-errors': 'off',
     // suggest using Reflect methods where applicable

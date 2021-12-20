@@ -20,6 +20,8 @@ module.exports = {
     'object-shorthand': 0,
     'prefer-arrow-callback': 0,
     'prefer-const': 0,
+    'prefer-destructuring': 0,
+    'prefer-object-has-own': 0,
     'prefer-promise-reject-errors': 0,
     'prefer-reflect': 0,
     'prefer-rest-params': 0,
