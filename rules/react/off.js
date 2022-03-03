@@ -11,6 +11,8 @@ module.export = {
     'react/forbid-foreign-prop-types': 0,
     'react/forbid-prop-types': 0,
     'react/function-component-definition': 0,
+    'react/hook-use-state': 0,
+    'react/iframe-missing-sandbox': 0,
     'react/jsx-boolean-value': 0,
     'react/jsx-child-element-spacing': 0,
     'react/jsx-closing-bracket-location': 0,

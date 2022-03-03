@@ -103,6 +103,7 @@ module.exports = {
     'unicorn/require-post-message-target-origin': 0,
     'unicorn/string-content': 0,
     'unicorn/template-indent': 0,
+    'unicorn/text-encoding-identifier-case': 0,
     'unicorn/throw-new-error': 0,
   },
 };

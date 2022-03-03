@@ -130,5 +130,8 @@ module.exports = {
     '@typescript-eslint/semi': 0,
     '@typescript-eslint/space-before-function-paren': 0,
     '@typescript-eslint/space-infix-ops': 0,
+    '@typescript-eslint/no-redundant-type-constituents': 0,
+    '@typescript-eslint/no-useless-empty-export': 0,
+    '@typescript-eslint/space-before-blocks': 0,
   },
 };

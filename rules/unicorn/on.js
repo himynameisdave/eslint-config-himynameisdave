@@ -125,6 +125,7 @@ module.exports = {
     'unicorn/require-post-message-target-origin': 'error',
     'unicorn/string-content': 'off',
     'unicorn/template-indent': 'error',
+    'unicorn/text-encoding-identifier-case': 'error',
     'unicorn/throw-new-error': 'error',
   },
 };

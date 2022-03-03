@@ -36,6 +36,8 @@ module.exports = {
       namedComponents: 'arrow-function',
       unnamedComponent: 'arrow-function',
     }],
+    'react/hook-use-state': 'error',
+    'react/iframe-missing-sandbox': 'error',
     // ========================================================================
     //                                JSX Specific Rules
     // ========================================================================

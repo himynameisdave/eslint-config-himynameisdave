@@ -99,6 +99,8 @@ module.exports = {
     '@typescript-eslint/no-meaningless-void-operator': 'error',
     '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 'error',
     '@typescript-eslint/consistent-type-exports': 'error',
+    '@typescript-eslint/no-redundant-type-constituents': 'error',
+    '@typescript-eslint/no-useless-empty-export': 'error',
     /*
       Extension Rules: these rules "extend" existing ESLint rules, therefore they turn off the rules they are extending.
       https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
@@ -268,5 +270,7 @@ module.exports = {
     '@typescript-eslint/padding-line-between-statements': 'off',
     'no-restricted-imports': 'off',
     '@typescript-eslint/no-restricted-imports': 'off',
+    'space-before-blocks': 'off',
+    '@typescript-eslint/space-before-blocks': ['error', 'always'],
   },
 };

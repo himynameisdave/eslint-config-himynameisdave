@@ -28,6 +28,7 @@ module.exports = {
     //  Prevents the use of expect in conditional blocks
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-conditional-expect.md
     'jest/no-conditional-expect': 'error',
+    'jest/no-conditional-in-test': 'error',
     //  Disallow use of deprecated functions
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-deprecated-functions.md
     'jest/no-deprecated-functions': 'error',
@@ -97,6 +98,8 @@ module.exports = {
     'jest/no-try-expect': 'off',
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-called-with.md
     'jest/prefer-called-with': 'error',
+    'jest/prefer-comparison-matcher': 'error',
+    'jest/prefer-equality-matcher': 'error',
     //  We don't enforce assertation counting
     //  https://github.com/jest-community/eslint-plugin-jest/blob/HEAD/docs/rules/prefer-expect-assertions.md
     'jest/prefer-expect-assertions': 'off',
@@ -115,6 +118,7 @@ module.exports = {
     'jest/prefer-lowercase-title': ['error', {
       'ignore': ['describe'],
     }],
+    'jest/prefer-snapshot-hint': 'off',
     //  [DEPRECATED] Prefer that you just return a promise instead of calling done()
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-test-callback.md
     // 'jest/no-test-callback': 'error',
