@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-himynameisdave",
-  "version": "5.4.2",
+  "version": "5.5.0",
   "description": "🗒️ An opinionated ESLint config by and for himynameisdave",
   "main": "configurations/core.js",
   "scripts": {
