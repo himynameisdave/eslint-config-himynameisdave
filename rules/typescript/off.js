@@ -61,6 +61,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars-experimental': 0,
     '@typescript-eslint/no-var-requires': 0,
     '@typescript-eslint/non-nullable-type-assertion-style': 0,
+    '@typescript-eslint/parameter-properties': 0,
     '@typescript-eslint/prefer-as-const': 0,
     '@typescript-eslint/prefer-enum-initializers': 0,
     '@typescript-eslint/prefer-for-of': 0,

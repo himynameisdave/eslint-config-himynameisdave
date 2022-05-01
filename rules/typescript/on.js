@@ -94,6 +94,7 @@ module.exports = {
     }],
     '@typescript-eslint/no-unnecessary-type-constraint': 'error',
     '@typescript-eslint/non-nullable-type-assertion-style': 'off',
+    '@typescript-eslint/parameter-properties': 'error',
     '@typescript-eslint/sort-type-union-intersection-members': 'error',
     '@typescript-eslint/prefer-return-this-type': 'error',
     '@typescript-eslint/no-meaningless-void-operator': 'error',

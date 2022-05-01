@@ -18,6 +18,8 @@ module.exports = {
     'no-cond-assign': ['error', 'always'],
     // disallow use of console
     'no-console': 'error',
+    //  Disallow dumb boolean comparisons.
+    'no-constant-binary-expression': 'error',
     // disallow use of constant expressions in conditions
     'no-constant-condition': 'warn',
     // disallow control characters in regular expressions

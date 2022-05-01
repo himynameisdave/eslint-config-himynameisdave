@@ -4,6 +4,7 @@ module.exports = {
     'no-cond-assign': 0,
     'no-console': 0,
     'no-constant-condition': 0,
+    'no-constant-binary-expression': 0,
     'no-control-regex': 0,
     'no-debugger': 0,
     'no-dupe-args': 0,
