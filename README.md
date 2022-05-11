@@ -10,6 +10,7 @@
     <a href='https://github.com/himynameisdave/eslint-config-himynameisdave/actions?query=workflow%3Aoutdated+branch%3Amain'>
       <img src="https://github.com/himynameisdave/eslint-config-himynameisdave/workflows/outdated/badge.svg" alt="GitHub Actions - Test Workflow Badge" />
     </a>
+<a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fhimynameisdave%2Feslint-config-himynameisdave?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhimynameisdave%2Feslint-config-himynameisdave.svg?type=shield"/></a>
     <a href="https://www.npmjs.com/package/eslint-config-himynameisdave">
       <img alt="npm Badge" src="https://img.shields.io/npm/v/eslint-config-himynameisdave?color=%2300aacc&label=version&logo=eslint-config-himynameisdave">
     </a>
@@ -287,3 +288,7 @@ Inspired very heavily by [`eslint-config-7geese`](https://github.com/7Geese/esli
 - [`eslint-nibble`](https://github.com/IanVS/eslint-nibble) - When you/your team don't have time to fix all the ESLint violations in your codebase, you should just nibble them.
 - [`eslint-multiplexer`](https://github.com/pimlie/eslint-multiplexer) - When you have multiple of the same error in the same file, this groups them in the output.
 - [`eslint-plugin-svelte3`](https://github.com/sveltejs/eslint-plugin-svelte3) - Because [Svelte](https://svelte.dev).
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhimynameisdave%2Feslint-config-himynameisdave.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fhimynameisdave%2Feslint-config-himynameisdave?ref=badge_large)
