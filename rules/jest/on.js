@@ -16,6 +16,9 @@ module.exports = {
     'jest/expect-expect': 'error',
     //  https://github.com/jest-community/eslint-plugin-jest/blob/HEAD/docs/rules/lowercase-name.md
     'jest/lowercase-name': 'off',
+    //  Enforces a maximum number assertion calls in a test body
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/max-expects.md
+    'jest/max-expects': 'error',
     //  Limit the number of nested describe calls (default: max 5)
     //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/max-nested-describe.md
     'jest/max-nested-describe': 'error',
@@ -62,8 +65,6 @@ module.exports = {
     'jest/no-interpolation-in-snapshots': 'error',
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-jasmine-globals.md
     'jest/no-jasmine-globals': 'error',
-    //  https://github.com/jest-community/eslint-plugin-jest/blob/HEAD/docs/rules/no-jest-import.md
-    'jest/no-jest-import': 'error',
     //  Allow snapshots to get 'yuge, we don't include them in .gitattribute anyway
     //  https://github.com/jest-community/eslint-plugin-jest/blob/HEAD/docs/rules/no-large-snapshots.md
     'jest/no-large-snapshots': 'off',
@@ -99,6 +100,9 @@ module.exports = {
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-called-with.md
     'jest/prefer-called-with': 'error',
     'jest/prefer-comparison-matcher': 'error',
+    //  Prefer using .each rather than manual loops
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-each.md
+    'jest/prefer-each': 'error',
     'jest/prefer-equality-matcher': 'error',
     //  We don't enforce assertation counting
     //  https://github.com/jest-community/eslint-plugin-jest/blob/HEAD/docs/rules/prefer-expect-assertions.md
@@ -106,6 +110,9 @@ module.exports = {
     //  Prefer await expect(...).resolves over expect(await ...) syntax
     //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-expect-resolves.md
     'jest/prefer-expect-resolves': 'error',
+    //  Prefer having hooks in a consistent order
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-hooks-in-order.md
+    'jest/prefer-hooks-in-order': 'error',
     //  Put all hooks at the top-most level
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-hooks-on-top.md
     'jest/prefer-hooks-on-top': 'error',
@@ -118,6 +125,9 @@ module.exports = {
     'jest/prefer-lowercase-title': ['error', {
       'ignore': ['describe'],
     }],
+    //  Prefer mock resolved/rejected shorthands for promises
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-mock-promise-shorthand.md
+    'jest/prefer-mock-promise-shorthand': 'error',
     'jest/prefer-snapshot-hint': 'off',
     //  [DEPRECATED] Prefer that you just return a promise instead of calling done()
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-test-callback.md

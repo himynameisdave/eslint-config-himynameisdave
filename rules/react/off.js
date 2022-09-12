@@ -35,6 +35,7 @@ module.export = {
     'react/jsx-no-comment-textnodes': 0,
     'react/jsx-no-constructed-context-values': 0,
     'react/jsx-no-duplicate-props': 0,
+    'react/jsx-no-leaked-render': 0,
     'react/jsx-no-literals': 0,
     'react/jsx-no-script-url': 0,
     'react/jsx-no-target-blank': 0,

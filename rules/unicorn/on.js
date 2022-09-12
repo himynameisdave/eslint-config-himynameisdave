@@ -8,7 +8,6 @@ module.exports = {
   },
   plugins: ['unicorn'],
   rules: {
-    //  Deprecated, renamed to better-regex
     'unicorn/better-regex': 'error',
     'unicorn/catch-error-name': 'error',
     'unicorn/consistent-destructuring': 'error',
@@ -81,11 +80,13 @@ module.exports = {
     'unicorn/prefer-dom-node-dataset': 'error',
     'unicorn/prefer-dom-node-remove': 'error',
     'unicorn/prefer-dom-node-text-content': 'error',
+    'unicorn/prefer-event-target': 'error',
     'unicorn/prefer-exponentiation-operator': 'off',
     'unicorn/prefer-export-from': 'error',
     'unicorn/prefer-includes': 'error',
     'unicorn/prefer-json-parse-buffer': 'error',
     'unicorn/prefer-keyboard-event-key': 'error',
+    'unicorn/prefer-logical-operator-over-ternary': 'error',
     'unicorn/prefer-math-trunc': 'error',
     'unicorn/prefer-modern-dom-apis': 'error',
     'unicorn/prefer-modern-math-apis': 'error',
@@ -122,6 +123,7 @@ module.exports = {
         },
       },
     }],
+    //  Deprecated, renamed to better-regex
     'unicorn/regex-shorthand': 'off',
     'unicorn/relative-url-style': 'error',
     'unicorn/require-array-join-separator': 'error',
