@@ -9,6 +9,8 @@ module.exports = {
     'promise/catch-or-return': 'error',
     //  https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/no-callback-in-promise.md
     'promise/no-callback-in-promise': 'off',
+    //  https://github.com/eslint-community/eslint-plugin-promise/blob/main/docs/rules/no-multiple-resolved.md
+    'promise/no-multiple-resolved': 'error',
     //  https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/no-native.md
     'promise/no-native': 'off',
     //  https://github.com/xjamundx/eslint-plugin-promise/blob/master/docs/rules/no-nesting.md

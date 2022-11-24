@@ -64,6 +64,7 @@ module.exports = {
     '@typescript-eslint/restrict-template-expressions': ['error', {
       allowNumber: true,
     }],
+    '@typescript-eslint/sort-type-constituents': 'error',
     '@typescript-eslint/strict-boolean-expressions': 'error',
     '@typescript-eslint/triple-slash-reference': 'error',
     '@typescript-eslint/type-annotation-spacing': 'error',
@@ -71,6 +72,7 @@ module.exports = {
     '@typescript-eslint/unbound-method': 'error',
     '@typescript-eslint/unified-signatures': 'error',
     '@typescript-eslint/no-unsafe-call': 'error',
+    '@typescript-eslint/no-unsafe-declaration-merging': 'error',
     '@typescript-eslint/no-unsafe-member-access': 'error',
     '@typescript-eslint/no-unsafe-return': 'error',
     '@typescript-eslint/class-literal-property-style': 'error',

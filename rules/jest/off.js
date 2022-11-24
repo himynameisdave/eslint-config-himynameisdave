@@ -23,6 +23,7 @@ module.exports = {
     'jest/no-jasmine-globals': 0,
     'jest/no-large-snapshots': 0,
     'jest/no-mocks-import': 0,
+    'jest/no-restricted-jest-methods': 0,
     'jest/no-standalone-expect': 0,
     'jest/no-test-prefixes': 0,
     'jest/no-test-return-statement': 0,

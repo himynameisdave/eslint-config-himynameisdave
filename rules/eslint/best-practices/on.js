@@ -45,6 +45,8 @@ module.exports = {
     'grouped-accessor-pairs': 'error',
     // make sure for-in loops have an if statement
     'guard-for-in': 'error',
+    //  https://eslint.org/docs/latest/rules/logical-assignment-operators
+    'logical-assignment-operators': 'off',
     //  https://github.com/eslint/eslint/blob/master/docs/rules/max-classes-per-file.md
     'max-classes-per-file': 'error',
     //  https://github.com/eslint/eslint/blob/master/docs/rules/max-lines-per-function.md
@@ -70,6 +72,9 @@ module.exports = {
     'no-empty-function': ['error', {
       allow: ['arrowFunctions'],
     }],
+    //  Disallow empty static blocks
+    //  https://eslint.org/docs/latest/rules/no-empty-static-block#version
+    'no-empty-static-block': 'error',
     // disallow use of empty destructuring patterns
     'no-empty-pattern': 'error',
     // disallow comparisons to null without a type-checking operator
@@ -124,6 +129,9 @@ module.exports = {
     //  Don't allow weird unicode stuff in regexes
     //  https://eslint.org/docs/rules/no-misleading-character-class
     'no-misleading-character-class': 'error',
+    //  Disallow new operators with global non-constructor functions
+    //  https://eslint.org/docs/latest/rules/no-new-native-nonconstructor
+    'no-new-native-nonconstructor': 'error',
     // disallow use of multiple spaces
     'no-multi-spaces': 'error',
     // disallow use of multiline strings

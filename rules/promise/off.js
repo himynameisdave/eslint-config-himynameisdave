@@ -4,6 +4,7 @@ module.exports = {
     'promise/avoid-new': 0,
     'promise/catch-or-return': 0,
     'promise/no-callback-in-promise': 0,
+    'promise/no-multiple-resolved': 0,
     'promise/no-native': 0,
     'promise/no-nesting': 0,
     'promise/no-new-statics': 0,

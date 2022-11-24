@@ -13,25 +13,25 @@
     "release": "np --no-yarn"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.37.0",
-    "@typescript-eslint/parser": "^5.37.0",
+    "@typescript-eslint/eslint-plugin": "^5.44.0",
+    "@typescript-eslint/parser": "^5.44.0",
     "babel-eslint": "^10.1.0",
-    "eslint": "^8.23.1",
+    "eslint": "^8.28.0",
     "eslint-find-rules": "^4.1.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jest": "^27.0.4",
+    "eslint-plugin-jest": "^27.1.6",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.0.1",
-    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-svelte3": "^4.0.0",
-    "eslint-plugin-unicorn": "^43.0.2",
-    "husky": "^8.0.1",
+    "eslint-plugin-unicorn": "^45.0.0",
+    "husky": "^8.0.2",
     "lint-staged": "^13.0.3",
     "np": "^7.6.2",
-    "svelte": "^3.50.1",
-    "typescript": "^4.8.3"
+    "svelte": "^3.53.1",
+    "typescript": "^4.9.3"
   },
   "peerDependencies": {
     "eslint": "^8.6.0"
