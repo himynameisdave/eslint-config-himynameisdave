@@ -100,6 +100,9 @@ module.exports = {
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-try-expect.md
     //  DEPRECATED: use no-conditional-expect instead
     'jest/no-try-expect': 'off',
+    //  Disallow using jest.mock() factories without an explicit type parameter
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-untyped-mock-factory.md
+    'jest/no-untyped-mock-factory': 'off',
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-called-with.md
     'jest/prefer-called-with': 'error',
     'jest/prefer-comparison-matcher': 'error',

@@ -29,6 +29,7 @@ module.exports = {
     'jest/no-test-return-statement': 0,
     'jest/no-truthy-falsy': 0,
     'jest/no-try-expect': 0,
+    'jest/no-untyped-mock-factory': 0,
     'jest/prefer-called-with': 0,
     'jest/prefer-comparison-matcher': 0,
     'jest/prefer-each': 0,
