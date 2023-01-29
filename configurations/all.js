@@ -9,7 +9,7 @@ module.exports = {
     'import',
     'jest',
     'jsx-a11y',
-    'node',
+    'n',
     'promise',
     'react',
     'react-hooks',

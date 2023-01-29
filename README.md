@@ -79,7 +79,7 @@ Extend this config with additional rules for Node projects. Useful for CLI/Node-
 
 ```bash
 # Add the following plugins
-yarn add -D eslint-plugin-node eslint-plugin-promise eslint-plugin-unicorn
+yarn add -D eslint-plugin-n eslint-plugin-promise eslint-plugin-unicorn
 ```
 
 ```js
@@ -133,8 +133,8 @@ yarn add -D @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-im
   //  If you are also using the node or import configurations, you'll want these rules off:
   rules: {
     'import/extensions': 'off',
-    'node/file-extension-in-import': 'off',
-    'node/no-unsupported-features/es-syntax': 'off',
+    'n/file-extension-in-import': 'off',
+    'n/no-unsupported-features/es-syntax': 'off',
   }
 }
 ```
