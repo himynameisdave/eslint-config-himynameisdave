@@ -7,6 +7,9 @@ module.exports = {
     //  alt-text - Enforce all elements that require alternative text have meaningful information to relay back to end user.
     //  https://github.com/evcohen/eslint-plugin-jsx-a11y/tree/master/docs/rules/alt-text.md
     'jsx-a11y/alt-text': 'error',
+    //  Enforces <a> values are not exact matches for the phrases "click here", "here", "link", "a link", or "learn more".
+    //  https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/anchor-ambiguous-text.md
+    'jsx-a11y/anchor-ambiguous-text': 'off',
     //  anchor-has-content - Enforce all anchors to contain accessible content.
     //  https://github.com/evcohen/eslint-plugin-jsx-a11y/tree/master/docs/rules/anchor-has-content.md
     'jsx-a11y/anchor-has-content': 'error',
@@ -70,6 +73,9 @@ module.exports = {
     //  no-access-key - Enforce that the `accessKey` prop is not used on any element to avoid complications with keyboard commands used by a screenreader.
     //  https://github.com/evcohen/eslint-plugin-jsx-a11y/tree/master/docs/rules/no-access-key.md
     'jsx-a11y/no-access-key': 'error',
+    //  Enforce that aria-hidden="true" is not set on focusable elements.
+    //  https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/no-aria-hidden-on-focusable.md
+    'jsx-a11y/no-aria-hidden-on-focusable': 'error',
     //  no-autofocus - Enforce autoFocus prop is not used.
     //  https://github.com/evcohen/eslint-plugin-jsx-a11y/tree/master/docs/rules/no-autofocus.md
     'jsx-a11y/no-autofocus': 'error',
@@ -97,6 +103,9 @@ module.exports = {
     //  no-static-element-interactions - Enforce that non-interactive, visible elements (such as `<div>`) that have click handlers use the role attribute.
     //  https://github.com/evcohen/eslint-plugin-jsx-a11y/tree/master/docs/rules/no-static-element-interactions.md
     'jsx-a11y/no-static-element-interactions': 'error',
+    //  Enforces using semantic DOM elements over the ARIA role property.
+    //  https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/prefer-tag-over-role.md
+    'jsx-a11y/prefer-tag-over-role': 'warn',
     //  role-has-required-aria-props - Enforce that elements with ARIA roles must have all required attributes for that role.
     //  https://github.com/evcohen/eslint-plugin-jsx-a11y/tree/master/docs/rules/role-has-required-aria-props.md
     'jsx-a11y/role-has-required-aria-props': 'error',

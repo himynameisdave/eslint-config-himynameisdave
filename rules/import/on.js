@@ -21,6 +21,9 @@ module.exports = {
     ],
   },
   rules: {
+    //  Specify how type imports should be done.
+    //  https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/consistent-type-specifier-style.md
+    'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
     // ensure default import coupled with default export
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md#when-not-to-use-it
     'import/default': 'off',
@@ -101,6 +104,9 @@ module.exports = {
     // Forbid require() calls with expressions
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-dynamic-require.md
     'import/no-dynamic-require': 'error',
+    //  Reports the use of empty named import blocks.
+    //  https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-empty-named-blocks.md
+    'import/no-empty-named-blocks': 'error',
     // Forbid the use of extraneous packages
     'import/no-extraneous-dependencies': ['warn', {
       devDependencies: true,

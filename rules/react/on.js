@@ -132,7 +132,8 @@ module.exports = {
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-props-no-spreading.md
     'react/jsx-props-no-spreading': 'off',
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-default-props.md
-    'react/jsx-sort-default-props': 'error',
+    //  @deprecated
+    'react/jsx-sort-default-props': 'off',
     // Enforce propTypes declarations alphabetical sorting
     'react/jsx-sort-props': 'off',
     // Validate spacing before closing bracket in JSX (fixable)
@@ -193,6 +194,8 @@ module.exports = {
     //  Enforce that namespaces are not used in React elements
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-namespace.md
     'react/no-namespace': 'error',
+    //  Disallow usage of referential-type variables as default param in functional component
+    'react/no-object-type-as-default-prop': 'error',
     //  https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-redundant-should-component-update.md
     'react/no-redundant-should-component-update': 'error',
     // Prevent usage of the return value of React.render
@@ -251,6 +254,8 @@ module.exports = {
     'react/self-closing-comp': 'error',
     // Enforce component methods order
     'react/sort-comp': 'error',
+    //  https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/sort-default-props.md
+    'react/sort-default-props': 'error',
     // Enforce propTypes declarations alphabetical sorting
     'react/sort-prop-types': ['error', {
       callbacksLast: true,

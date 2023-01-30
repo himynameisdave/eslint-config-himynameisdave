@@ -2,6 +2,7 @@ module.exports = {
   rules: {
     'jsx-a11y/accessible-emoji': 0,
     'jsx-a11y/alt-text': 0,
+    'jsx-a11y/anchor-ambiguous-text': 0,
     'jsx-a11y/anchor-has-content': 0,
     'jsx-a11y/anchor-is-valid': 0,
     'jsx-a11y/aria-activedescendant-has-tabindex': 0,
@@ -23,6 +24,7 @@ module.exports = {
     'jsx-a11y/media-has-caption': 0,
     'jsx-a11y/mouse-events-have-key-events': 0,
     'jsx-a11y/no-access-key': 0,
+    'jsx-a11y/no-aria-hidden-on-focusable': 0,
     'jsx-a11y/no-autofocus': 0,
     'jsx-a11y/no-distracting-elements': 0,
     'jsx-a11y/no-interactive-element-to-noninteractive-role': 0,
@@ -32,6 +34,7 @@ module.exports = {
     'jsx-a11y/no-onchange': 0,
     'jsx-a11y/no-redundant-roles': 0,
     'jsx-a11y/no-static-element-interactions': 0,
+    'jsx-a11y/prefer-tag-over-role': 0,
     'jsx-a11y/role-has-required-aria-props': 0,
     'jsx-a11y/role-supports-aria-props': 0,
     'jsx-a11y/scope': 0,
