@@ -20,6 +20,7 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 0,
     '@typescript-eslint/explicit-member-accessibility': 0,
     '@typescript-eslint/explicit-module-boundary-types': 0,
+    '@typescript-eslint/no-import-type-side-effects': 0,
     '@typescript-eslint/member-delimiter-style': 0,
     '@typescript-eslint/member-ordering': 0,
     '@typescript-eslint/method-signature-style': 0,
@@ -41,6 +42,7 @@ module.exports = {
     '@typescript-eslint/no-meaningless-void-operator': 0,
     '@typescript-eslint/no-misused-new': 0,
     '@typescript-eslint/no-misused-promises': 0,
+    '@typescript-eslint/no-mixed-enums': 0,
     '@typescript-eslint/no-namespace': 0,
     '@typescript-eslint/no-non-null-asserted-nullish-coalescing': 0,
     '@typescript-eslint/no-non-null-asserted-optional-chain': 0,
@@ -98,6 +100,7 @@ module.exports = {
       Extension Rules: these rules "extend" existing ESLint rules, therefore they turn off the rules they are extending.
       https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
     */
+    '@typescript-eslint/block-spacing': 0,
     '@typescript-eslint/brace-style': 0,
     '@typescript-eslint/comma-dangle': 0,
     '@typescript-eslint/comma-spacing': 0,
@@ -106,7 +109,9 @@ module.exports = {
     '@typescript-eslint/func-call-spacing': 0,
     '@typescript-eslint/indent': 0,
     '@typescript-eslint/init-declarations': 0,
+    '@typescript-eslint/key-spacing': 0,
     '@typescript-eslint/keyword-spacing': 0,
+    '@typescript-eslint/lines-around-comment': 0,
     '@typescript-eslint/lines-between-class-members': 0,
     '@typescript-eslint/no-array-constructor': 0,
     '@typescript-eslint/no-dupe-class-members': 0,

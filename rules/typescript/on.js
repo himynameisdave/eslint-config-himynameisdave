@@ -18,6 +18,7 @@ module.exports = {
       // Functions immediately returning another function expression will not be checked
       allowHigherOrderFunctions: true,
     }],
+    '@typescript-eslint/no-import-type-side-effects': 'error',
     '@typescript-eslint/member-delimiter-style': 'error',
     '@typescript-eslint/member-ordering': 'error',
     '@typescript-eslint/naming-convention': 'off',
@@ -34,6 +35,7 @@ module.exports = {
     }],
     '@typescript-eslint/no-misused-new': 'error',
     '@typescript-eslint/no-misused-promises': 'error',
+    '@typescript-eslint/no-mixed-enums': 'error',
     '@typescript-eslint/no-namespace': 'error',
     '@typescript-eslint/no-non-null-asserted-optional-chain': 'error',
     '@typescript-eslint/no-non-null-assertion': 'error',
@@ -110,6 +112,8 @@ module.exports = {
       Extension Rules: these rules "extend" existing ESLint rules, therefore they turn off the rules they are extending.
       https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
     */
+    'block-spacing': 'off',
+    '@typescript-eslint/block-spacing': ['error', 'always'],
     'brace-style': 'off',
     '@typescript-eslint/brace-style': ['error', '1tbs', {
       allowSingleLine: true,
@@ -221,6 +225,11 @@ module.exports = {
       allowKeywords: true,
     }],
     '@typescript-eslint/init-declarations': 'off',
+    'key-spacing': 'off',
+    '@typescript-eslint/key-spacing': ['error', {
+      afterColon: true,
+      beforeColon: false,
+    }],
     'keyword-spacing': 'off',
     '@typescript-eslint/keyword-spacing': ['error', {
       before: true,
@@ -237,6 +246,8 @@ module.exports = {
         },
       },
     }],
+    'lines-around-comment': 'off',
+    '@typescript-eslint/lines-around-comment': 'off',
     'lines-between-class-members': 'off',
     '@typescript-eslint/lines-between-class-members': ['error', 'always', {
       exceptAfterSingleLine: false,
