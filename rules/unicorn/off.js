@@ -63,6 +63,7 @@ module.exports = {
     'unicorn/prefer-array-index-of': 0,
     'unicorn/prefer-array-some': 0,
     'unicorn/prefer-at': 0,
+    'unicorn/prefer-blob-reading-methods': 0,
     'unicorn/prefer-code-point': 0,
     'unicorn/prefer-date-now': 0,
     'unicorn/prefer-default-parameters': 0,
