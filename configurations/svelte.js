@@ -10,7 +10,7 @@ module.exports = {
   overrides: [
     {
       files: ['*.svelte'],
-      processor: 'svelte-eslint-parser',
+      parser: 'svelte-eslint-parser',
     },
   ],
   'extends': [
