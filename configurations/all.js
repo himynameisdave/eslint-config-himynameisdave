@@ -13,7 +13,7 @@ module.exports = {
     'promise',
     'react',
     'react-hooks',
-    'svelte3',
+    'svelte',
     '@typescript-eslint',
     'unicorn',
   ],
