@@ -98,7 +98,7 @@ Extend this config for Typescript support. Compatible with other configurations 
 
 ```bash
 # Add the following plugins
-yarn add -D @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-import-resolver-typescript
+yarn add -D @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
 
 ```js
@@ -161,11 +161,11 @@ yarn add -D eslint-plugin-promise eslint-plugin-unicorn eslint-plugin-react esli
 
 #### Svelte
 
-Extends the base config with React support. This config may conflict with the Node config, so should be placed after it if using both.
+Extends the base config with Svelte support. This config may conflict with the Node config, so should be placed after it if using both.
 
 ```bash
 # Add the following plugins
-yarn add -D eslint-plugin-promise eslint-plugin-unicorn eslint-plugin-svelte3
+yarn add -D eslint-plugin-promise eslint-plugin-unicorn eslint-plugin-svelte
 ```
 
 ```js
@@ -178,9 +178,7 @@ yarn add -D eslint-plugin-promise eslint-plugin-unicorn eslint-plugin-svelte3
 }
 ```
 
-You may need to [read more about configuring your editor](https://github.com/sveltejs/eslint-plugin-svelte3/blob/master/INTEGRATIONS.md) for this plugin to work.
-
-_Note: You probably shouldn't use the `import` config below if you're using Svelte, as it has [been known not to work properly](https://github.com/sveltejs/eslint-plugin-svelte3/blob/master/OTHER_PLUGINS.md#eslint-plugin-import)._
+You may need to [read more about configuring your editor](https://sveltejs.github.io/eslint-plugin-svelte/) for this plugin to work.
 
 #### Import
 
