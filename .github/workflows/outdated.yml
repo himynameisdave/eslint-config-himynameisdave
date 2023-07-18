@@ -16,7 +16,7 @@ jobs:
       - name: setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 14
+          node-version: 18
       - name: Install
         run: yarn install
       - name: YOD
