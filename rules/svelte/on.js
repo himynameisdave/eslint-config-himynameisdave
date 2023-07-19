@@ -22,8 +22,8 @@ module.exports = {
     'svelte/no-at-html-tags': 'error',
     'svelte/no-target-blank': 'error',
     'svelte/block-lang': ['error', {
-      enforceScriptPresent: true,
-      enforceStylePresent: true,
+      enforceScriptPresent: false,
+      enforceStylePresent: false,
       script: ['ts', null],
       style: 'less',
     }],
