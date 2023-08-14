@@ -87,7 +87,7 @@ module.exports = {
     '@typescript-eslint/ban-tslint-comment': 'error',
     '@typescript-eslint/no-confusing-non-null-assertion': 'error',
     '@typescript-eslint/prefer-literal-enum-member': 'error',
-    '@typescript-eslint/consistent-indexed-object-style': ['error', 'index-signature'],
+    '@typescript-eslint/consistent-indexed-object-style': ['error', 'record'],
     '@typescript-eslint/consistent-type-imports': 'error',
     '@typescript-eslint/prefer-enum-initializers': 'error',
     '@typescript-eslint/no-confusing-void-expression': ['error', {
