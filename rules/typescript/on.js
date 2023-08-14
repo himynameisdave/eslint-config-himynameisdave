@@ -204,6 +204,7 @@ module.exports = {
       asyncArrow: 'always',
     }],
     '@typescript-eslint/ban-ts-comment': 'error',
+    '@typescript-eslint/class-methods-use-this': 'off',
     'comma-spacing': 'off', // overridden by below: https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/comma-spacing.md
     '@typescript-eslint/comma-spacing': ['error', {
       before: false,

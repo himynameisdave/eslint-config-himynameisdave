@@ -102,6 +102,7 @@ module.exports = {
     */
     '@typescript-eslint/block-spacing': 0,
     '@typescript-eslint/brace-style': 0,
+    '@typescript-eslint/class-methods-use-this': 0,
     '@typescript-eslint/comma-dangle': 0,
     '@typescript-eslint/comma-spacing': 0,
     '@typescript-eslint/default-param-last': 0,
