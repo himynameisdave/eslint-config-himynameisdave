@@ -28,15 +28,16 @@ A modular, opinionated, and well-maintained `eslint` config made by and for [`hi
 - [Requirements](#Requirements)
 - [Installation](#Installation)
 - [Configurations](#Configurations)
+  - [base](#Base)
   - [core](#Core)
   - [node](#Node)
   - [typescript](#Typescript)
   - [react](#React)
   - [svelte](#Svelte)
+  - [import](#Import)
   - [jest](#jest)
   - [off](#off)
 - [Rules](#Rules)
-- [Parser](#Parser)
 - [Releases](#Releases)
 - [Inspiration](#Inspiration)
 - [Neat ESLint Stuff](#Some-neat-ESLint-stuff)
@@ -45,7 +46,7 @@ A modular, opinionated, and well-maintained `eslint` config made by and for [`hi
 
 Requires at least:
 
-- Node v14.x+
+- Node v16.x+
 - ESLint v8.x+
 
 ### Installation
@@ -56,15 +57,26 @@ Install this `eslint` and this config:
 yarn add -D eslint eslint-config-himynameisdave
 ```
 
-You will need to install more plugins depending on which environment you are targeting/which extra plugins you want to use (see [configurations](#Configurations) below). You may also need a [parser](#Parser). Read on for more about how to get set up.
+You don't need to install `eslint` or any additional plugins to being using this package.
 
 ### Configurations
 
-This package provides various configurations which you can extend from. You may need to install additional plugins in order to use them.
+This package provides various configurations which you can extend from.
+
+#### Base
+
+The base config turns enables the core `eslint` rules only. No additional plugins are required to use this config. Great for small projects.
+
+```js
+// Extend your .eslintrc
+{
+  "extends": ["himynameisdave/configurations/base"]
+}
+```
 
 #### Core
 
-The base config turns enables the core `eslint` rules only. No additional plugins are required to use this config. Great for small projects.
+This includes `base` as well as turns on `promise` and `unicorn` rules as well.
 
 ```js
 // Extend your .eslintrc
@@ -75,12 +87,7 @@ The base config turns enables the core `eslint` rules only. No additional plugin
 
 #### Node
 
-Extend this config with additional rules for Node projects. Useful for CLI/Node-only projects, although it should be compatible with the browser-based configurations listed below.
-
-```bash
-# Add the following plugins
-yarn add -D eslint-plugin-n eslint-plugin-promise eslint-plugin-unicorn
-```
+Extend this config with additional rules for Node projects. Useful for CLI/Node-only projects, although it _should_ be compatible with the browser-based configurations listed below.
 
 ```js
 // Extend your .eslintrc
@@ -94,12 +101,7 @@ yarn add -D eslint-plugin-n eslint-plugin-promise eslint-plugin-unicorn
 
 #### Typescript
 
-Extend this config for Typescript support. Compatible with other configurations in this project, although Typescript should probably be extended last. Requires some additional configuration, as it has it's own parser.
-
-```bash
-# Add the following plugins
-yarn add -D @typescript-eslint/parser @typescript-eslint/eslint-plugin
-```
+Extend this config for Typescript support. Requires type information, so you'll need to configure ESLint to be aware of your TS setup. You can read more about doing that [here](https://typescript-eslint.io/linting/typed-linting). You don't need to install `@typescript-eslint/parser` as it is included like the other plugins.
 
 ```js
 // Extend your .eslintrc
@@ -143,11 +145,6 @@ yarn add -D @typescript-eslint/parser @typescript-eslint/eslint-plugin
 
 Extends the base config with React support. This config may conflict with the Node config, so should be placed after it if using both.
 
-```bash
-# Add the following plugins
-yarn add -D eslint-plugin-promise eslint-plugin-unicorn eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y
-```
-
 ```js
 //  Extend your .eslintrc
 {
@@ -162,11 +159,6 @@ yarn add -D eslint-plugin-promise eslint-plugin-unicorn eslint-plugin-react esli
 #### Svelte
 
 Extends the base config with Svelte support. This config may conflict with the Node config, so should be placed after it if using both.
-
-```bash
-# Add the following plugins
-yarn add -D eslint-plugin-promise eslint-plugin-unicorn eslint-plugin-svelte
-```
 
 ```js
 //  Extend your .eslintrc
@@ -184,11 +176,6 @@ You may need to [read more about configuring your editor](https://sveltejs.githu
 
 Extends the base config with [`import`](https://github.com/benmosher/eslint-plugin-import) plugin rules.
 
-```bash
-# Add the following plugin
-yarn add -D eslint-plugin-import
-```
-
 ```js
 //  Extend your .eslintrc
 {
@@ -202,11 +189,6 @@ yarn add -D eslint-plugin-import
 #### Jest
 
 Extends the base config with [`jest`](https://github.com/jest-community/eslint-plugin-jest) plugin rules.
-
-```bash
-# Add the following plugin
-yarn add -D eslint-plugin-jest
-```
 
 ```js
 //  Extend your .eslintrc
@@ -253,31 +235,13 @@ As an example, let's assume we are using React but don't care about the `jsx-a11
 }
 ```
 
-### Parser
-
-You may need to install the [`babel-eslint`](https://github.com/babel/babel-eslint) parser to use some of the configurations exported by this package, unless you are using TypeScript (see [Typescript](#Typescript) configuration above).
-
-```bash
-yarn add -D babel-eslint
-```
-
-What is `babel-eslint`?
-
-> **babel-eslint allows you to lint ALL valid Babel code with the fantastic ESLint.**
-
-> _ESLint's default parser and core rules only support the latest final ECMAScript standard and do not support experimental (such as new features) and non-standard (such as Flow or TypeScript types) syntax provided by Babel. babel-eslint is a parser that allows ESLint to run on source code that is transformed by Babel._
-
-> _Note: You only need to use babel-eslint if you are using Babel to transform your code. If this is not the case, please use the relevant parser for your chosen flavor of ECMAScript (note that the default parser supports all non-experimental syntax as well as JSX)._
-
-**Note:** `babel-config` expects that you've got a [`@babel/core`](https://www.npmjs.com/package/@babel/core) and `.babelrc` (or other config file) in your project. [Read more about that here](https://babeljs.io/docs/en/configuration).
-
 ### Releases
 
 Read more about the release guidelines for this project [over here](https://github.com/himynameisdave/eslint-config-himynameisdave/blob/main/.github/RELEASING.md).
 
 ### Inspiration
 
-Inspired very heavily by [`eslint-config-7geese`](https://github.com/7Geese/eslint-config-7geese), which was in turn inspired by [`eslint-config-walmart`](https://github.com/walmartlabs/eslint-config-walmart), [`eslint-config-formidable`](https://github.com/FormidableLabs/eslint-config-formidable), and many others.
+Inspired very heavily by the (now-dead) [`eslint-config-7geese`](https://github.com/7Geese/eslint-config-7geese), which was in turn inspired by [`eslint-config-walmart`](https://github.com/walmartlabs/eslint-config-walmart), [`eslint-config-formidable`](https://github.com/FormidableLabs/eslint-config-formidable), and many others.
 
 ### Some neat ESLint stuff
 
