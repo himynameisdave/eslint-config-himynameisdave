@@ -123,6 +123,7 @@ module.exports = {
         fn: true,
       },
       replacements: {
+        props: false,
         rej: {
           reject: true,
         },
