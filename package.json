@@ -35,9 +35,6 @@
     "svelte": "^4.2.0",
     "typescript": "^5.1.6"
   },
-  "peerDependencies": {
-    "eslint": "^8.47.0"
-  },
   "files": [
     "configurations/*",
     "rules/**/*"
