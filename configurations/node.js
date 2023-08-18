@@ -14,8 +14,6 @@ module.exports = {
     '../rules/eslint/node/off.js',
 
     '../rules/node/on.js',
-    '../rules/promise/on.js',
-    '../rules/unicorn/on.js',
   ],
   rules: {
     'unicorn/no-process-exit': 'off',
