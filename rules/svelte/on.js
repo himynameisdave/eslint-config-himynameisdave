@@ -47,7 +47,10 @@ module.exports = {
     'svelte/html-quotes': 'error',
     'svelte/html-self-closing': 'error',
     'svelte/indent': 'error',
-    'svelte/max-attributes-per-line': 'error',
+    'svelte/max-attributes-per-line': ['error', {
+      'multiline': 1,
+      'singleline': 3,
+    }],
     'svelte/mustache-spacing': 'error',
     'svelte/no-extra-reactive-curlies': 'error',
     'svelte/no-restricted-html-elements': 'off',
