@@ -14,8 +14,6 @@ module.exports = {
     //  Ensure there is an expect call in each test block
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/expect-expect.md
     'jest/expect-expect': 'error',
-    //  https://github.com/jest-community/eslint-plugin-jest/blob/HEAD/docs/rules/lowercase-name.md
-    'jest/lowercase-name': 'off',
     //  Enforces a maximum number assertion calls in a test body
     //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/max-expects.md
     'jest/max-expects': 'error',
@@ -28,6 +26,9 @@ module.exports = {
     //  Disallow commented out tests
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-commented-out-tests.md
     'jest/no-commented-out-tests': 'error',
+    //  Disallow confusing usages of jest.setTimeout
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-confusing-set-timeout.md
+    'jest/no-confusing-set-timeout': 'error',
     //  Prevents the use of expect in conditional blocks
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-conditional-expect.md
     'jest/no-conditional-expect': 'error',
@@ -43,10 +44,6 @@ module.exports = {
     //  Disallow duplicate setup and teardown hooks
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-duplicate-hooks.md
     'jest/no-duplicate-hooks': 'error',
-    //  Avoid using expect().resolves
-    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-expect-resolves.md
-    //  DEPRECATED => jest/no-restricted-matchers
-    'jest/no-expect-resolves': 'off',
     //  No exports from test file
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-export.md
     'jest/no-export': 'error',
@@ -92,14 +89,6 @@ module.exports = {
     //  Jest wants your tests to be void and not return anything
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-test-return-statement.md
     'jest/no-test-return-statement': 'off',
-    //  Disallow .toBeTruthy()/.toBeFalsy()
-    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-truthy-falsy.md
-    //  DEPRECATED => jest/no-restricted-matchers
-    'jest/no-truthy-falsy': 'off',
-    //  This rule prevents the use of expect inside catch blocks.
-    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/no-try-expect.md
-    //  DEPRECATED: use no-conditional-expect instead
-    'jest/no-try-expect': 'off',
     //  Disallow using jest.mock() factories without an explicit type parameter
     //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/no-untyped-mock-factory.md
     'jest/no-untyped-mock-factory': 'off',
@@ -122,10 +111,6 @@ module.exports = {
     //  Put all hooks at the top-most level
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-hooks-on-top.md
     'jest/prefer-hooks-on-top': 'error',
-    //  Suggest using inline snapshots
-    //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-inline-snapshots.md
-    //  DEPRECATED => jest/no-restricted-matchers
-    'jest/prefer-inline-snapshots': 'off',
     //  Enforce lowercase test names
     //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-lowercase-title.md
     'jest/prefer-lowercase-title': ['error', {
@@ -147,12 +132,6 @@ module.exports = {
     //  Suggest using toBe() for primitive literals
     //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-to-be.md
     'jest/prefer-to-be': 'error',
-    //  Suggest using toBeNull() instead of toBe(null)
-    //  https://github.com/jest-community/eslint-plugin-jest/blob/HEAD/docs/rules/prefer-to-be-null.md
-    'jest/prefer-to-be-null': 'error',
-    //  Suggest using toBeUndefined() instead of toBe(undefined)
-    //  https://github.com/jest-community/eslint-plugin-jest/blob/HEAD/docs/rules/prefer-to-be-undefined.md
-    'jest/prefer-to-be-undefined': 'error',
     //  Use .toContain when checking Array.includes
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-to-contain.md
     'jest/prefer-to-contain': 'error',
@@ -173,8 +152,6 @@ module.exports = {
     'jest/require-top-level-describe': 'error',
     //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/unbound-method.md
     'jest/unbound-method': 'off',
-    //  https://github.com/jest-community/eslint-plugin-jest/blob/HEAD/docs/rules/valid-describe.md
-    'jest/valid-describe': 'off',
     //  Enforce valid describe() callback
     //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/valid-describe-callback.md
     'jest/valid-describe-callback': 'error',
