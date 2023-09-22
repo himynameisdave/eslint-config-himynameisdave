@@ -1,0 +1,82 @@
+name: Find Rules
+
+on: [push, pull_request]
+  # schedule:
+  #   - cron: '0 0 * * 0'  # This runs the action every Sunday at midnight
+
+jobs:
+  find-rules:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install jq
+          sudo apt-get install gh
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Check for outdated packages
+        run: |
+          outdated=$(yarn outdated --json | grep '^{\"type\":\"table\"' | jq -r '.data.body[] | .[0]')
+          if [ -n "$outdated" ]; then
+            echo "OUTDATED_PACKAGES=true" >> $GITHUB_ENV
+            echo "$outdated" > outdated-packages.txt
+          fi
+
+      - name: Upgrade outdated dependencies
+        if: env.OUTDATED_PACKAGES == 'true'
+        run: |
+          while read package; do
+            yarn add "$package"
+          done < outdated-packages.txt
+
+      - name: Run find-rules
+        if: env.OUTDATED_PACKAGES == 'true'
+        run: |
+          output=$(yarn run find-rules 2>&1)
+          if [ $? -ne 0 ]; then
+            rules=$(echo "$output" | awk '/unused rules/{flag=1; next} flag' | grep -vE "error|info|yarn run v|Done in|^[[:space:]]*$")
+            echo "MISSING_RULES=$rules" >> $GITHUB_ENV
+          fi
+
+      - name: Commit and Open PR
+        if: env.OUTDATED_PACKAGES == 'true'
+        run: |
+          # Configure GitHub
+          git config user.name "GitHub Action Bot"
+          git config user.email "action@github.com"
+
+          # Read the list of packages
+          UPDATED_PACKAGES=$(cat outdated-packages.txt)
+
+          # Configure based on if we've got missing rules
+          prefix="update-pkgs"
+          commit_message="📦 Updating packages"
+          pr_title="Package upgrades"
+          pr_body="## 🤖 Hello human\n\nI have upgraded your dependencies for you. Here's the packages which were updated:\n${UPDATED_PACKAGES}"
+          if [ ! -z "${MISSING_RULES}" ]; then
+            prefix="missing-rules"
+            commit_message="🔎 Missing rules"
+            pr_title="Package upgrades + missing rules found"
+            pr_body="## 🤖 Hello human\n\nI have upgraded your dependencies for you, and it turns out that these latest versions include rules which are missing in your ESLint config.\nHere's the packages which were updated:\n${UPDATED_PACKAGES}\n\nThe missing rules are these ones:\n\n${MISSING_RULES}"
+          fi
+
+          # Checkout, commit and push
+          branch_name="${prefix}-$(date +'%Y%m%d')"
+          git checkout -b $branch_name
+          git add .
+          git commit -m "$commit_message"
+          git push origin $branch_name
+
+          # Create the pull request
+          gh pr create --title "$pr_title" --body "$pr_body"
