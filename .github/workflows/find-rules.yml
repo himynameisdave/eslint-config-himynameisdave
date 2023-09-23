@@ -36,9 +36,8 @@ jobs:
       - name: Upgrade outdated dependencies
         if: env.OUTDATED_PACKAGES == 'true'
         run: |
-          while read package; do
-            yarn add "$package"
-          done < outdated-packages.txt
+          packages=$(cat outdated-packages.txt | tr '\n' ' ')
+          yarn add $packages
 
       - name: Run find-rules
         if: env.OUTDATED_PACKAGES == 'true'
@@ -54,6 +53,8 @@ jobs:
 
       - name: Commit and Open PR
         if: env.OUTDATED_PACKAGES == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Configure GitHub
           git config user.name "GitHub Action Bot"
@@ -77,7 +78,7 @@ jobs:
           # Checkout, commit and push
           branch_name="${prefix}-$(date +'%Y%m%d')"
           git checkout -b $branch_name
-          git add .
+          git add package.json yarn.lock
           git commit -m "$commit_message"
           git push origin $branch_name
 
