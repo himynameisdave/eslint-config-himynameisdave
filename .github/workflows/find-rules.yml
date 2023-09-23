@@ -61,18 +61,20 @@ jobs:
           git config user.email "action@github.com"
 
           # Read the list of packages
-          UPDATED_PACKAGES=$(cat outdated-packages.txt)
+          UPDATED_PACKAGES=$(cat outdated-packages.txt | sed 's/^/- /')
 
           # Configure based on if we've got missing rules
           prefix="update-pkgs"
           commit_message="📦 Updating packages"
           pr_title="Package upgrades"
-          pr_body="## 🤖 Hello human\n\nI have upgraded your dependencies for you. Here's the packages which were updated:\n${UPDATED_PACKAGES}"
+          pr_body="## 🤖 Hello human{$'\n\n'}I have upgraded your dependencies for you. Here's the packages which were updated:{$'\n\n'}${UPDATED_PACKAGES}"
           if [ ! -z "${MISSING_RULES}" ]; then
             prefix="missing-rules"
             commit_message="🔎 Missing rules"
             pr_title="Package upgrades + missing rules found"
-            pr_body="## 🤖 Hello human\n\nI have upgraded your dependencies for you, and it turns out that these latest versions include rules which are missing in your ESLint config.\nHere's the packages which were updated:\n${UPDATED_PACKAGES}\n\nThe missing rules are these ones:\n\n${MISSING_RULES}"
+            # Format missing rules as a Markdown list
+            MISSING_RULES=$(echo "${MISSING_RULES}" | sed 's/^/- /')
+            pr_body="## 🤖 Hello human\n\nI have upgraded your dependencies for you, and it turns out that these latest versions include rules which are missing in your ESLint config.{$'\n'}Here's the packages which were updated:{$'\n'}${UPDATED_PACKAGES}{$'\n\n'}The missing rules are these ones:{$'\n\n'}${MISSING_RULES}"
           fi
 
           # Checkout, commit and push
