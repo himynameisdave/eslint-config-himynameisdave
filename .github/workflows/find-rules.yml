@@ -76,7 +76,7 @@ jobs:
           fi
 
           # Checkout, commit and push
-          branch_name="${prefix}-$(date +'%Y%m%d')"
+          branch_name="${prefix}-$(date +'%Y%m%d%H%M')"
           git checkout -b $branch_name
           git add package.json yarn.lock
           git commit -m "$commit_message"
