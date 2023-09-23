@@ -43,8 +43,11 @@ jobs:
       - name: Run find-rules
         if: env.OUTDATED_PACKAGES == 'true'
         run: |
+          # The +e allows the next command to return an error code, as we just capture the output
+          set +e
           output=$(yarn run find-rules 2>&1)
-          if [ $? -ne 0 ]; then
+          set -e
+          if [[ $? -ne 0 ]]; then
             rules=$(echo "$output" | awk '/unused rules/{flag=1; next} flag' | grep -vE "error|info|yarn run v|Done in|^[[:space:]]*$")
             echo "MISSING_RULES=$rules" >> $GITHUB_ENV
           fi
