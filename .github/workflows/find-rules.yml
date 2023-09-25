@@ -1,8 +1,8 @@
 name: Find Rules
 
-on: [push, pull_request]
-  # schedule:
-  #   - cron: '0 0 * * 0'  # This runs the action every Sunday at midnight
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # This runs the action every Sunday at midnight
 
 jobs:
   find-rules:
