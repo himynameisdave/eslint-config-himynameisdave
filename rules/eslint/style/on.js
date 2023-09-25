@@ -233,10 +233,14 @@ module.exports = {
     // https://eslint.org/docs/rules/no-negated-condition
     'no-negated-condition': 'off',
     // disallow nested ternary expressions
-    'no-nested-ternary': 'off',
     // Using unicorn/no-nested-ternary instead: https://github.com/sindresorhus/eslint-plugin-unicorn/blob/master/docs/rules/no-nested-ternary.md
+    'no-nested-ternary': 'off',
     // disallow use of the Object constructor
-    'no-new-object': 'error',
+    //  DEPRECATED: use no-object-constructor
+    'no-new-object': 'off',
+    //  Disallow Object constructors
+    //  https://eslint.org/docs/latest/rules/no-new-object
+    'no-object-constructor': 'error',
     // disallow use of unary operators, ++ and --
     // https://eslint.org/docs/rules/no-plusplus
     'no-plusplus': ['error', {

@@ -45,6 +45,7 @@ module.exports = {
     'no-negated-condition': 0,
     'no-nested-ternary': 0,
     'no-new-object': 0,
+    'no-object-constructor': 0,
     'no-plusplus': 0,
     'no-restricted-syntax': 0,
     'no-spaced-func': 0,
