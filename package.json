@@ -14,26 +14,26 @@
     "release": "np --no-yarn"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.7.2",
-    "@typescript-eslint/parser": "^6.7.2",
-    "eslint": "^8.50.0",
+    "@typescript-eslint/eslint-plugin": "^6.8.0",
+    "@typescript-eslint/parser": "^6.8.0",
+    "eslint": "^8.52.0",
     "eslint-plugin-import": "^2.28.1",
-    "eslint-plugin-jest": "^27.4.0",
+    "eslint-plugin-jest": "^27.4.3",
     "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-n": "^16.1.0",
+    "eslint-plugin-n": "^16.2.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-svelte": "^2.33.2",
+    "eslint-plugin-svelte": "^2.34.0",
     "eslint-plugin-unicorn": "^48.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint-find-rules": "^4.1.0",
     "husky": "^8.0.3",
-    "lint-staged": "^14.0.1",
+    "lint-staged": "^15.0.2",
     "np": "^8.0.4",
-    "svelte": "^4.2.1",
+    "svelte": "^4.2.2",
     "typescript": "^5.2.2"
   },
   "files": [
