@@ -172,7 +172,7 @@ module.exports = {
     // specify the maximum depth callbacks can be nested
     'max-nested-callbacks': 'off',
     // limits the number of parameters that can be used in the function declaration.
-    'max-params': ['off', 3],
+    'max-params': ['error', 3],
     // specify the maximum number of statement allowed in a function
     'max-statements': ['off', 12],
     // specify the maximum number of statements allowed per line

@@ -23,6 +23,7 @@ module.export = {
     'svelte/block-lang': 0,
     'svelte/button-has-type': 0,
     'svelte/no-at-debug-tags': 0,
+    'svelte/no-ignored-unsubscribe': 0,
     'svelte/no-immutable-reactive-statements': 0,
     'svelte/no-reactive-functions': 0,
     'svelte/no-reactive-literals': 0,

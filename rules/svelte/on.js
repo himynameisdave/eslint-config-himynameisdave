@@ -29,6 +29,7 @@ module.exports = {
     }],
     'svelte/button-has-type': 'error',
     'svelte/no-at-debug-tags': 'error',
+    'svelte/no-ignored-unsubscribe': 'error',
     'svelte/no-immutable-reactive-statements': 'error',
     'svelte/no-reactive-functions': 'error',
     'svelte/no-reactive-literals': 'error',

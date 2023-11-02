@@ -158,6 +158,8 @@ module.exports = {
       ],
       ignoreComments: false,
     }],
+    'max-params': 'off',
+    '@typescript-eslint/max-params': ['error', { max: 3 }],
     'no-array-constructor': 'off',
     '@typescript-eslint/no-array-constructor': 'error',
     'no-empty-function': 'off',
@@ -280,6 +282,14 @@ module.exports = {
     }],
     'padding-line-between-statements': 'off',
     '@typescript-eslint/padding-line-between-statements': 'off',
+    'prefer-destructuring': 'off',
+    '@typescript-eslint/prefer-destructuring': ['error', {
+      array: false,
+      object: true,
+    }, {
+      enforceForRenamedProperties: false,
+      enforceForDeclarationWithTypeAnnotation: false,
+    }],
     'no-restricted-imports': 'off',
     '@typescript-eslint/no-restricted-imports': 'off',
     'space-before-blocks': 'off',
