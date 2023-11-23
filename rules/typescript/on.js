@@ -77,6 +77,7 @@ module.exports = {
     '@typescript-eslint/no-unsafe-declaration-merging': 'error',
     '@typescript-eslint/no-unsafe-member-access': 'error',
     '@typescript-eslint/no-unsafe-return': 'error',
+    '@typescript-eslint/no-unsafe-unary-minus': 'error',
     '@typescript-eslint/class-literal-property-style': 'error',
     '@typescript-eslint/consistent-generic-constructors': 'error',
     '@typescript-eslint/method-signature-style': 'error',

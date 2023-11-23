@@ -63,6 +63,7 @@ module.exports = {
     '@typescript-eslint/no-unsafe-enum-comparison': 0,
     '@typescript-eslint/no-unsafe-member-access': 0,
     '@typescript-eslint/no-unsafe-return': 0,
+    '@typescript-eslint/no-unsafe-unary-minus': 0,
     '@typescript-eslint/no-unused-vars-experimental': 0,
     '@typescript-eslint/no-var-requires': 0,
     '@typescript-eslint/non-nullable-type-assertion-style': 0,
