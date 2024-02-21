@@ -43,6 +43,7 @@ module.exports = {
     'unicorn/no-this-assignment': 0,
     'unicorn/no-typeof-undefined': 0,
     'unicorn/no-unnecessary-await': 0,
+    'unicorn/no-unnecessary-polyfills': 0,
     'unicorn/no-unreadable-array-destructuring': 0,
     'unicorn/no-unreadable-iife': 0,
     'unicorn/no-unsafe-regex': 0,
