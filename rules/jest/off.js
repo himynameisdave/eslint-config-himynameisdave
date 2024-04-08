@@ -35,6 +35,7 @@ module.exports = {
     'jest/prefer-expect-resolves': 0,
     'jest/prefer-hooks-in-order': 0,
     'jest/prefer-hooks-on-top': 0,
+    'jest/prefer-importing-jest-globals': 0,
     'jest/prefer-lowercase-title': 0,
     'jest/prefer-mock-promise-shorthand': 0,
     'jest/prefer-snapshot-hint': 0,

@@ -103,6 +103,7 @@ module.exports = {
     '@typescript-eslint/no-duplicate-type-constituents': 'error',
     '@typescript-eslint/no-unnecessary-type-constraint': 'error',
     '@typescript-eslint/non-nullable-type-assertion-style': 'off',
+    '@typescript-eslint/only-throw-error': 'error',
     '@typescript-eslint/parameter-properties': 'error',
     '@typescript-eslint/prefer-return-this-type': 'error',
     '@typescript-eslint/no-meaningless-void-operator': 'error',
@@ -110,6 +111,7 @@ module.exports = {
     '@typescript-eslint/consistent-type-exports': 'error',
     '@typescript-eslint/no-redundant-type-constituents': 'error',
     '@typescript-eslint/no-useless-empty-export': 'error',
+    '@typescript-eslint/use-unknown-in-catch-callback-variable': 'error',
     /*
       Extension Rules: these rules "extend" existing ESLint rules, therefore they turn off the rules they are extending.
       https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
@@ -120,6 +122,8 @@ module.exports = {
     '@typescript-eslint/brace-style': ['error', '1tbs', {
       allowSingleLine: true,
     }],
+    //  Leave this off and instead use TSC's noImplicitReturns option
+    '@typescript-eslint/consistent-return': 'off',
     'default-param-last': 'off',
     '@typescript-eslint/default-param-last': 'error',
     'func-call-spacing': 'off',

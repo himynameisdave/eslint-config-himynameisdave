@@ -111,6 +111,9 @@ module.exports = {
     //  Put all hooks at the top-most level
     //  https://github.com/jest-community/eslint-plugin-jest/blob/master/docs/rules/prefer-hooks-on-top.md
     'jest/prefer-hooks-on-top': 'error',
+    //  Prefer importing the Jest globals
+    //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-importing-jest-globals.md
+    'jest/prefer-importing-jest-globals': 'error',
     //  Enforce lowercase test names
     //  https://github.com/jest-community/eslint-plugin-jest/blob/main/docs/rules/prefer-lowercase-title.md
     'jest/prefer-lowercase-title': ['error', {

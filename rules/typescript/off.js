@@ -68,6 +68,7 @@ module.exports = {
     '@typescript-eslint/no-useless-template-literals': 0,
     '@typescript-eslint/no-var-requires': 0,
     '@typescript-eslint/non-nullable-type-assertion-style': 0,
+    '@typescript-eslint/only-throw-error': 0,
     '@typescript-eslint/parameter-properties': 0,
     '@typescript-eslint/prefer-as-const': 0,
     '@typescript-eslint/prefer-enum-initializers': 0,
@@ -100,6 +101,7 @@ module.exports = {
     '@typescript-eslint/typedef': 0,
     '@typescript-eslint/unbound-method': 0,
     '@typescript-eslint/unified-signatures': 0,
+    '@typescript-eslint/use-unknown-in-catch-callback-variable': 0,
     /*
       Extension Rules: these rules "extend" existing ESLint rules, therefore they turn off the rules they are extending.
       https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
@@ -109,6 +111,7 @@ module.exports = {
     '@typescript-eslint/class-methods-use-this': 0,
     '@typescript-eslint/comma-dangle': 0,
     '@typescript-eslint/comma-spacing': 0,
+    '@typescript-eslint/consistent-return': 0,
     '@typescript-eslint/default-param-last': 0,
     '@typescript-eslint/dot-notation': 0,
     '@typescript-eslint/func-call-spacing': 0,

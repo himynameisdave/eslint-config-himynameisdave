@@ -67,12 +67,16 @@ module.exports = {
     'n/prefer-global/text-encoder': 'error',
     'n/prefer-global/url': 'error',
     'n/prefer-global/url-search-params': 'error',
+    //  Handled by unicorn/prefer-node-protocol instead.
+    'n/prefer-node-protocol': 'off',
     //  Prefer promises:
     'n/prefer-promises/dns': 'error',
     'n/prefer-promises/fs': 'error',
     //  make process.exit() expressions the same code path as throw
     'n/process-exit-as-throw': 'error',
-    //  suggest correct usage of shebang
+    //  [deprecated]
     'n/shebang': 'off',
+    //  Renamed from "shebang"
+    'n/hashbang': 'off',
   },
 };
