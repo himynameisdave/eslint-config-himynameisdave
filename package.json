@@ -11,7 +11,7 @@
     "print-config": "eslint --print-config index.js > config-full.json",
     "test": "npm run find-rules && npm run lint",
     "test:od": "npm outdated && npm run find-rules && npm run lint",
-    "release": "np --no-yarn"
+    "release": "np"
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^7.6.0",
@@ -32,7 +32,7 @@
     "eslint-find-rules": "^4.1.0",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
-    "np": "^9.2.0",
+    "np": "^10.0.3",
     "svelte": "^4.2.12",
     "typescript": "^5.4.4"
   },
