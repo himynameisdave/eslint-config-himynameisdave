@@ -21,6 +21,8 @@
 
 ---
 
+> ℹ️ *That's all, folks!* [`oxlint`](https://oxc.rs/docs/guide/usage/linter.html) is faster and cheaper than `eslint`, and so the spiritual successor to this config is [`@himynameisdave/oxlint-config`](https://github.com/himynameisdave/oxlint-config). This package will no longer be maintained.
+
 A modular, opinionated, and well-maintained `eslint` config made by and for [`himynameisdave`](https://github.com/himynameisdave). Made of small configs which can be composed together to achieve a linting setup that is project-aware.
 
 ### Contents
